@@ -8,10 +8,10 @@ using UnityEngine.Networking;
 
 public enum BlendAxis
 {
-    X,Y,Z
+    X, Y, Z
 }
 
-public class CharacterAnimation : NetworkBehaviour
+public class CharacterAnimation : MonoBehaviour
 {
     private Animator animator;
     public HumanBodyBones UpperChest = HumanBodyBones.UpperChest;
@@ -48,53 +48,31 @@ public class CharacterAnimation : NetworkBehaviour
         if (animator == null || character == null)
             return;
 
-        if (isLocalPlayer)
-        {
-            // update upper body rotation to host
-            UpperBodyRotation = Quaternion.identity;
-            float headCameraRotation = headCamera.transform.localRotation.eulerAngles.x;
-            if (character.MovementPreset.Length > character.MovementIndex)
-                headCameraRotation += character.MovementPreset[character.MovementIndex].UpperChestOffset;
-            switch (Axis)
-            {
-                case BlendAxis.X:
-                    UpperBodyRotation.eulerAngles = new Vector3(Speed * headCameraRotation + Offset.x, UpperBodyRotation.eulerAngles.y + Offset.y, UpperBodyRotation.eulerAngles.z + Offset.z);
-                    break;
-                case BlendAxis.Y:
-                    UpperBodyRotation.eulerAngles = new Vector3(UpperBodyRotation.eulerAngles.x + Offset.x, Speed * headCameraRotation + Offset.y, UpperBodyRotation.eulerAngles.z + Offset.z);
-                    break;
-                case BlendAxis.Z:
-                    UpperBodyRotation.eulerAngles = new Vector3(UpperBodyRotation.eulerAngles.x + Offset.x, UpperBodyRotation.eulerAngles.y + Offset.y, Speed * headCameraRotation + Offset.z);
-                    break;
-            }
 
-            float fps = (1 / Time.deltaTime);
-            float delay = (fps / character.currentSendingRate) * Time.deltaTime;
-            if (Time.time > timeTmpsending + delay)
-            {
-                CmdCameraUpdate(headCameraRotation);
-                timeTmpsending = Time.time;
-            }
+        // update upper body rotation to host
+        UpperBodyRotation = Quaternion.identity;
+        float headCameraRotation = headCamera.transform.localRotation.eulerAngles.x;
+        if (character.MovementPreset.Length > character.MovementIndex)
+            headCameraRotation += character.MovementPreset[character.MovementIndex].UpperChestOffset;
+        switch (Axis)
+        {
+            case BlendAxis.X:
+                UpperBodyRotation.eulerAngles = new Vector3(Speed * headCameraRotation + Offset.x, UpperBodyRotation.eulerAngles.y + Offset.y, UpperBodyRotation.eulerAngles.z + Offset.z);
+                break;
+            case BlendAxis.Y:
+                UpperBodyRotation.eulerAngles = new Vector3(UpperBodyRotation.eulerAngles.x + Offset.x, Speed * headCameraRotation + Offset.y, UpperBodyRotation.eulerAngles.z + Offset.z);
+                break;
+            case BlendAxis.Z:
+                UpperBodyRotation.eulerAngles = new Vector3(UpperBodyRotation.eulerAngles.x + Offset.x, UpperBodyRotation.eulerAngles.y + Offset.y, Speed * headCameraRotation + Offset.z);
+                break;
         }
-        else
+
+        float fps = (1 / Time.deltaTime);
+        float delay = (fps / character.currentSendingRate) * Time.deltaTime;
+        if (Time.time > timeTmpsending + delay)
         {
-            // rotate upper body by data from server
-            Quaternion rotationTarget = UpperBodyRotation;
-
-            switch (Axis)
-            {
-                case BlendAxis.X:
-                    rotationTarget.eulerAngles = new Vector3(Speed * cameraRotationSync + Offset.x, rotationTarget.eulerAngles.y + Offset.y, rotationTarget.eulerAngles.z + Offset.z);
-                    break;
-                case BlendAxis.Y:
-                    rotationTarget.eulerAngles = new Vector3(rotationTarget.eulerAngles.x + Offset.x, Speed * cameraRotationSync + Offset.y, rotationTarget.eulerAngles.z + Offset.z);
-                    break;
-                case BlendAxis.Z:
-                    rotationTarget.eulerAngles = new Vector3(rotationTarget.eulerAngles.x + Offset.x, rotationTarget.eulerAngles.y + Offset.y, Speed * cameraRotationSync + Offset.z);
-                    break;
-            }
-
-            UpperBodyRotation = Quaternion.Lerp(UpperBodyRotation, rotationTarget, 30 * Time.deltaTime);
+            CmdCameraUpdate(headCameraRotation);
+            timeTmpsending = Time.time;
         }
     }
 
