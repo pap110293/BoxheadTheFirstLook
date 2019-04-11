@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Scene
+  - Item
+  - AirSpawner
   layers:
   - Default
   - TransparentFX
@@ -13,8 +17,8 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
-  - 
+  - HitBox
+  - PlayerObject
   - 
   - 
   - 
