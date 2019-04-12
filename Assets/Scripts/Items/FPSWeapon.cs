@@ -14,17 +14,16 @@ public class FPSWeapon : FPSItem
         Tool
     }
 
+    private bool reloading;
     private float timeTemp;
     private AudioSource audioSource;
     private Animator animator;
-    private bool reloading;
 
     [Header("Ammo")]
     public bool infinityAmmo;
     public int clipSize = 30;
-    public int currentAmmo = 30;
-    public int ammoMax = 30;
-    [HideInInspector]
+    public int maxAmmo = 30;
+    public int ammo = 30;
     public int ammoHave = 0;
 
     [Header("Firing")]
@@ -42,6 +41,7 @@ public class FPSWeapon : FPSItem
     public Transform MuzzlePoint;
 
     [Header("Other")]
+    public bool isGun = true;
     public float FOVZoom = 65;
     public bool HideWhenZoom = false;
 
@@ -53,35 +53,110 @@ public class FPSWeapon : FPSItem
         timeTemp = 0.0f;
     }
 
-    private void Start()
+    public override void OnAction()
     {
-        animator.SetInteger("shoot_type", (int)Type);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(CrossPlatformInputManager.GetButton("Fire1"))
+        if (isGun)
         {
-            if (timeTemp <= 0.0f)
+            if (ammo <= 0)
             {
-                OnAction();
-                timeTemp = FireRate;
+                if (!Reload())
+                {
+                    Debug.Log("Het dan");
+                }
             }
-            else
+
+            if (!reloading || ammo <= 0)
             {
-                timeTemp -= Time.deltaTime;
+                if (timeTemp <= 0.0f)
+                {
+                    animator.SetTrigger("shoot");
+                    ammo--;
+                    base.OnAction();
+                    timeTemp = FireRate;
+                }
+                else
+                {
+                    timeTemp -= Time.deltaTime;
+                }
             }
         }
         else
         {
-            timeTemp = 0;
+            if (fire1)
+            {
+                if (timeTemp <= 0.0f)
+                {
+                    animator.SetTrigger("shoot");
+                    base.OnAction();
+                    timeTemp = FireRate;
+                }
+                else
+                {
+                    timeTemp -= Time.deltaTime;
+                }
+            }
         }
     }
 
-    public override void OnAction()
+    public override void OnFire1()
     {
-        animator.SetTrigger("shoot");
-        base.OnAction();
+        base.OnFire1();
+        OnAction();
+    }
+
+    public override void OnFire1Realse()
+    {
+        base.OnFire1Realse();
+        timeTemp = 0;
+    }
+
+    public override bool Reload()
+    {
+        if (ammo >= clipSize || ammoHave == 0)
+            return false;
+
+        if (!reloading)
+        {
+            if (audioSource && SoundReload)
+            {
+                audioSource.PlayOneShot(SoundReload);
+            }
+
+            if (animator)
+                animator.SetTrigger("reloading");
+        }
+
+        reloading = true;
+        base.Reload();
+        return true;
+    }
+
+    public override void ReloadComplete()
+    {
+        if (infinityAmmo)
+        {
+            ammo = clipSize;
+        }
+        else
+        {
+            var ammoWasUsed = clipSize - ammo;
+            if (ammoHave > ammoWasUsed)
+            {
+                ammoHave -= ammoWasUsed;
+                ammo = clipSize;
+            }
+            else
+            {
+                ammo += ammoHave;
+                ammoHave = 0;
+            }
+        }
+        base.ReloadComplete();
+        reloading = false;
+    }
+
+    private void OnEnable()
+    {
+        animator.SetInteger("shoot_type", (int)Type);
     }
 }
