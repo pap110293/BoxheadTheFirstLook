@@ -4,33 +4,49 @@ using UnityEngine;
 
 public class FPSItem : MonoBehaviour
 {
-    public int ItemIndex;
-    public string Info = "";
-    public ItemCollector CollectorSlot;
+    public int amount = 0;
+    public int maxAmount = 1;
     [HideInInspector]
-    public bool OnFire1, OnFire2;
-    public virtual void Trigger()
+    public bool fire1, fire2;
+
+    public virtual void OnFire1()
     {
-        OnFire1 = true;
+        fire1 = true;
     }
-    public virtual void Trigger2()
+
+    public virtual void OnFire2()
     {
-        OnFire2 = true;
+        fire2 = true;
     }
-    public virtual void OnTriggerRelease()
+
+    public virtual void OnFire1Realse()
     {
-        OnFire1 = false;
+        fire1 = false;
     }
-    public virtual void OnTrigger2Release()
+
+    public virtual void OnFire2Realse()
     {
-        OnFire2 = false;
+        fire2 = false;
     }
+
+    public virtual bool IsItemAvailable()
+    {
+        return amount > 0;
+    }
+
     public virtual bool Reload()
     {
         return true;
     }
+
     public virtual void OnAction()
     {
 
     }
+
+    public virtual void ReloadComplete()
+    {
+
+    }
+
 }
