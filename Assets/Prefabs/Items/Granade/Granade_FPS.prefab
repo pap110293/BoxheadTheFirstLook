@@ -1966,7 +1966,6 @@ GameObject:
   - component: {fileID: 400120}
   - component: {fileID: 9500000}
   - component: {fileID: 8200000}
-  - component: {fileID: 11400000}
   - component: {fileID: 7294213015423535694}
   m_Layer: 0
   m_Name: Granade_FPS
@@ -2111,34 +2110,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100120}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfe4ee4966d89d548826da7c341904f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemID: UZ17
-  ItemIndex: 17
-  Info: 
-  OnFire1: 0
-  OnFire2: 0
-  IsVisible: 1
-  HoldFire: 0
-  Item: {fileID: 100000, guid: 6433afb8aa6d00a49b35974fe65406dc, type: 3}
-  FireRate: 0.1
-  UsingType: 5
-  ItemUsed: {fileID: 11400000, guid: d9c8b84b7c14ab849833f0565c53b240, type: 3}
-  InfinityAmmo: 0
-  OnAnimationEvent: 1
-  Force1: 15
-  Force2: 5
-  SoundThrow: {fileID: 0}
 --- !u!114 &7294213015423535694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2151,20 +2122,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b03a9e265e89915498f762bba481fa95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemIndex: 0
-  Info: 
-  OnFire1: 0
-  OnFire2: 0
-  HoldFire: 0
+  amount: 0
+  maxAmount: 1
+  fire1: 0
+  fire2: 0
   Item: {fileID: 0}
-  FireRate: 0.1
-  UsingType: 0
-  ItemUsed: {fileID: 0}
-  InfinityAmmo: 0
-  OnAnimationEvent: 0
-  Force1: 15
-  Force2: 5
   SoundThrow: {fileID: 0}
+  infinity: 0
+  force: 10
+  point: {fileID: 0}
 --- !u!1 &100122
 GameObject:
   m_ObjectHideFlags: 0

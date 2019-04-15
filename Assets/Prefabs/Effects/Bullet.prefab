@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400000}
-  - component: {fileID: 11400000}
   - component: {fileID: 96731887140925616}
   - component: {fileID: 9161625745022162259}
   m_Layer: 0
@@ -33,20 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766ec95e9c2e54043bd2fa0427fb9283, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 60
-  lifeTime: 1
 --- !u!96 &96731887140925616
 TrailRenderer:
   serializedVersion: 2
@@ -156,3 +141,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fxOnHitObject: {fileID: 100000, guid: 2d332cf18bb674d428d38c0212d8ca6b, type: 3}
   fxOnHitLife: {fileID: 100000, guid: 4c467f85f6b21f54c835a7a5f4fb1d8f, type: 3}
+  effectTime: 5
+  Speed: 80
+  lifeTime: 1

@@ -56,7 +56,8 @@ public class FPSItemToThrow : FPSItem
             var i = Instantiate(Item, point.position, point.rotation);
             var rb = i.GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * force, ForceMode.Force);
-            amount--;
+            if(!infinity)
+                amount--;
         }
 
         if(amount <= 0)

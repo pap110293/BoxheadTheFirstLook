@@ -45,7 +45,7 @@ public class FPSWeapon : FPSItem
     public AudioClip SoundReload;
     public GameObject MuzzleFX;
     public Transform[] MuzzlePoint;
-    public GameObject projectileFX;
+    public GameObject bulletPrefab;
     public Transform point;
 
     [Header("Other")]
@@ -108,9 +108,9 @@ public class FPSWeapon : FPSItem
 
     private void ShootTheBullet()
     {
-        if(projectileFX && point)
+        if(bulletPrefab && point)
         {
-            var bullet = Instantiate(projectileFX, point.position, point.rotation);
+            var bullet = Instantiate(bulletPrefab, point.position, point.rotation);
         }
     }
 

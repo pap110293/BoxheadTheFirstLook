@@ -17,7 +17,8 @@ public class Granade : MonoBehaviour
     {
         if (explosionFX)
         {
-            var fx = Instantiate(explosionFX, transform.position, Quaternion.identity);
+            var rotation = Quaternion.Euler(-90.0f, 0.0f, 0.0f);
+            var fx = Instantiate(explosionFX, transform.position, rotation);
             Destroy(fx, 2.0f);
         }
         Destroy(gameObject);

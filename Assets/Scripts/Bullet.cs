@@ -7,16 +7,26 @@ public class Bullet : MonoBehaviour
     public GameObject fxOnHitObject;
     public GameObject fxOnHitLife;
     public float effectTime = 5.0f;
-    Vector3 prevPos;
+
+    public float Speed = 100;
+    public float lifeTime = 1;
+    Vector3 nextPos;
     private void Start()
     {
-        prevPos = transform.position;
+        Destroy(gameObject, lifeTime);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        Vector3 direction = transform.position - prevPos;
-        Ray ray = new Ray(transform.position, direction.normalized);
+        UpdateBullet();
+    }
+
+    private void UpdateBullet()
+    {
+        var currentPos = transform.position;
+        nextPos = transform.position + transform.forward * Speed * Time.deltaTime;
+        Vector3 direction = nextPos - currentPos;
+        Ray ray = new Ray(currentPos, direction.normalized);
         RaycastHit[] hits = Physics.RaycastAll(ray, direction.magnitude);
 
         for (int i = 0; i < hits.Length; i++)
@@ -36,6 +46,6 @@ public class Bullet : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        prevPos = transform.position;
+        transform.position = nextPos;
     }
 }
