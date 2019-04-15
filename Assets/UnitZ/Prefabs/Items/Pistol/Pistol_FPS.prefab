@@ -198,7 +198,7 @@ MonoBehaviour:
   SoundReload: {fileID: 0}
   SoundReloadComplete: {fileID: 0}
   DamageSound: []
-  MuzzleFX: {fileID: 100002, guid: a8809a76e6d7f19449d3d3f287b21381, type: 3}
+  MuzzleFX: {fileID: 0}
   MuzzlePoint: {fileID: 0}
   ProjectileFX: {fileID: 0}
   Pointer: {fileID: 0}
@@ -235,14 +235,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ae0fd4ea24c644eb1a72ea17d6bfb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemIndex: 0
-  Info: 
-  OnFire1: 0
-  OnFire2: 0
+  amount: 0
+  maxAmount: 1
+  fire1: 0
+  fire2: 0
   infinityAmmo: 1
   clipSize: 30
-  currentAmmo: 30
-  ammoMax: 30
+  maxAmmo: 30
+  ammo: 30
   ammoHave: 0
   Type: 1
   FireRate: 0.25
@@ -254,6 +254,7 @@ MonoBehaviour:
   SoundReload: {fileID: 0}
   MuzzleFX: {fileID: 0}
   MuzzlePoint: {fileID: 0}
+  weaponType: 0
   FOVZoom: 65
   HideWhenZoom: 0
 --- !u!1 &100006

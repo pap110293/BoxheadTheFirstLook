@@ -81,6 +81,34 @@ public class FPSItemController : MonoBehaviour
         }
     }
 
+    public bool NextItem()
+    {
+        for (int i = 0; i < itemSlots.Length; i++)
+        {
+            var item = itemSlots[i].Item;
+            if (item == currentItem && i < itemSlots.Length - 1)
+            {
+                ChooseItem(i + 1);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public bool PrevItem()
+    {
+        for (int i = 0; i < itemSlots.Length; i++)
+        {
+            var item = itemSlots[i].Item;
+            if (item == currentItem && i > 0)
+            {
+                ChooseItem(i - 1);
+                return true;
+            }
+        }
+        return false;
+    }
+
     [Serializable]
     public struct ItemSlot
     {

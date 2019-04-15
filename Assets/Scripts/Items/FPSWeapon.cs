@@ -14,6 +14,12 @@ public class FPSWeapon : FPSItem
         Tool
     }
 
+    public enum WeaponType
+    {
+        Gun,
+        Tool,
+    }
+
     private bool reloading;
     private float timeTemp;
     private AudioSource audioSource;
@@ -38,10 +44,12 @@ public class FPSWeapon : FPSItem
     public AudioClip SoundFire;
     public AudioClip SoundReload;
     public GameObject MuzzleFX;
-    public Transform MuzzlePoint;
+    public Transform[] MuzzlePoint;
+    public GameObject projectileFX;
+    public Transform point;
 
     [Header("Other")]
-    public bool isGun = true;
+    public WeaponType weaponType;
     public float FOVZoom = 65;
     public bool HideWhenZoom = false;
 
@@ -53,47 +61,68 @@ public class FPSWeapon : FPSItem
         timeTemp = 0.0f;
     }
 
-    public override void OnAction()
+    private void MakeToolHit()
     {
-        if (isGun)
+        if (fire1)
         {
-            if (ammo <= 0)
+            if (timeTemp <= 0.0f)
             {
-                if (!Reload())
-                {
-                    Debug.Log("Het dan");
-                }
+                animator.SetTrigger("shoot");
+                base.OnAction();
+                timeTemp = FireRate;
             }
-
-            if (!reloading || ammo <= 0)
+            else
             {
-                if (timeTemp <= 0.0f)
-                {
-                    animator.SetTrigger("shoot");
-                    ammo--;
-                    base.OnAction();
-                    timeTemp = FireRate;
-                }
-                else
-                {
-                    timeTemp -= Time.deltaTime;
-                }
+                timeTemp -= Time.deltaTime;
             }
         }
-        else
+    }
+
+    private void MakeGunShoot()
+    {
+        if (ammo <= 0)
         {
-            if (fire1)
+            if (!Reload())
             {
-                if (timeTemp <= 0.0f)
-                {
-                    animator.SetTrigger("shoot");
-                    base.OnAction();
-                    timeTemp = FireRate;
-                }
-                else
-                {
-                    timeTemp -= Time.deltaTime;
-                }
+                Debug.Log("Het dan");
+            }
+        }
+
+        if (!reloading && ammo > 0)
+        {
+            if (timeTemp <= 0.0f)
+            {
+                animator.SetTrigger("shoot");
+                CreateMuzzleFX();
+                ShootTheBullet();
+                ammo--;
+                base.OnAction();
+                timeTemp = FireRate;
+            }
+            else
+            {
+                timeTemp -= Time.deltaTime;
+            }
+        }
+    }
+
+    private void ShootTheBullet()
+    {
+        if(projectileFX && point)
+        {
+            var bullet = Instantiate(projectileFX, point.position, point.rotation);
+        }
+    }
+
+    private void CreateMuzzleFX()
+    {
+        if(MuzzleFX && MuzzlePoint.Length > 0)
+        {
+            foreach (var point in MuzzlePoint)
+            {
+                var fx = Instantiate(MuzzleFX, point.position, point.rotation);
+                fx.GetComponent<ParticleSystem>().Play();
+                Destroy(fx, 2.0f);
             }
         }
     }
@@ -101,7 +130,17 @@ public class FPSWeapon : FPSItem
     public override void OnFire1()
     {
         base.OnFire1();
-        OnAction();
+        switch (weaponType)
+        {
+            case WeaponType.Gun:
+                MakeGunShoot();
+                break;
+            case WeaponType.Tool:
+                MakeToolHit();
+                break;
+            default:
+                break;
+        }
     }
 
     public override void OnFire1Realse()
@@ -112,7 +151,7 @@ public class FPSWeapon : FPSItem
 
     public override bool Reload()
     {
-        if (ammo >= clipSize || ammoHave == 0)
+        if ((ammo >= clipSize || ammoHave == 0) && !infinityAmmo)
             return false;
 
         if (!reloading)
