@@ -34,15 +34,14 @@ public class Bullet : MonoBehaviour
             var hit = hits[i];
             GameObject fx;
             var life = hit.collider.GetComponent<Life>();
-            if (life)
+            var rotation = Quaternion.LookRotation(hit.normal);
+            var hitMask = hit.collider.GetComponent<HitMark>();
+            if (hitMask)
             {
-                fx = Instantiate(fxOnHitLife, hit.point, hit.collider.transform.rotation);
+                var fxObject = hitMask.HitFX;
+                fx = Instantiate(fxObject, hit.point, rotation);
+                Destroy(fx, effectTime);
             }
-            else
-            {
-                fx = Instantiate(fxOnHitObject, hit.point, hit.collider.transform.rotation);
-            }
-            Destroy(fx, effectTime);
             gameObject.SetActive(false);
         }
 

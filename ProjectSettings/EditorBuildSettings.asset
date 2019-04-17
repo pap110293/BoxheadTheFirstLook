@@ -6,15 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/UnitZ/mainmenu.unity
-    guid: 08a237a1d5ac592438adf50d6404b3c9
-  - enabled: 1
-    path: Assets/UnitZ/Scene/sandbox.unity
-    guid: b08c2a7e792ebb24e941c9d735775226
-  - enabled: 1
-    path: Assets/UnitZ/Scene/battleground.unity
-    guid: e30025cc0efc348429b471054feebe5f
-  - enabled: 1
-    path: Assets/UnitZ/Scene/teamdeathmatch.unity
-    guid: a2614c8acfd9ec24a82b8ae23a22a8d8
+    path: Assets/Scenes/PhamAnhScene.unity
+    guid: dbdda77421d41ba46a0b530da23eb0b3
   m_configObjects: {}
