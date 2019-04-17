@@ -9,38 +9,43 @@ public class SkillBlow : MonoBehaviour
     private Transform TargetAim;
     private float FlySpeed;
     private bool isDisable;
-
+    private bool isFollow;
     private Vector3 vecDelta;
     void Start()
     {
         isDisable = false;
+        isFollow = false;
     }
     
     void Update()
     {
         if (Target != null && PawnPoint != null)
         {
-            MoveTo(Target, TargetAim, FlySpeed);
+            if (isFollow)
+                MoveToFollow(Target, TargetAim, FlySpeed);
+            else
+                MoveTo(TargetAim, FlySpeed);
         }
         else
         {
             Destroy(this.gameObject);
         }       
     }
-    public void InitArrow(Transform pawnPoint, Transform target,Transform targetAim,float flySpeed)
+    public void InitSkillBlow(Transform _pawnPoint, Transform _target,Transform _targetAim,float flySpeed,bool _isFollow)
     {
-        if (!pawnPoint || !target || !targetAim)
+        if (!_pawnPoint || !_target || !_targetAim)
         {
             Destroy(this.gameObject);
             return;
         }
-        Target = target;
+        Target = _target;
         FlySpeed = flySpeed;
-        PawnPoint = pawnPoint;
-        TargetAim = targetAim;
+        PawnPoint = _pawnPoint;
+        TargetAim = _targetAim;
         vecDelta = PawnPoint.position;
+        isFollow = _isFollow;
     }
-    private void MoveTo(Transform target, Transform targetAim, float flySpeed)
+    private void MoveToFollow(Transform target, Transform targetAim, float flySpeed)
     {
         if(!target || !targetAim)
         {
@@ -52,28 +57,45 @@ public class SkillBlow : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(_look);
         }
     }
+    private void MoveTo(Transform movePos, float flySpeed)
+    {
+        if (!movePos)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, movePos.position, flySpeed = flySpeed * Time.deltaTime);
+            Vector3 _look = movePos.position - vecDelta;
+            transform.rotation = Quaternion.LookRotation(_look);
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
-        if(!isDisable)
+        if (!isDisable)
         {
-            if (Target != null)
-            {                
-                if (other.gameObject == Target.gameObject)
-                {
-                    //var _health = other.gameObject.GetComponent<Health>();
-                    //if(_health)
-                    //{
-                    //    _health.TakeDamage(10);
-                    //}
-                    isDisable = true;
-                    Destroy(gameObject, 1);
-                }
-            }
-            else
-            {
-                isDisable = true;
-                Destroy(this.gameObject);
-            }
+            isDisable = true;
+            Destroy(gameObject, 1);
+
+            //Debug.LogError("triger");
+            //if (Target != null)
+            //{                
+            //    if (other.gameObject == Target.gameObject)
+            //    {
+            //        //var _health = other.gameObject.GetComponent<Health>();
+            //        //if(_health)
+            //        //{
+            //        //    _health.TakeDamage(10);
+            //        //}
+            //        isDisable = true;
+            //        Destroy(gameObject, 1);
+            //    }
+            //}
+            //else
+            //{
+            //    isDisable = true;
+            //    Destroy(this.gameObject);
+            //}
         }
     }
     
