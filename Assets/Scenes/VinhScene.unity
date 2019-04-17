@@ -623,7 +623,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170254933}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.6557417, y: -0.05915475, z: 1.2304977}
+  m_LocalPosition: {x: -0.83, y: -0.05915475, z: -0.09}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 249005643}
@@ -647,6 +647,7 @@ GameObject:
   - component: {fileID: 1448111021}
   - component: {fileID: 1448111029}
   - component: {fileID: 1448111031}
+  - component: {fileID: 1448111030}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -791,13 +792,9 @@ MonoBehaviour:
   animator: {fileID: 0}
   target: {fileID: 871746669}
   movementSpeed: 2
-  planeMovement: {fileID: 0}
-  AttackCountDown: 0
-  TimeCount: 0
-  ArrowPrefabs: {fileID: 0}
-  ArrowFlySpeed: 8
-  ShootPoint: {fileID: 1448111026}
-  teamManager: {fileID: 0}
+  planeMovement: {fileID: 1448111029}
+  enemyAttacker: {fileID: 1448111030}
+  teamManager: {fileID: 1448111021}
 --- !u!114 &1448111029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -810,6 +807,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34f56852713fff849be51f7d07338210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flyDictance: 0
+--- !u!114 &1448111030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448111020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68c14bdafba911e408351003c74355c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackCountDown: 0
+  TimeCount: 0
+  SkillBlowFlySpeed: 8
+  ShootPoint: {fileID: 1448111026}
+  target: {fileID: 0}
+  skillBlowPrefabs: {fileID: 2842845842128036240, guid: d9558f2a0ec8eab48bbb3d3d03f9c9d4,
+    type: 3}
 --- !u!195 &1448111031
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -8,8 +8,8 @@ namespace Assets.Scripts
     public enum Team
     {
         TeamNone,
-        TeamGreen,
-        TeamRed
+        TeamPlayer,
+        TeamEnemy
     }
     public enum CharacterType
     {
