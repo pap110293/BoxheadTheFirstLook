@@ -141,6 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fxOnHitObject: {fileID: 100000, guid: 2d332cf18bb674d428d38c0212d8ca6b, type: 3}
   fxOnHitLife: {fileID: 100000, guid: 4c467f85f6b21f54c835a7a5f4fb1d8f, type: 3}
+  force: 100
   effectTime: 5
-  Speed: 80
+  Speed: 200
   lifeTime: 1

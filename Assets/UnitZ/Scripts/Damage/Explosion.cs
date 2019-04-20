@@ -12,8 +12,7 @@ public class Explosion : DamageBase
     public float Duration = 3;
     public float Force = 100;
     public float Radius = 30;
-    public byte Damage = 100;
-    public string[] BlockerTag = { "Scene" };
+    public int Damage = 100;
 
     void Start()
     {
@@ -56,18 +55,13 @@ public class Explosion : DamageBase
         Destroy(this.gameObject, Duration);
     }
 
-
-    private bool tagDestroyerCheck(string tag)
+    public void SetDamage(int damage)
     {
-        for (int i = 0; i < BlockerTag.Length; i++)
-        {
-            if (BlockerTag[i] == tag)
-            {
-                return true;
-            }
-        }
-        return false;
+        this.Damage = damage;
     }
 
-
+    public void SetRadius(int radius)
+    {
+        this.Radius = radius;
+    }
 }

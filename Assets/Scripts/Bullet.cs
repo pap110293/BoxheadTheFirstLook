@@ -6,10 +6,14 @@ public class Bullet : MonoBehaviour
 {
     public GameObject fxOnHitObject;
     public GameObject fxOnHitLife;
+    public float force;
     public float effectTime = 5.0f;
 
     public float Speed = 100;
     public float lifeTime = 1;
+
+    private int damage = 1;
+
     Vector3 nextPos;
     private void Start()
     {
@@ -19,6 +23,11 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         UpdateBullet();
+    }
+
+    public void SetDamage(int damage)
+    {
+        this.damage = damage;
     }
 
     private void UpdateBullet()
@@ -31,20 +40,36 @@ public class Bullet : MonoBehaviour
 
         for (int i = 0; i < hits.Length; i++)
         {
-            var hit = hits[i];
-            GameObject fx;
-            var life = hit.collider.GetComponent<Life>();
-            var rotation = Quaternion.LookRotation(hit.normal);
-            var hitMask = hit.collider.GetComponent<HitMark>();
-            if (hitMask)
+            var hited = hits[i];
+
+            if (hited.collider.GetComponent<Rigidbody>())
+                hited.collider.GetComponent<Rigidbody>().AddForceAtPosition((hited.transform.position - transform.position).normalized * force, hited.point);
+
+            DamagePackage dm = new DamagePackage
             {
-                var fxObject = hitMask.HitFX;
-                fx = Instantiate(fxObject, hit.point, rotation);
-                Destroy(fx, effectTime);
-            }
+                Damage = damage,
+                Normal = hited.normal,
+                Direction = (hited.transform.position - transform.position).normalized * force,
+                Position = hited.point,
+            };
+
+            //GameObject fx;
+            //var life = hited.collider.GetComponent<Life>();
+            //var rotation = Quaternion.LookRotation(hited.normal);
+            //var hitMask = hited.collider.GetComponent<HitMark>();
+            //if (hitMask)
+            //{
+            //    var fxObject = hitMask.HitFX;
+            //    fx = Instantiate(fxObject, hited.point, rotation);
+            //    Destroy(fx, effectTime);
+            //}
+
+            hited.collider.GetComponent<Collider>().SendMessage("OnHit", dm, SendMessageOptions.DontRequireReceiver);
+
             gameObject.SetActive(false);
         }
 
         transform.position = nextPos;
     }
+
 }

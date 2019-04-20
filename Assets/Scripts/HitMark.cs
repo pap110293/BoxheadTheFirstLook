@@ -11,7 +11,7 @@ public struct DamagePackage
     public Vector3 Position;
     public Vector3 Direction;
     public Vector3 Normal;
-    public byte Damage;
+    public int Damage;
     public int ID;
     public byte Team;
     public byte DamageType;
@@ -19,8 +19,7 @@ public struct DamagePackage
 
 public class HitMark : MonoBehaviour
 {
-    public DamageManager DamageManage;
-    public ItemSticker Armor;
+    public LifeBase life;
     public GameObject HitFX;
     public float DamageMult = 1;
     // 8 must be a Hitbox Layer;
@@ -35,47 +34,22 @@ public class HitMark : MonoBehaviour
     {
         if (this.transform.root)
         {
-            DamageManage = this.transform.root.GetComponent<DamageManager>();
+            life = this.transform.root.GetComponent<LifeBase>();
         }
         else
         {
-            DamageManage = this.transform.GetComponent<DamageManager>();
+            life = this.transform.GetComponent<LifeBase>();
         }
     }
 
     public void OnHit(DamagePackage pack)
     {
-        if (DamageManage)
+        if (life)
         {
-
-            float damageReducer = 1;
-            if (Armor != null)
-            {
-                ItemEquipment armor = Armor.GetEquipped();
-                if (armor != null)
-                    damageReducer = 1 - armor.Armor;
-            }
             // apply damage to damage manager
-            float alldamage = (byte)((pack.Damage * DamageMult) * damageReducer);
+            int alldamage = (int)(pack.Damage * DamageMult);
 
-            if (alldamage > byte.MaxValue)
-                alldamage = byte.MaxValue;
-
-            DamageManage.ApplyDamage((byte)alldamage, pack.Direction, pack.ID, pack.Team);
-            // show hit effect in crosshair
-            if (UnitZ.gameManager != null && UnitZ.gameManager.PlayerNetID == pack.ID)
-            {
-                if (UnitZ.playerManager.PlayingCharacter != null && UnitZ.playerManager.PlayingCharacter.inventory != null)
-                {
-                    if (UnitZ.playerManager.PlayingCharacter.inventory.FPSEquipment != null)
-                    {
-                        if (UnitZ.playerManager.PlayingCharacter.inventory.FPSEquipment.GetComponent<Crosshair>())
-                        {
-                            UnitZ.playerManager.PlayingCharacter.inventory.FPSEquipment.GetComponent<Crosshair>().Hit();
-                        }
-                    }
-                }
-            }
+            life.TakeDamage(alldamage);
         }
 
         // add particle effect at hit position
@@ -84,7 +58,7 @@ public class HitMark : MonoBehaviour
     }
     public void OnHitTest(DamagePackage pack)
     {
-        if (DamageManage)
+        if (life)
         {
             // show hit effect in crosshair
             if (UnitZ.gameManager != null && UnitZ.gameManager.PlayerNetID == pack.ID)

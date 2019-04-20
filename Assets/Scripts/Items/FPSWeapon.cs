@@ -36,7 +36,7 @@ public class FPSWeapon : FPSItem
     public UsingTypes Type = 0;
     public float FireRate = 0.09f;
     public byte Spread = 20;
-    public byte Damage = 10;
+    public int Damage = 10;
     public Vector2 KickPower = Vector2.zero;
     public Vector3 AimPosition = new Vector3(-0.082f, 0.06f, 0);
 
@@ -68,7 +68,6 @@ public class FPSWeapon : FPSItem
             if (timeTemp <= 0.0f)
             {
                 animator.SetTrigger("shoot");
-                base.OnAction();
                 timeTemp = FireRate;
             }
             else
@@ -96,7 +95,6 @@ public class FPSWeapon : FPSItem
                 CreateMuzzleFX();
                 ShootTheBullet();
                 ammo--;
-                base.OnAction();
                 timeTemp = FireRate;
             }
             else
@@ -111,6 +109,8 @@ public class FPSWeapon : FPSItem
         if(bulletPrefab && point)
         {
             var bullet = Instantiate(bulletPrefab, point.position, point.rotation);
+            var bulletClass = bullet.GetComponent<Bullet>();
+            bulletClass.SetDamage(Damage);
         }
     }
 

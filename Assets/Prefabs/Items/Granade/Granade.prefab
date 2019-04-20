@@ -339,4 +339,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToExplose: 2
+  damage: 100
+  radius: 6
   explosionFX: {fileID: 100000, guid: e55e7258611b64a499379096623380aa, type: 3}
