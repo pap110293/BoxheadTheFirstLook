@@ -1809,25 +1809,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ae0fd4ea24c644eb1a72ea17d6bfb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemIndex: 0
-  Info: 
-  OnFire1: 0
-  OnFire2: 0
+  amount: 0
+  maxAmount: 1
+  fire1: 0
+  fire2: 0
   infinityAmmo: 0
   clipSize: 30
-  currentAmmo: 30
-  ammoMax: 30
+  maxAmmo: 30
+  ammo: 30
   ammoHave: 0
   Type: 1
   FireRate: 1
   Spread: 20
-  Damage: 10
+  Damage: 100
   KickPower: {x: 0, y: 0}
   AimPosition: {x: -0.082, y: 0.06, z: 0}
   SoundFire: {fileID: 0}
   SoundReload: {fileID: 0}
   MuzzleFX: {fileID: 0}
-  MuzzlePoint: {fileID: 0}
+  MuzzlePoint:
+  - {fileID: 0}
+  bulletPrefab: {fileID: 0}
+  point: {fileID: 0}
+  weaponType: 0
   FOVZoom: 65
   HideWhenZoom: 0
 --- !u!1 &100080

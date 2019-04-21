@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,16 +14,32 @@ public class Bullet : MonoBehaviour
     public float lifeTime = 1;
 
     private int damage = 1;
+    private float distance = float.MaxValue;
+    private Vector3 startPos;
 
     Vector3 nextPos;
     private void Start()
     {
         Destroy(gameObject, lifeTime);
+        startPos = transform.position;
     }
 
     private void Update()
     {
         UpdateBullet();
+        CheckDistance();
+    }
+
+    private void CheckDistance()
+    {
+        var dis = (transform.position - startPos).magnitude;
+        if (dis >= distance)
+            Destroy(gameObject);
+    }
+
+    public void SetDistance(float dis)
+    {
+        distance = dis;
     }
 
     public void SetDamage(int damage)
@@ -64,7 +81,7 @@ public class Bullet : MonoBehaviour
             //    Destroy(fx, effectTime);
             //}
 
-            hited.collider.GetComponent<Collider>().SendMessage("OnHit", dm, SendMessageOptions.DontRequireReceiver);
+            hited.collider.SendMessage("OnHit", dm, SendMessageOptions.DontRequireReceiver);
 
             gameObject.SetActive(false);
         }

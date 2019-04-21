@@ -14,6 +14,13 @@ public class FPSWeapon : FPSItem
         Tool
     }
 
+    public enum ShootType
+    {
+        Normal,
+        ShotGun
+    }
+
+
     public enum WeaponType
     {
         Gun,
@@ -24,7 +31,9 @@ public class FPSWeapon : FPSItem
     private float timeTemp;
     private AudioSource audioSource;
     private Animator animator;
+    private bool isScoped = false;
 
+    public float animationSpeed = 1.0f;
     [Header("Ammo")]
     public bool infinityAmmo;
     public int clipSize = 30;
@@ -37,21 +46,21 @@ public class FPSWeapon : FPSItem
     public float FireRate = 0.09f;
     public byte Spread = 20;
     public int Damage = 10;
-    public Vector2 KickPower = Vector2.zero;
-    public Vector3 AimPosition = new Vector3(-0.082f, 0.06f, 0);
 
     [Header("Sound / FX")]
     public AudioClip SoundFire;
     public AudioClip SoundReload;
+    public AudioClip soundClipOut;
     public GameObject MuzzleFX;
     public Transform[] MuzzlePoint;
     public GameObject bulletPrefab;
     public Transform point;
 
+
     [Header("Other")]
     public WeaponType weaponType;
     public float FOVZoom = 65;
-    public bool HideWhenZoom = false;
+    public bool canScope = false;
 
     private void Awake()
     {
@@ -59,6 +68,38 @@ public class FPSWeapon : FPSItem
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         timeTemp = 0.0f;
+    }
+
+    private void Start()
+    {
+        if (animator)
+        {
+            animator.speed = animationSpeed;
+        }
+    }
+
+    private void Update()
+    {
+        timeTemp -= Time.deltaTime;
+
+        if (Input.GetButtonDown("Fire2") && canScope)
+        {
+            isScoped = !isScoped;
+            if (isScoped)
+                OnScoped();
+            else
+                OnUnScoped();
+        }
+    }
+
+    private void OnUnScoped()
+    {
+        MasterManager.gameHUBCanvas.UnScoped();
+    }
+
+    private void OnScoped()
+    {
+        MasterManager.gameHUBCanvas.Scoped(FOVZoom);
     }
 
     private void MakeToolHit()
@@ -69,10 +110,7 @@ public class FPSWeapon : FPSItem
             {
                 animator.SetTrigger("shoot");
                 timeTemp = FireRate;
-            }
-            else
-            {
-                timeTemp -= Time.deltaTime;
+                
             }
         }
     }
@@ -81,9 +119,9 @@ public class FPSWeapon : FPSItem
     {
         if (ammo <= 0)
         {
-            if (!Reload())
+            if (!Reload() && audioSource && soundClipOut)
             {
-                Debug.Log("Het dan");
+                audioSource.PlayOneShot(soundClipOut);
             }
         }
 
@@ -91,22 +129,22 @@ public class FPSWeapon : FPSItem
         {
             if (timeTemp <= 0.0f)
             {
+                if (SoundFire && audioSource)
+                {
+                    audioSource.PlayOneShot(SoundFire);
+                }
                 animator.SetTrigger("shoot");
                 CreateMuzzleFX();
                 ShootTheBullet();
                 ammo--;
                 timeTemp = FireRate;
             }
-            else
-            {
-                timeTemp -= Time.deltaTime;
-            }
         }
     }
 
     private void ShootTheBullet()
     {
-        if(bulletPrefab && point)
+        if (bulletPrefab && point)
         {
             var bullet = Instantiate(bulletPrefab, point.position, point.rotation);
             var bulletClass = bullet.GetComponent<Bullet>();
@@ -116,7 +154,7 @@ public class FPSWeapon : FPSItem
 
     private void CreateMuzzleFX()
     {
-        if(MuzzleFX && MuzzlePoint.Length > 0)
+        if (MuzzleFX && MuzzlePoint.Length > 0)
         {
             foreach (var point in MuzzlePoint)
             {
@@ -146,7 +184,24 @@ public class FPSWeapon : FPSItem
     public override void OnFire1Realse()
     {
         base.OnFire1Realse();
-        timeTemp = 0;
+    }
+
+    public override void OnAction()
+    {
+        base.OnAction();
+        if (weaponType == WeaponType.Tool)
+        {
+            if(audioSource && SoundFire)
+            {
+                audioSource.PlayOneShot(SoundFire);
+            }
+
+            var bullet = Instantiate(bulletPrefab, point.position, point.rotation);
+            bullet.GetComponent<TrailRenderer>().enabled = false;
+            var bulletClass = bullet.GetComponent<Bullet>();
+            bulletClass.SetDamage(Damage);
+            bulletClass.SetDistance(0.01f);
+        }
     }
 
     public override bool Reload()
@@ -172,6 +227,11 @@ public class FPSWeapon : FPSItem
 
     public override void ReloadComplete()
     {
+        if (SoundReload && audioSource)
+        {
+            audioSource.PlayOneShot(SoundReload);
+        }
+
         if (infinityAmmo)
         {
             ammo = clipSize;
@@ -197,5 +257,6 @@ public class FPSWeapon : FPSItem
     private void OnEnable()
     {
         animator.SetInteger("shoot_type", (int)Type);
+        MasterManager.gameHUBCanvas.UnScoped();
     }
 }

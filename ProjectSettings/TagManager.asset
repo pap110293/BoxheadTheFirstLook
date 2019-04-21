@@ -8,6 +8,7 @@ TagManager:
   - Scene
   - Item
   - AirSpawner
+  - WeaponCamera
   layers:
   - Default
   - TransparentFX

@@ -71,6 +71,9 @@ public class FPSItemController : MonoBehaviour
 
     private void ChooseItem(int index)
     {
+        if (index < 0 || index > itemSlots.Length - 1)
+            return;
+
         var item = itemSlots[index].Item;
 
         if (currentItem != item && item.IsItemAvailable())
