@@ -14,28 +14,25 @@ public class EnemyAttacker : MonoBehaviour
     {
         AttackCountDown = 0;
         TimeCount = 1;
-        //if (!animator) animator.speed = TimeCount * 120 / 100;
+        if (!ShootPoint) ShootPoint = this.transform;
     }
     public void EnemyUpdateAttack(Transform _target)
     {
         if (_target) target = _target;
-         AttackCountDown -= Time.deltaTime;
-        if (AttackCountDown <= 0)
-        {
-            Invoke("ActionSwordAttack", TimeCount / 2);
-            AttackCountDown = TimeCount;
-        }
+        //AttackCountDown -= Time.deltaTime;
+        //if (AttackCountDown <= 0)
+        //{
+        //    Invoke("ActionAttack", TimeCount / 2);
+        //    AttackCountDown = TimeCount;
+        //}
     }
-    public void ActionSwordAttack()
+    public void ActionAttack()
     {
         EnemyAttack(target, SkillBlowFlySpeed);
     }
     void EnemyAttack(Transform target, float flySpeed)
     {
         if (!ShootPoint || !target) return;
-        //var _spineStruct = target.gameObject.GetComponent<SpineStruct>();
-        //if (!_spineStruct) return;
-        //Transform _targetAim = _spineStruct.GetBody();
         Transform _targetAim = target.transform;
         var SkillBlow = Instantiate(skillBlowPrefabs, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<SkillBlow>();
         SkillBlow.transform.position = ShootPoint.position;

@@ -9,7 +9,6 @@ public class Movement : MonoBehaviour
     void Start()
     {
         navMeshAgent = this.GetComponent<NavMeshAgent>();
-        flyDictance = 5;
     }
     public void SetMove(Transform _target)
     {
@@ -17,9 +16,8 @@ public class Movement : MonoBehaviour
     }
     public void Stop()
     {
-        navMeshAgent.SetDestination(this.transform.position);;
+        navMeshAgent.SetDestination(this.transform.position);
     }
-    // Update is called once per frame
     void Update()
     {
         if (flyDictance > 0) 
