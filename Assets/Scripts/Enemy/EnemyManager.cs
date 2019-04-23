@@ -42,7 +42,7 @@ public class EnemyManager : MonoBehaviour
     {
         if (teamManager != null) target = teamManager.target;
     }    
-    public void MeleeAttackEvent()
+    public void DefaultAttackEvent()
     {
         enemyAttacker.ActionAttack();
     }
