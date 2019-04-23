@@ -9,7 +9,7 @@ public class EnemyAnimState : MonoBehaviour
         Dead=-1,
         Idle,
         RunForward,
-        MeleeAttack
+        DefaultAttack
         
     }
     public AnimState currentAnimState = AnimState.Idle;
