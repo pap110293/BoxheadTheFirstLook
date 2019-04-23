@@ -9,7 +9,7 @@ public class EnemyStateMachineAI : MonoBehaviour
     public float meleeRange;
     public EnemyManager enemyManager;
     public Transform target;
-    public EnemyFSM sfm = new EnemyFSM();    
+    public EnemyFSM sfm = new EnemyFSM();
     private string curAction;
     public TeamManager teamManager;
     void Start()
@@ -27,8 +27,9 @@ public class EnemyStateMachineAI : MonoBehaviour
             return;
         }
         var distance = Vector3.Distance(transform.position, target.position);
-        
+
         sfm.PlayerDistance = distance;
+        sfm.IsValidAttack = CheckAvailableAttack();
         sfm.Update();
     }
 
@@ -54,5 +55,26 @@ public class EnemyStateMachineAI : MonoBehaviour
         Gizmos.DrawWireSphere(center, dangerRange);
         Gizmos.color = Color.black;
         Gizmos.DrawWireSphere(center, meleeRange);
+    }
+    private bool CheckAvailableAttack()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, target.transform.position - this.transform.position, out hit,1000))
+        {
+            //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+            //Debug.LogWarning("Did Hit:");
+            //if (!!hit.transform.gameObject.GetComponent<EnemyManager>())
+            if (hit.transform.gameObject.CompareTag("Player"))
+            {
+                return true;
+            }
+            return false;
+        }
+        else
+        {
+            //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+            //Debug.LogWarning("Did not Hit");
+            return true;
+        }
     }
 }
