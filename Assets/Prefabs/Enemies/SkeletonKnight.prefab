@@ -287,7 +287,7 @@ Transform:
   m_GameObject: {fileID: 7327495030661986757}
   m_LocalRotation: {x: -0.7071069, y: -0.00000004412232, z: 0.00000004017136, w: 0.70710677}
   m_LocalPosition: {x: -0.0016018105, y: 0.0010928726, z: 0.0084278295}
-  m_LocalScale: {x: 1, y: 1, z: 0.9999999}
+  m_LocalScale: {x: 1, y: 1.5, z: 0.9999999}
   m_Children:
   - {fileID: 7327495030661727479}
   m_Father: {fileID: 7327495030661822039}
@@ -1598,7 +1598,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -1651,7 +1651,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -1704,7 +1704,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -1757,7 +1757,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -6107,7 +6107,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -6228,8 +6228,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttackCountDown: 0
   TimeCount: 0
-  SkillBlowFlySpeed: 8
-  ShootPoint: {fileID: 0}
+  SkillBlowFlySpeed: 10
+  ShootPoint: {fileID: 7327495030661840015}
   target: {fileID: 0}
   skillBlowPrefabs: {fileID: 2842845842128036240, guid: d9558f2a0ec8eab48bbb3d3d03f9c9d4,
     type: 3}

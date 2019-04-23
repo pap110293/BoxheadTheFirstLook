@@ -36,6 +36,7 @@ public class EnemyAttacker : MonoBehaviour
         Transform _targetAim = target.transform;
         var SkillBlow = Instantiate(skillBlowPrefabs, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<SkillBlow>();
         SkillBlow.transform.position = ShootPoint.position;
-        SkillBlow.InitSkillBlow(ShootPoint, target, _targetAim, flySpeed,false);
+        //SkillBlow.InitSkillBlow(ShootPoint, target, _targetAim, flySpeed);
+        SkillBlow.InitSkillBlow(ShootPoint, target, target.transform.position, flySpeed);
     }
 }
