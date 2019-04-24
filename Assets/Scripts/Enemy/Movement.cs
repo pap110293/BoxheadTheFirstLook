@@ -4,15 +4,20 @@ using UnityEngine;
 using UnityEngine.AI;
 public class Movement : MonoBehaviour
 {
-    public float flyDictance;
+    public float flyHeight;
+    public Transform model;
+
     NavMeshAgent navMeshAgent;
-    void Start()
+    private Transform target;
+
+    void Awake()
     {
         navMeshAgent = this.GetComponent<NavMeshAgent>();
     }
     public void SetMove(Transform _target)
     {
         navMeshAgent.SetDestination(_target.position);
+        target = _target;
     }
     public void Stop()
     {
@@ -20,9 +25,14 @@ public class Movement : MonoBehaviour
     }
     void Update()
     {
-        if (flyDictance > 0) 
+        if (flyHeight > 0) 
         {
-            this.transform.position = new Vector3(this.transform.position.x, flyDictance, this.transform.position.z);
-        }        
+            model.localPosition = new Vector3(0, flyHeight, 0);
+        }
+        if (target != null)
+        {
+            transform.LookAt(target);
+            model.LookAt(target);
+        }
     }
 }

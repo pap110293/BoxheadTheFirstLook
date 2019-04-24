@@ -14,13 +14,20 @@ public class Spawner : MonoBehaviour
     }
 
     public SpawnerObject[] spawnerObjects;
-    public float spawnSpeed = 1.0f;
+    public float duration = 10.0f;
+    public int numberOfObject = 10;
     public Vector3 size = new Vector3(10.0f, 1.0f, 10.0f);
     public bool isSpawning { get { return spawning; } }
 
+    private float spawnSpeed = 1.0f;
     private float timing = 0.0f;
     [SerializeField]
     private bool spawning = false;
+
+    private void Start()
+    {
+        spawnSpeed = duration / numberOfObject;
+    }
 
     private void Update()
     {
@@ -49,21 +56,40 @@ public class Spawner : MonoBehaviour
     }
 
     private void Spawn()
-    {
-        var randomNum = UnityEngine.Random.value;
+    {   
+        float totalRate = TotalSpawnRate();
+        var randomNum = UnityEngine.Random.Range(0f, totalRate);
 
         foreach (var ob in spawnerObjects)
         {
-            if (randomNum < ob.percent/100.0f)
+            if (randomNum < ob.percent)
             {
-                var x = UnityEngine.Random.Range(transform.position.x - size.x/2, transform.position.x + size.x/2);
-                var z = UnityEngine.Random.Range(transform.position.z - size.z/2, transform.position.z + size.z/2);
-                var y = transform.position.y;
-                var position = new Vector3(x, y, z);
-                Instantiate(ob.Obj, position, Quaternion.identity);
+                SpawnZombie(ob);
+                return;
             }
+            randomNum -= ob.percent;
         }
     }
+
+    private void SpawnZombie(SpawnerObject ob)
+    {
+        var x = UnityEngine.Random.Range(transform.position.x - size.x / 2, transform.position.x + size.x / 2);
+        var z = UnityEngine.Random.Range(transform.position.z - size.z / 2, transform.position.z + size.z / 2);
+        var y = transform.position.y;
+        var position = new Vector3(x, y, z);
+        Instantiate(ob.Obj, position, Quaternion.identity);
+    }
+
+    private float TotalSpawnRate()
+    {
+        var total = 0f;
+        foreach (var ob in spawnerObjects)
+        {
+            total += ob.percent;
+        }
+        return total;
+    }
+
 
     private void OnDrawGizmos()
     {
