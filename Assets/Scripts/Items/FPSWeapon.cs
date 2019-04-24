@@ -258,5 +258,6 @@ public class FPSWeapon : FPSItem
     {
         animator.SetInteger("shoot_type", (int)Type);
         MasterManager.gameHUBCanvas.UnScoped();
+        reloading = false;
     }
 }
