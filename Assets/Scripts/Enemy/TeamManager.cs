@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts;
 using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,14 +10,19 @@ public class TeamManager : MonoBehaviour
     public Team team = Team.TeamNone;
     public Transform target;
     public List<GameObject> listTarget = new List<GameObject>();
-    private float timeFind;
+    private float timeFind = 1.0f;
     //private Health health;
     public void Start()
     {
-        //health = this.gameObject.GetComponent<Health>();
+        FindTarget();
     }
     public void FindTarget()
     {
+        if(listTarget.Count == 0)
+        {
+            listTarget = GameObject.FindGameObjectsWithTag("Player").ToList();
+        }
+
         if (listTarget.Count > 0)
         {
             foreach (var _item in listTarget)

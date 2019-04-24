@@ -13,13 +13,14 @@ public class Spawner : MonoBehaviour
         public float percent;
     }
 
-    public bool spawning = false;
     public SpawnerObject[] spawnerObjects;
     public float spawnSpeed = 1.0f;
     public Vector3 size = new Vector3(10.0f, 1.0f, 10.0f);
     public bool isSpawning { get { return spawning; } }
 
     private float timing = 0.0f;
+    [SerializeField]
+    private bool spawning = false;
 
     private void Update()
     {

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SkillBlow : MonoBehaviour
 {
+    public int damage = 10;
+
     private Transform PawnPoint;
     private Transform Target;
     private Transform TargetAim;
@@ -90,14 +92,9 @@ public class SkillBlow : MonoBehaviour
             {
                 if (other.gameObject == Target.gameObject)
                 {
-                    //var _health = other.gameObject.GetComponent<Health>();
-                    //if(_health)
-                    //{
-                    //    _health.TakeDamage(10);
-                    //}
-                    Debug.Log("Enemy Attack Hit");
                     isDisable = true;
                     Destroy(gameObject);
+                    SkillHit(other);
                 }
             }
             else
@@ -107,5 +104,17 @@ public class SkillBlow : MonoBehaviour
             }
         }
     }
-    
+
+    private void SkillHit(Collider other)
+    {
+        DamagePackage dm = new DamagePackage
+        {
+            Damage = damage,
+            Normal = Vector3.up,
+            Direction = Vector3.zero,
+            Position = other.transform.position,
+        };
+
+        other.SendMessage("OnHit", dm, SendMessageOptions.DontRequireReceiver);
+    }
 }

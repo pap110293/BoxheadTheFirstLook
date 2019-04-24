@@ -19,12 +19,12 @@ public struct DamagePackage
 
 public class HitMark : MonoBehaviour
 {
-    public LifeBase life;
     public GameObject HitFX;
     public float DamageMult = 1;
     // 8 must be a Hitbox Layer;
     public int HitboxPhysicLayer = 8;
 
+    private LifeBase life;
     private void Awake()
     {
         this.gameObject.layer = HitboxPhysicLayer;
@@ -54,7 +54,6 @@ public class HitMark : MonoBehaviour
 
         // add particle effect at hit position
         ParticleFX(pack.Position, pack.Normal);
-
     }
     public void OnHitTest(DamagePackage pack)
     {

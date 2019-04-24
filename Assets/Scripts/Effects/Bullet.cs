@@ -70,17 +70,6 @@ public class Bullet : MonoBehaviour
                 Position = hited.point,
             };
 
-            //GameObject fx;
-            //var life = hited.collider.GetComponent<Life>();
-            //var rotation = Quaternion.LookRotation(hited.normal);
-            //var hitMask = hited.collider.GetComponent<HitMark>();
-            //if (hitMask)
-            //{
-            //    var fxObject = hitMask.HitFX;
-            //    fx = Instantiate(fxObject, hited.point, rotation);
-            //    Destroy(fx, effectTime);
-            //}
-
             hited.collider.SendMessage("OnHit", dm, SendMessageOptions.DontRequireReceiver);
 
             gameObject.SetActive(false);

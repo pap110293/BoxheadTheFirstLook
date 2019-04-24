@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class LifeBase : MonoBehaviour
 {
-    public int maxHeath = 100;
+    public int maxHP = 100;
     public int maxArmor = 100;
     private int currentArmor;
-    private int currentHeath;
+    private int currentHP;
 
     public int CurrentArmor { get { return currentArmor; } }
-    public int CurrentHeath { get { return currentHeath; } }
+    public int CurrentHP { get { return currentHP; } }
 
     private void Start()
     {
@@ -27,12 +27,12 @@ public class LifeBase : MonoBehaviour
 
     public virtual void Init()
     {
-        currentHeath = maxHeath;
+        currentHP = maxHP;
     }
 
     public virtual bool IsDead()
     {
-        return currentHeath <= 0;
+        return currentHP <= 0;
     }
 
     public virtual void TakeDamage(int damage)
@@ -42,22 +42,22 @@ public class LifeBase : MonoBehaviour
             currentArmor -= damage;
             if (currentArmor < 0)
             {
-                currentHeath -= currentArmor;
+                currentHP -= currentArmor;
                 currentArmor = 0;
             }
         }
         else
         {
-            currentHeath -= damage;
+            currentHP -= damage;
         }
 
-        currentHeath = Mathf.Clamp(currentHeath, 0, maxHeath);
+        currentHP = Mathf.Clamp(currentHP, 0, maxHP);
     }
 
     public virtual void Heal(int heal)
     {
-        currentHeath += heal;
-        currentHeath = Mathf.Clamp(currentHeath, 0, maxHeath);
+        currentHP += heal;
+        currentHP = Mathf.Clamp(currentHP, 0, maxHP);
     }
 
     public virtual void AddArmo(int armor)

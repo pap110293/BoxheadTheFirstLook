@@ -19,6 +19,8 @@ GameObject:
   - component: {fileID: 1291664968}
   - component: {fileID: 1291664967}
   - component: {fileID: 1291664966}
+  - component: {fileID: 8667566661259391727}
+  - component: {fileID: 8355323808581876568}
   m_Layer: 0
   m_Name: SkeletonMage
   m_TagString: Untagged
@@ -162,10 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team: 0
   target: {fileID: 0}
-  listTarget:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  listTarget: []
 --- !u!114 &1291664968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +212,36 @@ MonoBehaviour:
   currentAnimState: 0
   animator: {fileID: 715624626807733621}
   animSpeed: 1
+--- !u!114 &8667566661259391727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5329938760072784364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3615198484d4bd04a90ce82e4a58af42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHeath: 100
+  maxArmor: 100
+  fxOndead: {fileID: 100000, guid: 4c467f85f6b21f54c835a7a5f4fb1d8f, type: 3}
+--- !u!114 &8355323808581876568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5329938760072784364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05d31853b75195347a34c5ee58c21748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitFX: {fileID: 100000, guid: d57dbdf2451f7164a8709e9c61f813a3, type: 3}
+  DamageMult: 1
+  HitboxPhysicLayer: 8
 --- !u!1 &8404270469048206497
 GameObject:
   m_ObjectHideFlags: 0

@@ -6054,6 +6054,8 @@ GameObject:
   - component: {fileID: 7627813415215022354}
   - component: {fileID: 4272222312954497593}
   - component: {fileID: 352979008448347114}
+  - component: {fileID: 325101423599727106}
+  - component: {fileID: 5959634240954355089}
   m_Layer: 0
   m_Name: SkeletonKnight
   m_TagString: Untagged
@@ -6197,10 +6199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   team: 0
   target: {fileID: 0}
-  listTarget:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  listTarget: []
 --- !u!114 &7627813415215022354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6248,3 +6247,33 @@ MonoBehaviour:
   currentAnimState: 0
   animator: {fileID: 8846445596957168664}
   animSpeed: 1
+--- !u!114 &325101423599727106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8846445596957168667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3615198484d4bd04a90ce82e4a58af42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHeath: 100
+  maxArmor: 100
+  fxOndead: {fileID: 100000, guid: 4c467f85f6b21f54c835a7a5f4fb1d8f, type: 3}
+--- !u!114 &5959634240954355089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8846445596957168667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05d31853b75195347a34c5ee58c21748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitFX: {fileID: 100000, guid: d57dbdf2451f7164a8709e9c61f813a3, type: 3}
+  DamageMult: 1
+  HitboxPhysicLayer: 8
