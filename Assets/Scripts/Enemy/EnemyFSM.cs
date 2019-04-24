@@ -13,6 +13,7 @@ public class EnemyFSM
     private float bowRange, dangerRange, meleeRange;
     public EnemyManager enemyManager;
     public float PlayerDistance { get; set; } 
+    public bool IsValidAttack { get; set; }
     public void Init(float _bowRange, float _dangerRange, float _meleeRange, EnemyManager _enemyManager)
     {
         bowRange = _bowRange;
@@ -105,7 +106,7 @@ public class EnemyFSM
             new StateMachine.Transition()
             {
                 targetState = rangeAttackState,
-                IsTriggered = () => PlayerDistance <= bowRange - 0.1f
+                IsTriggered = () => (PlayerDistance <= bowRange - 0.1f && IsValidAttack)
             }
         };
     }
@@ -116,7 +117,7 @@ public class EnemyFSM
             new StateMachine.Transition()
             {
                 targetState = chasingState,
-                IsTriggered = () => PlayerDistance > bowRange
+                IsTriggered = () => (PlayerDistance > bowRange || !IsValidAttack)
             },
             new StateMachine.Transition()
             {

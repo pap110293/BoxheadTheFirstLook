@@ -11,10 +11,11 @@ public class SkillBlow : MonoBehaviour
     private bool isDisable;
     private bool isFollow;
     private Vector3 vecDelta;
+    private Vector3 vecGoto;
     void Start()
     {
         isDisable = false;
-        isFollow = false;
+        //isFollow = false;
     }
     
     void Update()
@@ -24,26 +25,44 @@ public class SkillBlow : MonoBehaviour
             if (isFollow)
                 MoveToFollow(Target, TargetAim, FlySpeed);
             else
-                MoveTo(TargetAim, FlySpeed);
+                MoveTo(Target, vecGoto, FlySpeed);
         }
         else
         {
             Destroy(this.gameObject);
-        }       
+        } 
+        if(Vector3.Distance(vecGoto, vecDelta)<=Vector3.Distance(vecDelta,this.transform.position))
+        {
+            Destroy(this.gameObject);
+        }
     }
-    public void InitSkillBlow(Transform _pawnPoint, Transform _target,Transform _targetAim,float flySpeed,bool _isFollow)
+    public void InitSkillBlow(Transform _pawnPoint, Transform _target,Transform _targetAim,float flySpeed)//Init bullet follow target
     {
         if (!_pawnPoint || !_target || !_targetAim)
         {
             Destroy(this.gameObject);
             return;
         }
-        Target = _target;
-        FlySpeed = flySpeed;
         PawnPoint = _pawnPoint;
+        Target = _target;
         TargetAim = _targetAim;
+        FlySpeed = flySpeed;
         vecDelta = PawnPoint.position;
-        isFollow = _isFollow;
+        isFollow = true;
+    }
+    public void InitSkillBlow(Transform _pawnPoint, Transform _target,Vector3 _posGoto, float flySpeed)//Init bullet don't follow target
+    {
+        if (!_pawnPoint || !_target)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        PawnPoint = _pawnPoint;
+        Target = _target;
+        vecGoto = _posGoto;
+        FlySpeed = flySpeed;
+        vecDelta = PawnPoint.position;
+        isFollow = false;
     }
     private void MoveToFollow(Transform target, Transform targetAim, float flySpeed)
     {
@@ -57,45 +76,35 @@ public class SkillBlow : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(_look);
         }
     }
-    private void MoveTo(Transform movePos, float flySpeed)
-    {
-        if (!movePos)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            transform.position = Vector3.MoveTowards(transform.position, movePos.position, flySpeed = flySpeed * Time.deltaTime);
-            Vector3 _look = movePos.position - vecDelta;
-            transform.rotation = Quaternion.LookRotation(_look);
-        }
+    private void MoveTo(Transform target, Vector3 movePos, float flySpeed)
+    {        
+        transform.position = Vector3.MoveTowards(transform.position, movePos, flySpeed = flySpeed * Time.deltaTime);
+        Vector3 _look = movePos - vecDelta;
+        transform.rotation = Quaternion.LookRotation(_look);
     }
     private void OnTriggerEnter(Collider other)
     {
         if (!isDisable)
-        {
-            isDisable = true;
-            Destroy(gameObject, 1);
-
-            //Debug.LogError("triger");
-            //if (Target != null)
-            //{                
-            //    if (other.gameObject == Target.gameObject)
-            //    {
-            //        //var _health = other.gameObject.GetComponent<Health>();
-            //        //if(_health)
-            //        //{
-            //        //    _health.TakeDamage(10);
-            //        //}
-            //        isDisable = true;
-            //        Destroy(gameObject, 1);
-            //    }
-            //}
-            //else
-            //{
-            //    isDisable = true;
-            //    Destroy(this.gameObject);
-            //}
+        {                       
+            if (Target != null)
+            {
+                if (other.gameObject == Target.gameObject)
+                {
+                    //var _health = other.gameObject.GetComponent<Health>();
+                    //if(_health)
+                    //{
+                    //    _health.TakeDamage(10);
+                    //}
+                    Debug.Log("Enemy Attack Hit");
+                    isDisable = true;
+                    Destroy(gameObject);
+                }
+            }
+            else
+            {
+                isDisable = true;
+                Destroy(this.gameObject);
+            }
         }
     }
     
