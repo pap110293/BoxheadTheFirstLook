@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class FPSItem : MonoBehaviour
 {
-    public int amount = 0;
     public int maxAmount = 1;
     [HideInInspector]
     public bool fire1, fire2;
+    public bool isLocked = true;
 
+    [SerializeField]
+    protected int amount = 0;
     public virtual void OnFire1()
     {
         fire1 = true;
@@ -31,7 +33,7 @@ public class FPSItem : MonoBehaviour
 
     public virtual bool IsItemAvailable()
     {
-        return amount > 0;
+        return amount > 0 && !isLocked;
     }
 
     public virtual bool Reload()
@@ -49,4 +51,15 @@ public class FPSItem : MonoBehaviour
 
     }
 
+    public virtual void UnlockItem()
+    {
+        isLocked = false;
+    }
+
+    public void AddMore(int amount)
+    {
+        this.amount += amount;
+        if (this.amount > maxAmount)
+            this.amount = maxAmount;
+    }
 }

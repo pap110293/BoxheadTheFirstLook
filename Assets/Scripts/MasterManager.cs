@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class MasterManager : MonoBehaviour
 {
-    public static GameHUBManager gameHUBCanvas; 
+    public static GameHUBManager gameHUBCanvas;
+    public static FPSItemController fpsItemController;
 }

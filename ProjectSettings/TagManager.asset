@@ -21,7 +21,7 @@ TagManager:
   - HitBox
   - PlayerObject
   - Weapon
-  - 
+  - PickUpItem
   - 
   - 
   - 

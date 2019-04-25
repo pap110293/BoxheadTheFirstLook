@@ -12,6 +12,7 @@ public class FPSItemController : MonoBehaviour
 
     private void Start()
     {
+        MasterManager.fpsItemController = this;
         ChooseItem(0);
     }
 
@@ -121,5 +122,36 @@ public class FPSItemController : MonoBehaviour
     public FPSItem GetCurrentItem()
     {
         return currentItem;
+    }
+
+    public int NextFPSItemCanUnlock()
+    {
+        for (int i = 0; i < itemSlots.Length; i++)
+        {
+            if (itemSlots[i].Item.isLocked)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public IEnumerable<FPSItem> GetUnlockedFPSItems()
+    {
+        List<FPSItem> unlockedItems = new List<FPSItem>();
+        foreach (var item in itemSlots)
+        {
+            if(!item.Item.isLocked)
+            {
+                unlockedItems.Add(item.Item);
+            }
+        }
+        return unlockedItems;
+    }
+
+    public void UnlockNextItem()
+    {
+        int index = NextFPSItemCanUnlock();
+        itemSlots[index].Item.UnlockItem();
     }
 }

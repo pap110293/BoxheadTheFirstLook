@@ -38,4 +38,10 @@ public class PlayerLife : LifeBase
         MasterManager.gameHUBCanvas.updateArmorUI(CurrentArmor);
         MasterManager.gameHUBCanvas.UpdateHPUI(CurrentHP);
     }
+
+    public override void Heal(int heal)
+    {
+        base.Heal(heal);
+        // show text
+    }
 }

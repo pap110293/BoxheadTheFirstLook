@@ -27,7 +27,7 @@ public class FPSItemToThrow : FPSItem
     }
 
     public override void OnFire1()
-    {
+    {   
         base.OnFire1();
         if (!isThrow && amount > 0)
         {

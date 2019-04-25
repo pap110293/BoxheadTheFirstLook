@@ -260,4 +260,18 @@ public class FPSWeapon : FPSItem
         MasterManager.gameHUBCanvas.UnScoped();
         reloading = false;
     }
+
+    public Delegate upgrate;
+
+    public void AddAmmor(int amount)
+    {
+        ammoHave += amount;
+        if (ammoHave > maxAmmo)
+            ammoHave = maxAmmo;
+    }
+
+    public void AddDamage(int amount)
+    {
+        Damage += amount;
+    }
 }
