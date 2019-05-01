@@ -61,6 +61,7 @@ public class FPSWeapon : FPSItem
     public WeaponType weaponType;
     public float FOVZoom = 65;
     public bool canScope = false;
+    public string weaponName;
 
     private void Awake()
     {
@@ -268,10 +269,13 @@ public class FPSWeapon : FPSItem
         ammoHave += amount;
         if (ammoHave > maxAmmo)
             ammoHave = maxAmmo;
+
+        MasterManager.gameHUBCanvas.PushNotification(weaponName + " add more ammor");
     }
 
     public void AddDamage(int amount)
     {
         Damage += amount;
+        MasterManager.gameHUBCanvas.PushNotification(weaponName + " add " + amount + " damage");
     }
 }

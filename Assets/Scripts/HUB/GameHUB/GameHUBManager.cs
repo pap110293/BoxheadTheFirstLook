@@ -12,6 +12,8 @@ public class GameHUBManager : MonoBehaviour
     private float defaultFOV;
     [SerializeField]
     private Text hp, armor;
+    [SerializeField]
+    private GameObject notification;
 
     public GameObject crossHair;
     public GameObject crossHairZoom;
@@ -62,6 +64,16 @@ public class GameHUBManager : MonoBehaviour
         {
             if (armor < 0) armor = 0;
             this.armor.text = armor + "";
+        }
+    }
+
+    public void PushNotification(string content)
+    {
+        var notificationObj = Instantiate(notification, this.transform);
+        var notificationText = notificationObj.GetComponent<Text>();
+        if(notificationText)
+        {
+            notificationText.text = content;
         }
     }
 }

@@ -86,34 +86,23 @@ public class SkillBlow : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (!isDisable)
-        {                       
-            if (Target != null)
-            {
-                if (other.gameObject == Target.gameObject)
-                {
-                    isDisable = true;
-                    Destroy(gameObject);
-                    SkillHit(other);
-                }
-            }
-            else
-            {
-                isDisable = true;
-                Destroy(this.gameObject);
-            }
+        if (!isDisable && other.gameObject != gameObject)
+        {
+            isDisable = true;
+            Destroy(gameObject);
+            SkillHit(other);
         }
     }
 
     private void SkillHit(Collider other)
     {
-        DamagePackage dm = new DamagePackage
-        {
-            Damage = damage,
-            Normal = Vector3.up,
-            Direction = Vector3.zero,
-            Position = other.transform.position,
-        };
+            DamagePackage dm = new DamagePackage
+            {
+                Damage = damage,
+                Normal = Vector3.up,
+                Direction = Vector3.zero,
+                Position = other.transform.position,
+            };
 
         other.SendMessage("OnHit", dm, SendMessageOptions.DontRequireReceiver);
     }

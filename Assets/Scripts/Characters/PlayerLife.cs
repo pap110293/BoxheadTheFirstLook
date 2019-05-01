@@ -42,6 +42,8 @@ public class PlayerLife : LifeBase
     public override void Heal(int heal)
     {
         base.Heal(heal);
+        updateUI();
         // show text
+        MasterManager.gameHUBCanvas.PushNotification("Heal " + heal);
     }
 }

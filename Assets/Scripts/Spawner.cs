@@ -19,6 +19,7 @@ public class Spawner : MonoBehaviour
     public Vector3 size = new Vector3(10.0f, 1.0f, 10.0f);
     public bool isSpawning { get { return spawning; } }
 
+    private int counting = 0;
     private float spawnSpeed = 1.0f;
     private float timing = 0.0f;
     [SerializeField]
@@ -26,12 +27,13 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
+        counting = 0;
         spawnSpeed = duration / numberOfObject;
     }
 
     private void Update()
     {
-        if (!spawning)
+        if (!spawning || counting >= numberOfObject)
             return;
 
         if (timing <= 0)
@@ -52,6 +54,7 @@ public class Spawner : MonoBehaviour
 
     public void StopSpawn()
     {
+        counting = 0;
         spawning = false;
     }
 
@@ -64,6 +67,7 @@ public class Spawner : MonoBehaviour
         {
             if (randomNum < ob.percent)
             {
+                counting++;
                 SpawnZombie(ob);
                 return;
             }

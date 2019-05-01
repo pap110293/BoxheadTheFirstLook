@@ -32,7 +32,7 @@ public class Movement : MonoBehaviour
         if (target != null)
         {
             transform.LookAt(target);
-            model.LookAt(target);
+            //model.LookAt(target);
         }
     }
 }
