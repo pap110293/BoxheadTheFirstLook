@@ -12,4 +12,14 @@ public class MainMenuController : MonoBehaviour
     {
         SceneManager.LoadScene(mainSceneIndex);
     }
+
+    public void GotoOpstionScene()
+    {
+        //SceneManager.LoadScene(optionSceneIndex);
+    }
+
+    public void ExitApp()
+    {
+        Application.Quit();
+    }
 }

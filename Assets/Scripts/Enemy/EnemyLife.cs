@@ -14,6 +14,11 @@ public class EnemyLife : LifeBase
         {
             var fx = Instantiate(fxOndead, transform.position, Quaternion.identity);
             Destroy(fx, 1.0f);
+            var item = MasterManager.itemSpawnerController.GetItem();
+            if (item)
+            {
+                Instantiate(item, transform.position, Quaternion.identity);
+            }
         }
     }
 }
