@@ -18,6 +18,7 @@ public class GameHUBManager : MonoBehaviour
     public GameObject crossHair;
     public GameObject crossHairZoom;
 
+    public Text ammoText;
 
     private void Awake()
     {
@@ -75,5 +76,17 @@ public class GameHUBManager : MonoBehaviour
         {
             notificationText.text = content;
         }
+    }
+
+    public void UpdateAmmoUI(int current, int have)
+    {
+        if (!ammoText.gameObject.activeSelf)
+            ammoText.gameObject.SetActive(true);
+        ammoText.text = current + " / " + have;
+    }
+
+    public void DisableAmmoUI()
+    {
+        ammoText.gameObject.SetActive(false);
     }
 }

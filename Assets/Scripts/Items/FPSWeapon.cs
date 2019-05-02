@@ -61,7 +61,6 @@ public class FPSWeapon : FPSItem
     public WeaponType weaponType;
     public float FOVZoom = 65;
     public bool canScope = false;
-    public string weaponName;
 
     private void Awake()
     {
@@ -91,6 +90,11 @@ public class FPSWeapon : FPSItem
             else
                 OnUnScoped();
         }
+    }
+
+    private void UpdateAmmoUI()
+    {
+        MasterManager.gameHUBCanvas.UpdateAmmoUI(ammo, ammoHave);
     }
 
     private void OnUnScoped()
@@ -141,6 +145,7 @@ public class FPSWeapon : FPSItem
                 timeTemp = FireRate;
             }
         }
+        UpdateAmmoUI();
     }
 
     private void ShootTheBullet()
@@ -253,6 +258,7 @@ public class FPSWeapon : FPSItem
         }
         base.ReloadComplete();
         reloading = false;
+        UpdateAmmoUI();
     }
 
     private void OnEnable()
@@ -260,22 +266,23 @@ public class FPSWeapon : FPSItem
         animator.SetInteger("shoot_type", (int)Type);
         MasterManager.gameHUBCanvas.UnScoped();
         reloading = false;
+        if (weaponType == WeaponType.Gun)
+            UpdateAmmoUI();
+        else if (weaponType == WeaponType.Tool)
+            MasterManager.gameHUBCanvas.DisableAmmoUI();
     }
-
-    public Delegate upgrate;
-
-    public void AddAmmor(int amount)
+    public void AddAmmo(int amount)
     {
         ammoHave += amount;
         if (ammoHave > maxAmmo)
             ammoHave = maxAmmo;
 
-        MasterManager.gameHUBCanvas.PushNotification(weaponName + " add more ammor");
+        MasterManager.gameHUBCanvas.PushNotification(itemName + " add ammor " + amount);
     }
 
     public void AddDamage(int amount)
     {
         Damage += amount;
-        MasterManager.gameHUBCanvas.PushNotification(weaponName + " add " + amount + " damage");
+        MasterManager.gameHUBCanvas.PushNotification(itemName + " add " + amount + " damage");
     }
 }

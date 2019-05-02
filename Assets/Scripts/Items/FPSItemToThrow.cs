@@ -21,13 +21,19 @@ public class FPSItemToThrow : FPSItem
         audioSource = GetComponent<AudioSource>();
     }
 
+    private void UpdateAmountUI()
+    {
+        MasterManager.gameHUBCanvas.UpdateAmmoUI(amount, maxAmount);
+    }
+
     private void OnEnable()
     {
         animator.SetInteger("shoot_type", throwType);
+        UpdateAmountUI();
     }
 
     public override void OnFire1()
-    {   
+    {
         base.OnFire1();
         if (!isThrow && amount > 0)
         {
@@ -58,6 +64,7 @@ public class FPSItemToThrow : FPSItem
             rb.AddForce(transform.forward * force, ForceMode.Force);
             if(!infinity)
                 amount--;
+            UpdateAmountUI();
         }
 
         if(amount <= 0)

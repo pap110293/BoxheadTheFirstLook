@@ -112,6 +112,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &126086766 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 126086766, guid: 1cf31489969381c4a818ff39a43a3500,
+    type: 3}
+  m_PrefabInstance: {fileID: 2004323586}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &165806415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -810,6 +822,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3833984844522386248, guid: 1cf31489969381c4a818ff39a43a3500,
+        type: 3}
+      propertyPath: AmmoText
+      value: 
+      objectReference: {fileID: 126086766}
+    - target: {fileID: 126086765, guid: 1cf31489969381c4a818ff39a43a3500, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 47.19995
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cf31489969381c4a818ff39a43a3500, type: 3}

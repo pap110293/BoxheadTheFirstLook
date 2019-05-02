@@ -6,9 +6,9 @@ public class PickUpItemHealth : PickUpItemBase
 {
     [Range(0f,100f)]
     public int healPercent = 30;
-    public override void ExecuteItem()
+    public override void PickUpItem()
     {
-        base.ExecuteItem();
+        base.PickUpItem();
         if (MasterManager.fpsItemController == null) return;
 
         var life = MasterManager.fpsItemController.GetComponent<PlayerLife>();

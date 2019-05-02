@@ -8,6 +8,7 @@ public class FPSItem : MonoBehaviour
     [HideInInspector]
     public bool fire1, fire2;
     public bool isLocked = true;
+    public string itemName;
 
     [SerializeField]
     protected int amount = 0;

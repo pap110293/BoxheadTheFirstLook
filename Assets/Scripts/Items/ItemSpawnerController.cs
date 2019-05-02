@@ -14,7 +14,7 @@ public class ItemSpawnerController : MonoBehaviour
     public GameObject GetItem()
     {
         float totalRate = TotalSpawnRate();
-        var randomNum = UnityEngine.Random.Range(0f, totalRate);
+        var randomNum = Random.Range(0f, totalRate);
 
         foreach (var ob in spawnerObjects)
         {

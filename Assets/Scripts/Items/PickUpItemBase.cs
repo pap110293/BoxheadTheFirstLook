@@ -18,13 +18,13 @@ public class PickUpItemBase : MonoBehaviour
         {
             if (ob.CompareTag("Player"))
             {
-                ExecuteItem();
+                PickUpItem();
                 Destroy(gameObject);
             }
         }
     }
 
-    public virtual void ExecuteItem()
+    public virtual void PickUpItem()
     {
         
     }

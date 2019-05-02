@@ -6,9 +6,9 @@ using UnityEngine;
 public class PickUpItemPowerUp : PickUpItemBase
 {
     public int damageToAdd = 10;
-    public override void ExecuteItem()
+    public override void PickUpItem()
     {
-        base.ExecuteItem();
+        base.PickUpItem();
         if (MasterManager.fpsItemController)
         {
             var unlockedItems = MasterManager.fpsItemController.GetUnlockedFPSItems()
