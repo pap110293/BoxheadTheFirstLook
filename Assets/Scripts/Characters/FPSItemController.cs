@@ -19,6 +19,8 @@ public class FPSItemController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (MasterManager.isPause) return;
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
             ChooseItem(0);
         if (Input.GetKeyDown(KeyCode.Alpha2))
