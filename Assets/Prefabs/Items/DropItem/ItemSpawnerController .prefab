@@ -43,4 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b7ccb928390d48778f2aa39140b3980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnerObjects: []
+  spawnerObjects:
+  - Obj: {fileID: 4039087285630114366, guid: 654a63cb3fb66f344a85faa67bb2d662, type: 3}
+    percent: 20
+  - Obj: {fileID: 1641780700217324795, guid: 821e9421058534a7e8e88c8750f3aef5, type: 3}
+    percent: 10
+  - Obj: {fileID: 281833134398504457, guid: 314e03e83f7e140408c3772ba0f570e1, type: 3}
+    percent: 10
+  - Obj: {fileID: 0}
+    percent: 50

@@ -17,7 +17,7 @@ public class EnemyLife : LifeBase
             var item = MasterManager.itemSpawnerController.GetItem();
             if (item)
             {
-                Instantiate(item, transform.position, Quaternion.identity);
+                var itemInstance = Instantiate(item, transform.position, Quaternion.identity);
             }
         }
     }
