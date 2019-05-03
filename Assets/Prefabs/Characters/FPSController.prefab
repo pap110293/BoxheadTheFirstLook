@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601294955}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0, z: 0.59}
+  m_LocalPosition: {x: -0, y: -0.094, z: 0.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 407451650286767460}
@@ -750,6 +750,7 @@ MonoBehaviour:
   FireRate: 1.5
   Spread: 20
   Damage: 10
+  numberOfBullet: 1
   SoundFire: {fileID: 0}
   SoundReload: {fileID: 0}
   soundClipOut: {fileID: 0}
@@ -1221,6 +1222,11 @@ PrefabInstance:
       propertyPath: itemName
       value: Barrett
       objectReference: {fileID: 0}
+    - target: {fileID: 6607649806970851606, guid: c82ba99bde8acc147a01736c9f141013,
+        type: 3}
+      propertyPath: Spread
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: c82ba99bde8acc147a01736c9f141013, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.117
@@ -1651,7 +1657,7 @@ PrefabInstance:
     - target: {fileID: 1866010978013347016, guid: ce16cf02bb81b6848bdad66c6ba0f3da,
         type: 3}
       propertyPath: Damage
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1866010978013347016, guid: ce16cf02bb81b6848bdad66c6ba0f3da,
         type: 3}
@@ -1697,6 +1703,16 @@ PrefabInstance:
         type: 3}
       propertyPath: itemName
       value: Shot Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866010978013347016, guid: ce16cf02bb81b6848bdad66c6ba0f3da,
+        type: 3}
+      propertyPath: Spread
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866010978013347016, guid: ce16cf02bb81b6848bdad66c6ba0f3da,
+        type: 3}
+      propertyPath: numberOfBullet
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400126, guid: ce16cf02bb81b6848bdad66c6ba0f3da, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2123,6 +2139,11 @@ PrefabInstance:
         type: 3}
       propertyPath: itemName
       value: Pistol
+      objectReference: {fileID: 0}
+    - target: {fileID: 100203498427885547, guid: 266e1dc2315ee8d40af09f793b8eae9d,
+        type: 3}
+      propertyPath: Spread
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 266e1dc2315ee8d40af09f793b8eae9d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2561,6 +2582,11 @@ PrefabInstance:
         type: 3}
       propertyPath: itemName
       value: AK47
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285811045391690362, guid: 44d7a1798f1226b46a9e671633f6bca8,
+        type: 3}
+      propertyPath: Spread
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 44d7a1798f1226b46a9e671633f6bca8, type: 3}
       propertyPath: m_LocalPosition.x

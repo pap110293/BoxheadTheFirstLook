@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
@@ -44,8 +43,9 @@ public class FPSWeapon : FPSItem
     [Header("Firing")]
     public UsingTypes Type = 0;
     public float FireRate = 0.09f;
-    public byte Spread = 20;
+    public float Spread = 20;
     public int Damage = 10;
+    public int numberOfBullet = 1;
 
     [Header("Sound / FX")]
     public AudioClip SoundFire;
@@ -152,10 +152,20 @@ public class FPSWeapon : FPSItem
     {
         if (bulletPrefab && point)
         {
-            var bullet = Instantiate(bulletPrefab, point.position, point.rotation);
-            var bulletClass = bullet.GetComponent<Bullet>();
-            bulletClass.SetDamage(Damage);
+            for (int i = 0; i < numberOfBullet; i++)
+            {
+                Quaternion bulletDirection = GetBulletRotation();
+                var bullet = Instantiate(bulletPrefab, point.position, bulletDirection);
+                bullet.GetComponent<Bullet>().SetDamage(Damage);
+            }
         }
+    }
+
+    private Quaternion GetBulletRotation()
+    {
+        Vector3 spreadDirection = point.position - (point.position + new Vector3(Random.Range(-Spread,Spread),Random.Range(-Spread,Spread),0));
+        Quaternion rotation = Quaternion.Euler(point.rotation.eulerAngles + spreadDirection); 
+        return rotation;
     }
 
     private void CreateMuzzleFX()
