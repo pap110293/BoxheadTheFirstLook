@@ -22,10 +22,14 @@ public class GameHUBManager : MonoBehaviour
 
     private void Awake()
     {
-        MasterManager.gameHUBCanvas = this;
         weaponCamera = GameObject.FindGameObjectWithTag("WeaponCamera");
         mainCamera = Camera.main;
         defaultFOV = mainCamera.fieldOfView;
+    }
+
+    private void Start()
+    {
+        MasterManager.gameHUBCanvas = this;
     }
 
     public void Scoped(float FOVZoom)
@@ -70,14 +74,14 @@ public class GameHUBManager : MonoBehaviour
 
     public void PushNotification(string content)
     {
-        this.PushNotification(content,Color.blue);
+        this.PushNotification(content, Color.blue);
     }
 
-    public void PushNotification(string content,Color color)
+    public void PushNotification(string content, Color color)
     {
         var notificationObj = Instantiate(notification, this.transform);
         var notificationText = notificationObj.GetComponent<Text>();
-        if(notificationText)
+        if (notificationText)
         {
             notificationText.color = color;
             notificationText.text = content;

@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerLife : LifeBase
 {
     public bool isImportal = false;
@@ -29,8 +31,11 @@ public class PlayerLife : LifeBase
         {
             base.OnDead();
             isDead = true;
-            Debug.Log("The player is dead!!!");
-            
+
+            GetComponent<FirstPersonController>().enabled = false;
+            GetComponent<CharacterController>().enabled = false;
+            GetComponent<BoxCollider>().enabled = true;
+            GetComponent<Rigidbody>().isKinematic = false;
         }
     }
 
