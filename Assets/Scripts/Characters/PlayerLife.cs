@@ -30,6 +30,7 @@ public class PlayerLife : LifeBase
             base.OnDead();
             isDead = true;
             Debug.Log("The player is dead!!!");
+            
         }
     }
 
