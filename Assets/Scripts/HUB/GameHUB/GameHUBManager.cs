@@ -70,10 +70,16 @@ public class GameHUBManager : MonoBehaviour
 
     public void PushNotification(string content)
     {
+        this.PushNotification(content,Color.blue);
+    }
+
+    public void PushNotification(string content,Color color)
+    {
         var notificationObj = Instantiate(notification, this.transform);
         var notificationText = notificationObj.GetComponent<Text>();
         if(notificationText)
         {
+            notificationText.color = color;
             notificationText.text = content;
         }
     }

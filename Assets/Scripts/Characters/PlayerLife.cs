@@ -44,6 +44,6 @@ public class PlayerLife : LifeBase
         base.Heal(heal);
         updateUI();
         // show text
-        MasterManager.gameHUBCanvas.PushNotification("Heal " + heal);
+        MasterManager.gameHUBCanvas.PushNotification("Heal " + heal, Color.green);
     }
 }

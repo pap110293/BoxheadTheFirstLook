@@ -9,6 +9,7 @@ public class MasterManager : MonoBehaviour
     public static GameHUBManager gameHUBCanvas;
     public static FPSItemController fpsItemController;
     public static ItemSpawnerController itemSpawnerController;
+    public static MenuInGameController menuInGameController;
 
     public static void PauseGame()
     {

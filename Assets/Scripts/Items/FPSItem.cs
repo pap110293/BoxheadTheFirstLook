@@ -62,5 +62,7 @@ public class FPSItem : MonoBehaviour
         this.amount += amount;
         if (this.amount > maxAmount)
             this.amount = maxAmount;
+        else
+            MasterManager.gameHUBCanvas.PushNotification(itemName + " add " + amount, Color.black);
     }
 }

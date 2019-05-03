@@ -277,12 +277,12 @@ public class FPSWeapon : FPSItem
         if (ammoHave > maxAmmo)
             ammoHave = maxAmmo;
 
-        MasterManager.gameHUBCanvas.PushNotification(itemName + " add ammor " + amount);
+        MasterManager.gameHUBCanvas.PushNotification(itemName + " add ammor " + amount, Color.black);
     }
 
     public void AddDamage(int amount)
     {
         Damage += amount;
-        MasterManager.gameHUBCanvas.PushNotification(itemName + " add " + amount + " damage");
+        MasterManager.gameHUBCanvas.PushNotification(itemName + " add " + amount + " damage", Color.red);
     }
 }
