@@ -24,4 +24,16 @@ public class MasterManager : MonoBehaviour
         Time.timeScale = 1f;
         fpsItemController.GetComponent<FirstPersonController>().canMove = true;
     }
+
+    public static void LockCursor()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public static void UnLockCursor()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
 }
