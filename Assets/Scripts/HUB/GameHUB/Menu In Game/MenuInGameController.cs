@@ -8,10 +8,12 @@ public class MenuInGameController : MonoBehaviour
     public int mainMenuSceneIndex = 0;
     public GameObject panel;
 
+    private void Awake() {
+        MasterManager.menuInGameController = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        MasterManager.menuInGameController = this;
         this.Hide();
     }
 

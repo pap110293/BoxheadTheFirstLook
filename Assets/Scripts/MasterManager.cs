@@ -15,14 +15,12 @@ public class MasterManager : MonoBehaviour
     {
         isPause = true;
         Time.timeScale = 0f;
-        fpsItemController.GetComponent<FirstPersonController>().canMove = false;
     }
 
     public static void ResumeGame()
     {
         isPause = false;
         Time.timeScale = 1f;
-        fpsItemController.GetComponent<FirstPersonController>().canMove = true;
     }
 
     public static void LockCursor()

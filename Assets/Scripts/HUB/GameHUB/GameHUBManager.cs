@@ -25,10 +25,6 @@ public class GameHUBManager : MonoBehaviour
         weaponCamera = GameObject.FindGameObjectWithTag("WeaponCamera");
         mainCamera = Camera.main;
         defaultFOV = mainCamera.fieldOfView;
-    }
-
-    private void Start()
-    {
         MasterManager.gameHUBCanvas = this;
     }
 
