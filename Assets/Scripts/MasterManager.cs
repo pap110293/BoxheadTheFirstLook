@@ -10,7 +10,10 @@ public class MasterManager : MonoBehaviour
     public static FPSItemController fpsItemController;
     public static ItemSpawnerController itemSpawnerController;
     public static MenuInGameController menuInGameController;
-
+    public static GameStateManager gameStateManager;
+    public static GameController gameController;
+    public static LevelConfig levelConfig;
+    public static SpawEnemyManager spawEnemyManager;
     public static void PauseGame()
     {
         isPause = true;

@@ -6,8 +6,9 @@ using UnityEngine;
 public class LevelData
 {
     public int levelId;
-    public float speed;
+    public int numberOfObject;
     public float duration;
+    public int totalEnemy;
     public Spawner.SpawnerObject[] monsters;
 }
 
