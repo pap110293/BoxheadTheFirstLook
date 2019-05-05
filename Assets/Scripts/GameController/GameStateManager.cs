@@ -29,6 +29,7 @@ public class GameStateManager : MonoBehaviour
     public void ResetData()
     {
         waitTime = 0;
+        currWaveLevel = 0;
     }
     
     public void UpdateGameState()
@@ -37,7 +38,7 @@ public class GameStateManager : MonoBehaviour
         {
             case GameState.NewGame:
                 {
-                    currWaveLevel = 0;
+                    ResetData();                    
                     currentGameState = GameState.NewWave;
                     break;
                 }
