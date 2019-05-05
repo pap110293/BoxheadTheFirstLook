@@ -16,6 +16,7 @@ public class GameStateManager : MonoBehaviour
     void Start()
     {
         currWaveLevel = 0;
+        enemyCount = 10;
         playerHealth = 100;
     }
 
