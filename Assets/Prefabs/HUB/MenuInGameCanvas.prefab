@@ -1020,7 +1020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuSceneIndex: 0
-  pausePanel: {fileID: 0}
+  pausePanel: {fileID: 1677369069524167929}
   winPanel: {fileID: 0}
   losePanel: {fileID: 0}
 --- !u!1 &4331801906312002154
