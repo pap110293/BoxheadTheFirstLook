@@ -18,12 +18,14 @@ public class MasterManager : MonoBehaviour
     {
         isPause = true;
         Time.timeScale = 0f;
+        UnLockCursor();
     }
 
     public static void ResumeGame()
     {
         isPause = false;
         Time.timeScale = 1f;
+        LockCursor();
     }
 
     public static void LockCursor()

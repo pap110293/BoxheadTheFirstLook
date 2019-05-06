@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
 
-        PushNotification("Start wave " + (MasterManager.levelConfigManager.currentLeve));
+        PushNotification("Start wave " + (MasterManager.levelConfigManager.currentLevel));
 
         if (MasterManager.spawEnemyManager)
         {
@@ -79,6 +79,7 @@ public class GameController : MonoBehaviour
     IEnumerator WiningProcess()
     {
         PushNotification("you win!!!");
+        StartCoroutine(GameProcess());
         yield return null;
     }
 
