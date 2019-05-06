@@ -6,8 +6,9 @@ public class SpawEnemyManager : MonoBehaviour
 {
     public List<Spawner> spawners;
     public int totalEnemy = 0;
-    void Start()
-    {
+
+    private void Awake() {
+        
         MasterManager.spawEnemyManager = this;
     }
 

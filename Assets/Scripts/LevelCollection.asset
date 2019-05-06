@@ -9,21 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 2e97ebd1f8d5b944797c09a55179ce92, type: 3}
   m_Name: LevelCollection
   m_EditorClassIdentifier: Assembly-CSharp::LevelCollection
-  records:
-  - levelId: 1
-    duration: 2
-    totalSpawnObject: 2
-    monsters:
-    - Obj: {fileID: 8846445596957168667, guid: 6a9c7cec68eec164489f653d6bd3afbf, type: 3}
-      percent: 100
-    boss: {fileID: 0}
-  - levelId: 2
-    duration: 2
-    totalSpawnObject: 2
-    monsters:
-    - Obj: {fileID: 8846445596957168667, guid: 6a9c7cec68eec164489f653d6bd3afbf, type: 3}
-      percent: 100
-    boss: {fileID: 0}
+  character: {fileID: 0}
+  ai: {fileID: 0}
+  ItemSets: []
+  TimeWait: 60
+  CurrentSet: 0

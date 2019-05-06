@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1691100012623550418}
-  - component: {fileID: 1691100012623550420}
   - component: {fileID: 1691100012623550419}
   - component: {fileID: 1691100012623550421}
+  - component: {fileID: 5561727201292251965}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -36,20 +36,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1691100012623550420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1691100012623550417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c9292afe9e47684184c3ddc3bb724b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentGameState: 0
-  PrepareTime: 3
 --- !u!114 &1691100012623550419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,6 +69,19 @@ MonoBehaviour:
     totalSpawnObject: 0
     monsters: []
     boss: {fileID: 0}
+--- !u!114 &5561727201292251965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691100012623550417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51ebf5d41a2b9df43932afe4bcf1af9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PrepareTime: 3
 --- !u!1001 &1691100012188506877
 PrefabInstance:
   m_ObjectHideFlags: 0
