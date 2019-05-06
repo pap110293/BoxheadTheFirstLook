@@ -14,7 +14,7 @@ namespace Assets.Scripts
     public enum GameState
     {
         NewGame,
-        NewWave,
+        Playing,
         Prepare,
         InitWave,
         Action,

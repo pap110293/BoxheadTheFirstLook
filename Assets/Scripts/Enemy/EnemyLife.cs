@@ -8,7 +8,6 @@ public class EnemyLife : LifeBase
     public override void OnDead()
     {
         base.OnDead();
-        Destroy(gameObject);
         gameObject.SetActive(false);
         if (fxOndead)
         {
@@ -20,5 +19,7 @@ public class EnemyLife : LifeBase
                 var itemInstance = Instantiate(item, transform.position, Quaternion.identity);
             }
         }
+        MasterManager.spawEnemyManager.totalEnemy--;
+        Destroy(gameObject);
     }
 }

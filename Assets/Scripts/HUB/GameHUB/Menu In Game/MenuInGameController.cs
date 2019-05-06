@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class MenuInGameController : MonoBehaviour
 {
     public int mainMenuSceneIndex = 0;
-    public GameObject panel;
+    public GameObject pausePanel;
+    public GameObject winPanel;
+    public GameObject losePanel;
 
     private void Awake() {
         MasterManager.menuInGameController = this;
@@ -14,7 +16,8 @@ public class MenuInGameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.Hide();
+        this.HidePauseMenu();
+
     }
 
     void Update()
@@ -30,28 +33,48 @@ public class MenuInGameController : MonoBehaviour
             {
                 MasterManager.PauseGame();
                 MasterManager.UnLockCursor();
-                this.Show();
+                this.ShowPauseMenu();
             }
         }
     }
 
-    public void Show()
+    public void ShowPauseMenu()
     {
         if (!MasterManager.isPause)
             return;
 
-        panel.SetActive(true);
+        pausePanel.SetActive(true);
     }
 
-    public void Hide()
+    public void HidePauseMenu()
     {
-        panel.SetActive(false);
+        pausePanel.SetActive(false);
     }
 
     public void ResumeGame()
     {
         MasterManager.ResumeGame();
-        this.Hide();
+        this.HidePauseMenu();
+    }
+
+    public void HideLosePanel()
+    {
+        losePanel.SetActive(false);
+    }
+
+    public void HideWinPanel()
+    {
+        winPanel.SetActive(false);
+    }
+
+    public void ShowLosePanel()
+    {
+        losePanel.SetActive(true);
+    }
+
+    public void ShowWinPanel()
+    {
+        winPanel.SetActive(true);
     }
 
     public void BackToMenu()
@@ -63,5 +86,10 @@ public class MenuInGameController : MonoBehaviour
     public void ExitToDesktop()
     {
         Application.Quit();
+    }
+
+    public void PlayAgain()
+    {
+        
     }
 }

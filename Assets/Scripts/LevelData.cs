@@ -6,10 +6,10 @@ using UnityEngine;
 public class LevelData
 {
     public int levelId;
-    public int numberOfObject;
     public float duration;
-    public int totalEnemy;
+    public int totalSpawnObject;
     public Spawner.SpawnerObject[] monsters;
+    public GameObject boss;
 }
 
 [CreateAssetMenu(fileName = "LevelData", menuName = "Assets/Create Level Collection")]

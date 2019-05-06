@@ -64,7 +64,7 @@ public class FPSItemController : MonoBehaviour
         }
     }
 
-    private void DisableAllItem()
+    public void DisableAllItem()
     {
         foreach (var itemSlot in itemSlots)
         {

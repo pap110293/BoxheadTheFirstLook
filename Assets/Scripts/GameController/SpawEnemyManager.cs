@@ -5,28 +5,48 @@ using UnityEngine;
 public class SpawEnemyManager : MonoBehaviour
 {
     public List<Spawner> spawners;
-    public int totalEnemy;
+    public int totalEnemy = 0;
     void Start()
     {
         MasterManager.spawEnemyManager = this;
-        //InitSpawners(MasterManager.levelConfig.GetConfigWithLevel(1));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void InitSpawners(LevelData _levelData)
-    {        
-        foreach(var spawner in spawners)
+    {
+        foreach (var spawner in spawners)
+        {
+            spawner.spawnerObjects = _levelData.monsters;
+            spawner.numberOfObject = _levelData.totalSpawnObject / spawners.Count;
+            spawner.duration = _levelData.duration;
+        }
+    }
+
+    public void StopAll()
+    {
+        foreach (var spawner in spawners)
         {
             spawner.StopSpawn();
-            spawner.spawnerObjects = _levelData.monsters;
-            spawner.numberOfObject = _levelData.numberOfObject;
-            spawner.duration = _levelData.duration;
+        }
+    }
+
+    public void StartAll()
+    {
+        foreach (var spawner in spawners)
+        {
             spawner.StartSpawn();
         }
-        
+    }
+
+    public bool IsAllSpawnerStoped
+    {
+        get
+        {
+            foreach (var spawner in spawners)
+            {
+                if (spawner.isSpawning)
+                    return false;
+            }
+            return true;
+        }
     }
 }

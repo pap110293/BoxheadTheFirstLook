@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
     public bool isSpawning { get { return spawning; } }
 
     private int counting = 0;
-    private float spawnSpeed = 1.0f;
+    private float spawnSpeed;
     private float timing = 0.0f;
     [SerializeField]
     private bool spawning = false;
@@ -69,6 +69,10 @@ public class Spawner : MonoBehaviour
             {
                 counting++;
                 SpawnZombie(ob);
+                if(counting >= numberOfObject)
+                {
+                    StopSpawn();
+                }
                 return;
             }
             randomNum -= ob.percent;
@@ -82,6 +86,7 @@ public class Spawner : MonoBehaviour
         var y = transform.position.y;
         var position = new Vector3(x, y, z);
         Instantiate(ob.Obj, position, Quaternion.identity);
+        MasterManager.spawEnemyManager.totalEnemy++;
     }
 
     private float TotalSpawnRate()

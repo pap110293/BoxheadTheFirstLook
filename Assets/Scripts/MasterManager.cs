@@ -12,7 +12,7 @@ public class MasterManager : MonoBehaviour
     public static MenuInGameController menuInGameController;
     public static GameStateManager gameStateManager;
     public static GameController gameController;
-    public static LevelConfig levelConfig;
+    public static LevelConfigManager levelConfigManager;
     public static SpawEnemyManager spawEnemyManager;
     public static void PauseGame()
     {

@@ -33,9 +33,11 @@ public class PlayerLife : LifeBase
             isDead = true;
 
             GetComponent<FirstPersonController>().enabled = false;
+            GetComponent<CapsuleCollider>().enabled = false;
             GetComponent<CharacterController>().enabled = false;
             GetComponent<BoxCollider>().enabled = true;
             GetComponent<Rigidbody>().isKinematic = false;
+            MasterManager.fpsItemController.DisableAllItem();
         }
     }
 

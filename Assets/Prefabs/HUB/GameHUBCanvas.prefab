@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 3833984844522386252}
   - component: {fileID: 3833984844522386248}
   m_Layer: 5
-  m_Name: GameHUB
+  m_Name: GameHUBCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
