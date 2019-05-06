@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
@@ -44,8 +43,9 @@ public class FPSWeapon : FPSItem
     [Header("Firing")]
     public UsingTypes Type = 0;
     public float FireRate = 0.09f;
-    public byte Spread = 20;
+    public float Spread = 20;
     public int Damage = 10;
+    public int numberOfBullet = 1;
 
     [Header("Sound / FX")]
     public AudioClip SoundFire;
@@ -90,6 +90,11 @@ public class FPSWeapon : FPSItem
             else
                 OnUnScoped();
         }
+    }
+
+    private void UpdateAmmoUI()
+    {
+        MasterManager.gameHUBCanvas.UpdateAmmoUI(ammo, ammoHave);
     }
 
     private void OnUnScoped()
@@ -140,16 +145,27 @@ public class FPSWeapon : FPSItem
                 timeTemp = FireRate;
             }
         }
+        UpdateAmmoUI();
     }
 
     private void ShootTheBullet()
     {
         if (bulletPrefab && point)
         {
-            var bullet = Instantiate(bulletPrefab, point.position, point.rotation);
-            var bulletClass = bullet.GetComponent<Bullet>();
-            bulletClass.SetDamage(Damage);
+            for (int i = 0; i < numberOfBullet; i++)
+            {
+                Quaternion bulletDirection = GetBulletRotation();
+                var bullet = Instantiate(bulletPrefab, point.position, bulletDirection);
+                bullet.GetComponent<Bullet>().SetDamage(Damage);
+            }
         }
+    }
+
+    private Quaternion GetBulletRotation()
+    {
+        Vector3 spreadDirection = point.position - (point.position + new Vector3(Random.Range(-Spread,Spread),Random.Range(-Spread,Spread),0));
+        Quaternion rotation = Quaternion.Euler(point.rotation.eulerAngles + spreadDirection); 
+        return rotation;
     }
 
     private void CreateMuzzleFX()
@@ -252,6 +268,7 @@ public class FPSWeapon : FPSItem
         }
         base.ReloadComplete();
         reloading = false;
+        UpdateAmmoUI();
     }
 
     private void OnEnable()
@@ -259,5 +276,23 @@ public class FPSWeapon : FPSItem
         animator.SetInteger("shoot_type", (int)Type);
         MasterManager.gameHUBCanvas.UnScoped();
         reloading = false;
+        if (weaponType == WeaponType.Gun)
+            UpdateAmmoUI();
+        else if (weaponType == WeaponType.Tool)
+            MasterManager.gameHUBCanvas.DisableAmmoUI();
+    }
+    public void AddAmmo(int amount)
+    {
+        ammoHave += amount;
+        if (ammoHave > maxAmmo)
+            ammoHave = maxAmmo;
+
+        MasterManager.gameHUBCanvas.PushNotification(itemName + " add ammor " + amount, Color.black);
+    }
+
+    public void AddDamage(int amount)
+    {
+        Damage += amount;
+        MasterManager.gameHUBCanvas.PushNotification(itemName + " add " + amount + " damage", Color.red);
     }
 }

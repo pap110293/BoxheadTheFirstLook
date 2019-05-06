@@ -11,19 +11,14 @@ namespace Assets.Scripts
         TeamPlayer,
         TeamEnemy
     }
-    public enum CharacterType
-    {
-        Sword,
-        Archer
-    }
     public enum GameState
     {
-        MenuScene,
-        OverScene,
-        Wait,
-        Start,
+        NewGame,
+        Playing,
+        Prepare,
+        InitWave,
         Action,
         ShowDown,
-        End
+        Over
     }
 }

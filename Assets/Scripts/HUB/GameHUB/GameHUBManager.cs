@@ -12,17 +12,20 @@ public class GameHUBManager : MonoBehaviour
     private float defaultFOV;
     [SerializeField]
     private Text hp, armor;
+    [SerializeField]
+    private GameObject notification;
 
     public GameObject crossHair;
     public GameObject crossHairZoom;
 
+    public Text ammoText;
 
     private void Awake()
     {
-        MasterManager.gameHUBCanvas = this;
         weaponCamera = GameObject.FindGameObjectWithTag("WeaponCamera");
         mainCamera = Camera.main;
         defaultFOV = mainCamera.fieldOfView;
+        MasterManager.gameHUBCanvas = this;
     }
 
     public void Scoped(float FOVZoom)
@@ -63,5 +66,33 @@ public class GameHUBManager : MonoBehaviour
             if (armor < 0) armor = 0;
             this.armor.text = armor + "";
         }
+    }
+
+    public void PushNotification(string content)
+    {
+        this.PushNotification(content, Color.blue);
+    }
+
+    public void PushNotification(string content, Color color)
+    {
+        var notificationObj = Instantiate(notification, this.transform);
+        var notificationText = notificationObj.GetComponent<Text>();
+        if (notificationText)
+        {
+            notificationText.color = color;
+            notificationText.text = content;
+        }
+    }
+
+    public void UpdateAmmoUI(int current, int have)
+    {
+        if (!ammoText.gameObject.activeSelf)
+            ammoText.gameObject.SetActive(true);
+        ammoText.text = current + " / " + have;
+    }
+
+    public void DisableAmmoUI()
+    {
+        ammoText.gameObject.SetActive(false);
     }
 }
