@@ -12,6 +12,8 @@ public class LifeBase : MonoBehaviour
     public int CurrentArmor { get { return currentArmor; } }
     public int CurrentHP { get { return currentHP; } }
 
+    public bool IsDead {get{return currentHP <= 0; }}
+
     private void Start()
     {
         Init();
@@ -19,7 +21,7 @@ public class LifeBase : MonoBehaviour
 
     private void Update()
     {
-        if (IsDead())
+        if (IsDead)
             OnDead();
         else
             OnUpdate();
@@ -28,11 +30,6 @@ public class LifeBase : MonoBehaviour
     public virtual void Init()
     {
         currentHP = maxHP;
-    }
-
-    public virtual bool IsDead()
-    {
-        return currentHP <= 0;
     }
 
     public virtual void TakeDamage(int damage)

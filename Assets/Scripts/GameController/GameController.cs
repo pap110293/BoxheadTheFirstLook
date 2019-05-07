@@ -1,14 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public int PrepareTime = 3;
+    public int PrepareTime = 5;
 
     private PlayerLife playerLife;
     private bool isGamePlaying = false;
+    private bool isDone = false;
+
     void Start()
     {
         StartCoroutine(GameProcess());
@@ -21,44 +24,77 @@ public class GameController : MonoBehaviour
         if (levelData != null)
         {
             yield return StartCoroutine(loadLevel(levelData));
+            isDone = false;
+        }
+        else
+        {
+            isDone = true;
         }
     }
 
     IEnumerator loadLevel(LevelData level)
     {
-        if(level == null) yield return null;
+        if (level == null) yield return null;
         if (MasterManager.spawEnemyManager)
         {
             MasterManager.spawEnemyManager.InitSpawners(level);
+            MasterManager.itemSpawnerController.InitSpawners(level);
         }
         for (int i = 0; i < PrepareTime; i++)
         {
-            PushNotification("Start in : " + (PrepareTime - i));
+            PushNotification("START NEXT WAVE IN : " + (PrepareTime - i));
             yield return new WaitForSeconds(1f);
         }
 
-        PushNotification("Start wave " + (MasterManager.levelConfigManager.currentLevel));
+        PushNotification("START WAVE " + (MasterManager.levelConfigManager.currentLevel));
 
         if (MasterManager.spawEnemyManager)
         {
             MasterManager.spawEnemyManager.StartAll();
-            yield return new WaitForSeconds(1f);
         }
     }
 
     IEnumerator GameProcess()
     {
         yield return StartCoroutine(StartNewWave());
-        yield return StartCoroutine(Playing());
 
-        if(CheckIsLose())
+        if (isDone == false)
         {
-            StartCoroutine(LosingProcess());
+            yield return new WaitForSeconds(1f);
+            yield return StartCoroutine(Playing());
+
+            if (CheckIsLose())
+            {
+                StartCoroutine(LosingProcess());
+            }
+            else if (CheckIsWinTheWave())
+            {
+                StartCoroutine(WiningProcess());
+            }
         }
-        else if(CheckIsWinTheWave())
+        else
         {
-            StartCoroutine(WiningProcess());
+            StartCoroutine(WinAllWaveProcess());
         }
+    }
+
+    private IEnumerator WinAllWaveProcess()
+    {
+
+        PushNotification("YOU WIN ALL THE WAVE");
+        PushNotification("YOU WIN ALL THE WAVE");
+        PushNotification("YOU WIN ALL THE WAVE");
+        PushNotification("YOU WIN ALL THE WAVE");
+        PushNotification("YOU WIN ALL THE WAVE");
+        PushNotification("YOU WIN ALL THE WAVE");
+
+        for (int i = 0; i < PrepareTime; i++)
+        {
+            PushNotification("BACK TO MAIN MENU IN " + (PrepareTime - i));
+            yield return new WaitForSeconds(1f);
+        }
+        MasterManager.menuInGameController.BackToMenu();
+        yield return null;
     }
 
     private IEnumerator Playing()
@@ -78,14 +114,14 @@ public class GameController : MonoBehaviour
 
     IEnumerator WiningProcess()
     {
-        PushNotification("you win!!!");
+        PushNotification("+++++ CLEAR +++++");
         StartCoroutine(GameProcess());
         yield return null;
     }
 
     private bool CheckIsWinTheWave()
     {
-        if(MasterManager.spawEnemyManager)
+        if (MasterManager.spawEnemyManager)
         {
             return MasterManager.spawEnemyManager.totalEnemy <= 0;
         }
@@ -95,14 +131,14 @@ public class GameController : MonoBehaviour
 
     private bool CheckIsLose()
     {
-        if(!playerLife)
+        if (!playerLife)
         {
             playerLife = GameObject.FindObjectOfType<PlayerLife>();
         }
 
-        if(playerLife)
+        if (playerLife)
         {
-            return playerLife.IsDead();
+            return playerLife.IsDead;
         }
 
         return true;

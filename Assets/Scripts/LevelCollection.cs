@@ -10,6 +10,8 @@ public class LevelData
     public int totalSpawnObject;
     public Spawner.SpawnerObject[] monsters;
     public GameObject boss;
+    public Spawner.SpawnerObject[] items;
+
 }
 
 [CreateAssetMenu(fileName = "LevelData", menuName = "Assets/Create Level Collection")]

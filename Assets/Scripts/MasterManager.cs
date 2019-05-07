@@ -10,7 +10,6 @@ public class MasterManager : MonoBehaviour
     public static FPSItemController fpsItemController;
     public static ItemSpawnerController itemSpawnerController;
     public static MenuInGameController menuInGameController;
-    public static GameStateManager gameStateManager;
     public static GameController gameController;
     public static LevelConfigManager levelConfigManager;
     public static SpawEnemyManager spawEnemyManager;
@@ -18,14 +17,12 @@ public class MasterManager : MonoBehaviour
     {
         isPause = true;
         Time.timeScale = 0f;
-        UnLockCursor();
     }
 
     public static void ResumeGame()
     {
         isPause = false;
         Time.timeScale = 1f;
-        LockCursor();
     }
 
     public static void LockCursor()

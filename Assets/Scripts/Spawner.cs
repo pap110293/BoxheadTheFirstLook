@@ -49,12 +49,14 @@ public class Spawner : MonoBehaviour
 
     public void StartSpawn()
     {
+        counting = 0;
+        timing = 0f;
         spawning = true;
+        spawnSpeed = duration / numberOfObject;
     }
 
     public void StopSpawn()
     {
-        counting = 0;
         spawning = false;
     }
 

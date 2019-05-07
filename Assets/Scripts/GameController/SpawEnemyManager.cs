@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SpawEnemyManager : MonoBehaviour
@@ -16,7 +17,8 @@ public class SpawEnemyManager : MonoBehaviour
     {
         foreach (var spawner in spawners)
         {
-            spawner.spawnerObjects = _levelData.monsters;
+            if(_levelData.monsters != null)
+                spawner.spawnerObjects = _levelData.monsters;
             spawner.numberOfObject = _levelData.totalSpawnObject / spawners.Count;
             spawner.duration = _levelData.duration;
         }

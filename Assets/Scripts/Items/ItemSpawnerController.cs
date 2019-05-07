@@ -36,4 +36,10 @@ public class ItemSpawnerController : MonoBehaviour
         }
         return total;
     }
+
+    public void InitSpawners(LevelData level)
+    {
+        if(level.items != null)
+            spawnerObjects = level.items;
+    }
 }

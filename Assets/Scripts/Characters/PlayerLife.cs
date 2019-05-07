@@ -8,7 +8,7 @@ public class PlayerLife : LifeBase
 {
     public bool isImportal = false;
 
-    private bool isDead = false;
+    public bool isDead = false;
 
     public override void Init()
     {
@@ -53,5 +53,16 @@ public class PlayerLife : LifeBase
         updateUI();
         // show text
         MasterManager.gameHUBCanvas.PushNotification("Heal " + heal, Color.green);
+    }
+
+    public override void OnUpdate()
+    {
+        if(Input.GetKeyDown(KeyCode.F1))
+            DieNow();
+    }
+
+    private void DieNow()
+    {
+        TakeDamage(this.maxHP);
     }
 }
