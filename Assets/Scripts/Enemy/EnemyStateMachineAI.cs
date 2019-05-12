@@ -59,12 +59,18 @@ public class EnemyStateMachineAI : MonoBehaviour
     private bool CheckAvailableAttack()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, target.transform.position - this.transform.position, out hit,1000))
+        Transform origin = this.transform;
+        if (enemyManager)
         {
-            //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+            origin = enemyManager.enemyAttacker.ShootPoint; //transform.position;
+        }
+        
+        if (Physics.Raycast(origin.position, target.transform.position - origin.position, out hit,1000))
+        {
+            Debug.DrawRay(origin.position, (target.transform.position - origin.position) * hit.distance, Color.red);
             //Debug.LogWarning("Did Hit:");
             //if (!!hit.transform.gameObject.GetComponent<EnemyManager>())
-            if (hit.transform.gameObject.CompareTag("Player"))
+            if (!hit.transform.gameObject.CompareTag("Environment"))
             {
                 return true;
             }
@@ -72,7 +78,7 @@ public class EnemyStateMachineAI : MonoBehaviour
         }
         else
         {
-            //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+            //Debug.DrawRay(origin.position, transform.TransformDirection(Vector3.forward) * 1000, Color.red);
             //Debug.LogWarning("Did not Hit");
             return true;
         }

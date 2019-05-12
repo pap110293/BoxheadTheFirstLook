@@ -33,7 +33,7 @@ public class EnemyManager : MonoBehaviour
     }
     public void UpdateAttacking()
     {
-        transform.LookAt(target);
+        //transform.LookAt(target);
         animState.SetAnim(EnemyAnimState.AnimState.DefaultAttack);
         enemyAttacker.EnemyUpdateAttack(target);
     }

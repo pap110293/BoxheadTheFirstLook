@@ -9,6 +9,10 @@ TagManager:
   - Item
   - AirSpawner
   - WeaponCamera
+  - Wood (Static)
+  - Metal
+  - Concrete (Static)
+  - Environment
   layers:
   - Default
   - TransparentFX
