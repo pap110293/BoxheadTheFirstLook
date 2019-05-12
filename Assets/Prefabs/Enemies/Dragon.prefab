@@ -209,7 +209,7 @@ MonoBehaviour:
   SkillBlowFlySpeed: 3
   ShootPoint: {fileID: 1414847367917217043}
   target: {fileID: 0}
-  skillBlowPrefabs: {fileID: 2842845842128036240, guid: 9196f1fe45c9aa744a225898ae73ed9d,
+  skillBlowPrefabs: {fileID: 5563692012498191205, guid: c9235b856811978409fb76259c42193d,
     type: 3}
 --- !u!114 &6171029549530708836
 MonoBehaviour:
