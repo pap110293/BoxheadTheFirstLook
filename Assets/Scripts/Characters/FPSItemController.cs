@@ -143,7 +143,7 @@ public class FPSItemController : MonoBehaviour
         List<FPSItem> unlockedItems = new List<FPSItem>();
         foreach (var item in itemSlots)
         {
-            if(!item.Item.isLocked)
+            if (!item.Item.isLocked)
             {
                 unlockedItems.Add(item.Item);
             }

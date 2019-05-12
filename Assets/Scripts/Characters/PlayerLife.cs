@@ -35,10 +35,24 @@ public class PlayerLife : LifeBase
             GetComponent<FirstPersonController>().enabled = false;
             GetComponent<CapsuleCollider>().enabled = false;
             GetComponent<CharacterController>().enabled = false;
+            GetComponent<SphereCollider>().enabled = true;
             GetComponent<BoxCollider>().enabled = true;
             GetComponent<Rigidbody>().isKinematic = false;
             MasterManager.fpsItemController.DisableAllItem();
         }
+    }
+
+    public void Restart()
+    {
+        isDead = false;
+
+        GetComponent<FirstPersonController>().enabled = true;
+        GetComponent<CapsuleCollider>().enabled = true;
+        GetComponent<CharacterController>().enabled = false;
+        GetComponent<SphereCollider>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
+        GetComponent<Rigidbody>().isKinematic = true;
+        MasterManager.fpsItemController.Restart();
     }
 
     private void updateUI()
@@ -57,7 +71,7 @@ public class PlayerLife : LifeBase
 
     public override void OnUpdate()
     {
-        if(Input.GetKeyDown(KeyCode.F1))
+        if (Input.GetKeyDown(KeyCode.F1))
             DieNow();
     }
 

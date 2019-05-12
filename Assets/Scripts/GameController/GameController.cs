@@ -1,29 +1,29 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Assets.Scripts;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
     public int PrepareTime = 5;
 
     private PlayerLife playerLife;
-    private bool isGamePlaying = false;
-    private bool isDone = false;
+    public bool isDone = false;
 
     void Start()
     {
-        StartCoroutine(GameProcess());
+        MasterManager.gameController = this;
+        StartNewGame();
     }
 
-    private IEnumerator StartNewWave()
+    private IEnumerator StartNewWaveProcess()
     {
         MasterManager.spawEnemyManager.totalEnemy = 0;
         var levelData = MasterManager.levelConfigManager.GetNextLevelData();
         if (levelData != null)
         {
-            yield return StartCoroutine(loadLevel(levelData));
+            yield return StartCoroutine(LoadLevel(levelData));
             isDone = false;
         }
         else
@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    IEnumerator loadLevel(LevelData level)
+    IEnumerator LoadLevel(LevelData level)
     {
         if (level == null) yield return null;
         if (MasterManager.spawEnemyManager)
@@ -46,7 +46,7 @@ public class GameController : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
 
-        PushNotification("START WAVE " + (MasterManager.levelConfigManager.currentLevel));
+        PushNotification("START WAVE " + (MasterManager.levelConfigManager.CurrentLevel));
 
         if (MasterManager.spawEnemyManager)
         {
@@ -56,7 +56,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator GameProcess()
     {
-        yield return StartCoroutine(StartNewWave());
+        yield return StartCoroutine(StartNewWaveProcess());
 
         if (isDone == false)
         {
@@ -78,22 +78,18 @@ public class GameController : MonoBehaviour
         }
     }
 
+    private IEnumerator StartNewGameProcess()
+    {
+
+        MasterManager.levelConfigManager.Restart();
+        yield return StartCoroutine(GameProcess());
+    }
+
     private IEnumerator WinAllWaveProcess()
     {
 
         PushNotification("YOU WIN ALL THE WAVE");
-        PushNotification("YOU WIN ALL THE WAVE");
-        PushNotification("YOU WIN ALL THE WAVE");
-        PushNotification("YOU WIN ALL THE WAVE");
-        PushNotification("YOU WIN ALL THE WAVE");
-        PushNotification("YOU WIN ALL THE WAVE");
-
-        for (int i = 0; i < PrepareTime; i++)
-        {
-            PushNotification("BACK TO MAIN MENU IN " + (PrepareTime - i));
-            yield return new WaitForSeconds(1f);
-        }
-        MasterManager.menuInGameController.BackToMenu();
+        ShowFinishPanel();
         yield return null;
     }
 
@@ -107,9 +103,16 @@ public class GameController : MonoBehaviour
 
     IEnumerator LosingProcess()
     {
-        PushNotification("you Lose!!!");
-        //MasterManager.menuInGameController.ShowLosePanel();
+        yield return new WaitForSeconds(PrepareTime);
+        ShowFinishPanel();
         yield return null;
+    }
+
+    private void ShowFinishPanel()
+    {
+        MasterManager.menuInGameController.ShowFinishPanel(100, "Your score");
+        MasterManager.UnLockCursor();
+        MasterManager.PauseGame();
     }
 
     IEnumerator WiningProcess()
@@ -133,7 +136,7 @@ public class GameController : MonoBehaviour
     {
         if (!playerLife)
         {
-            playerLife = GameObject.FindObjectOfType<PlayerLife>();
+            playerLife = FindObjectOfType<PlayerLife>();
         }
 
         if (playerLife)
@@ -155,5 +158,15 @@ public class GameController : MonoBehaviour
     private void PushNotification(string content)
     {
         PushNotification(content, Color.red);
+    }
+
+    public void StartNewGame()
+    {
+        StartCoroutine(StartNewGameProcess());
+    }
+
+    public void PlayAgain()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

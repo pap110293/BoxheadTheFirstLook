@@ -9,7 +9,7 @@ public class LevelConfigManager : MonoBehaviour
     [HideInInspector]
     public LevelData currentLevelData;
     private int currentLevelIndex = -1;
-    public int currentLevel { get { return currentLevelIndex + 1; } }
+    public int CurrentLevel { get { return currentLevelIndex + 1; } }
 
     void Awake()
     {
@@ -43,5 +43,10 @@ public class LevelConfigManager : MonoBehaviour
             }
         }
         return null;
+    }
+
+    public void Restart()
+    {
+        currentLevelIndex = -1;
     }
 }
