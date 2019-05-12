@@ -34,7 +34,7 @@ public class EnemyManager : MonoBehaviour
     public void UpdateAttacking()
     {
         //transform.LookAt(target);
-        animState.SetAnim(EnemyAnimState.AnimState.DefaultAttack);
+        animState.SetAnim(EnemyAnimState.AnimState.DefaultAttack,enemyAttacker.AttackSpeed);
         enemyAttacker.EnemyUpdateAttack(target);
     }
     #region Attack    

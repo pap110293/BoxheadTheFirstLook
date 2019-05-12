@@ -204,9 +204,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68c14bdafba911e408351003c74355c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackCountDown: 0
-  TimeCount: 0
-  SkillBlowFlySpeed: 3
+  AttackSpeed: 1
+  SkillBlowFlySpeed: 25
   ShootPoint: {fileID: 1414847367917217043}
   target: {fileID: 0}
   skillBlowPrefabs: {fileID: 5563692012498191205, guid: c9235b856811978409fb76259c42193d,

@@ -788,12 +788,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68c14bdafba911e408351003c74355c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackCountDown: 0
-  TimeCount: 0
+  AttackSpeed: 1
   SkillBlowFlySpeed: 3
   ShootPoint: {fileID: 5181445986051680359}
   target: {fileID: 0}
-  skillBlowPrefabs: {fileID: 2842845842128036240, guid: 9196f1fe45c9aa744a225898ae73ed9d,
+  skillBlowPrefabs: {fileID: 5563692012498191205, guid: bfadd6a4e3ac8de468df0261888d9fc1,
     type: 3}
 --- !u!114 &5426048675048595106
 MonoBehaviour:

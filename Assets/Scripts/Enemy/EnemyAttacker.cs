@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class EnemyAttacker : MonoBehaviour
 {
-    public float AttackCountDown;
-    public float TimeCount;
+    //public float AttackCountDown;
+    //public float TimeCount;
+    public float AttackSpeed = 1;
     public float SkillBlowFlySpeed = 8;
     public Transform ShootPoint;
     public Transform target;
     public GameObject skillBlowPrefabs;
     private void Start()
     {
-        AttackCountDown = 0;
-        TimeCount = 1;
+        //AttackCountDown = 0;
+        //TimeCount = 1;
         if (!ShootPoint) ShootPoint = this.transform;
     }
     public void EnemyUpdateAttack(Transform _target)
