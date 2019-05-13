@@ -52,7 +52,6 @@ public class PlayerLife : LifeBase
         GetComponent<SphereCollider>().enabled = false;
         GetComponent<BoxCollider>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
-        MasterManager.fpsItemController.Restart();
     }
 
     private void updateUI()

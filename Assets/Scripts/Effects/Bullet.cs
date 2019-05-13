@@ -53,14 +53,11 @@ public class Bullet : MonoBehaviour
         nextPos = transform.position + transform.forward * Speed * Time.deltaTime;
         Vector3 direction = nextPos - currentPos;
         Ray ray = new Ray(currentPos, direction.normalized);
-        RaycastHit[] hits = Physics.RaycastAll(ray, direction.magnitude);
+        RaycastHit[] hits = Physics.RaycastAll(ray);
 
         for (int i = 0; i < hits.Length; i++)
         {
             var hited = hits[i];
-
-            if (hited.collider.GetComponent<Rigidbody>())
-                hited.collider.GetComponent<Rigidbody>().AddForceAtPosition((hited.transform.position - transform.position).normalized * force, hited.point);
 
             DamagePackage dm = new DamagePackage
             {
@@ -70,8 +67,12 @@ public class Bullet : MonoBehaviour
                 Position = hited.point,
             };
 
-            hited.collider.SendMessage("OnHit", dm, SendMessageOptions.DontRequireReceiver);
-
+            //hited.collider.SendMessage("OnHit", dm, SendMessageOptions.DontRequireReceiver);
+            var hitMark = hited.collider.GetComponentInParent<HitMark>();
+            if (hitMark != null)
+            {
+                hitMark.OnHit(dm);
+            }
             gameObject.SetActive(false);
         }
 
