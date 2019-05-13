@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3327028}
   - component: {fileID: 18329472}
   - component: {fileID: 13766006}
+  - component: {fileID: 5319406713884828299}
   m_Layer: 0
   m_Name: Curtain
   m_TagString: Untagged
@@ -225,3 +226,17 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: -0.27510157, z: 0.0000022411348}
     m_Extent: {x: 0.19511896, y: 0.27510157, z: 0.0000022411348}
   m_DirtyAABB: 0
+--- !u!64 &5319406713884828299
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 02cba9aa5d1581847972f6e16a8ef1d3, type: 3}

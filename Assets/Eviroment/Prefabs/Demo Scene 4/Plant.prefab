@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 486764}
   - component: {fileID: 3312898}
   - component: {fileID: 2399346}
+  - component: {fileID: 4119469682957379941}
   m_Layer: 0
   m_Name: Plant
   m_TagString: Untagged
@@ -77,3 +78,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4119469682957379941
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: f3f78f771156dd5448227c8709cefd9f, type: 3}

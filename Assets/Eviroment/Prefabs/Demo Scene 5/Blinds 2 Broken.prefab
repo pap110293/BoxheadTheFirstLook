@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 437892}
   - component: {fileID: 3394928}
   - component: {fileID: 2313624}
+  - component: {fileID: 4487169072194787441}
   m_Layer: 0
   m_Name: Blinds 2 Broken
   m_TagString: Untagged
@@ -77,3 +78,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4487169072194787441
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158432}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 2cf0e39e84c685c4caf500c4a300e711, type: 3}
