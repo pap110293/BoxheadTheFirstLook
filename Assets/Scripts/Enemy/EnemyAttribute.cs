@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class EnemyAttribute : MonoBehaviour
 {
-    public AnimationState CurrentAnimState;
+    public float Health;
+    public float Damage;
+    public float MoveSpeed;
+    public float AttackSpeed;
 }

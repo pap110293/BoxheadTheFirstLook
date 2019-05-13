@@ -31,7 +31,9 @@ public class Movement : MonoBehaviour
         }
         if (target != null)
         {
-            //transform.LookAt(target);
+            Transform targetLookat = target.transform;
+            targetLookat.position  = new Vector3(target.position.x,transform.position.y,target.position.z);
+            transform.LookAt(targetLookat);
             //model.LookAt(target);
         }
     }

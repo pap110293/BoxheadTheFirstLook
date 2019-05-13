@@ -27,16 +27,13 @@ public class SkillBlow : MonoBehaviour
             if (isFollow)
                 MoveToFollow(Target, TargetAim, FlySpeed);
             else
-                MoveTo(Target, vecGoto, FlySpeed);
+                UpdateMove(FlySpeed);
+                //MoveTo(Target, vecGoto, FlySpeed);
         }
         else
         {
             Destroy(this.gameObject);
-        } 
-        if(Vector3.Distance(vecGoto, vecDelta)<=Vector3.Distance(vecDelta,this.transform.position))
-        {
-            Destroy(this.gameObject);
-        }
+        }        
     }
     public void InitSkillBlow(Transform _pawnPoint, Transform _target,Transform _targetAim,float flySpeed)//Init bullet follow target
     {
@@ -65,6 +62,8 @@ public class SkillBlow : MonoBehaviour
         FlySpeed = flySpeed;
         vecDelta = PawnPoint.position;
         isFollow = false;
+
+        transform.LookAt(_posGoto);
     }
     private void MoveToFollow(Transform target, Transform targetAim, float flySpeed)
     {
@@ -78,12 +77,22 @@ public class SkillBlow : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(_look);
         }
     }
-    private void MoveTo(Transform target, Vector3 movePos, float flySpeed)
-    {        
-        transform.position = Vector3.MoveTowards(transform.position, movePos, flySpeed = flySpeed * Time.deltaTime);
-        Vector3 _look = movePos - vecDelta;
-        transform.rotation = Quaternion.LookRotation(_look);
+    //private void MoveTo(Transform target, Vector3 movePos, float flySpeed)
+    //{        
+    //    transform.position = Vector3.MoveTowards(transform.position, movePos + transform., flySpeed = flySpeed * Time.deltaTime);
+    //    Vector3 _look = movePos - vecDelta;
+    //    transform.rotation = Quaternion.LookRotation(_look);
+    //}
+
+    private void UpdateMove(float flySpeed)
+    {
+        transform.position += transform.forward * flySpeed * Time.deltaTime;
+        if ((Vector3.Distance(vecGoto, vecDelta) * 3) <= Vector3.Distance(vecDelta, this.transform.position))
+        {
+            Destroy(this.gameObject);
+        }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (!isDisable)
