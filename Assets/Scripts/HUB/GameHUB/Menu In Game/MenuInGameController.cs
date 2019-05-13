@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuInGameController : MonoBehaviour
 {
     public int mainMenuSceneIndex = 0;
+    [Header("Pause panel")]
     public GameObject pausePanel;
-    public GameObject winPanel;
-    public GameObject losePanel;
+    [Header("finish panel")]
+    public GameObject finishPanel;
+    public Text header;
+    public Text score;
 
-    private void Awake() {
+    private void Awake()
+    {
         MasterManager.menuInGameController = this;
     }
     // Start is called before the first frame update
@@ -22,7 +27,7 @@ public class MenuInGameController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && MasterManager.gameController.isDone == false)
         {
             if (MasterManager.isPause)
             {
@@ -57,24 +62,18 @@ public class MenuInGameController : MonoBehaviour
         this.HidePauseMenu();
     }
 
-    public void HideLosePanel()
+    public void HideFinishPanel()
     {
-        losePanel.SetActive(false);
+        MasterManager.ResumeGame();
+        MasterManager.LockCursor();
+        finishPanel.SetActive(false);
     }
 
-    public void HideWinPanel()
+    public void ShowFinishPanel(int score, string text)
     {
-        winPanel.SetActive(false);
-    }
-
-    public void ShowLosePanel()
-    {
-        losePanel.SetActive(true);
-    }
-
-    public void ShowWinPanel()
-    {
-        winPanel.SetActive(true);
+        header.text = text;
+        this.score.text = score + "";
+        finishPanel.SetActive(true);
     }
 
     public void BackToMenu()
@@ -90,6 +89,6 @@ public class MenuInGameController : MonoBehaviour
 
     public void PlayAgain()
     {
-        
+        MasterManager.gameController.PlayAgain();
     }
 }
