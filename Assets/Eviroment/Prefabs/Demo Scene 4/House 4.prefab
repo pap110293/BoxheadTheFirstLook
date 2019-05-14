@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 475392}
   - component: {fileID: 3351598}
   - component: {fileID: 2383606}
+  - component: {fileID: 2664989069163523393}
+  - component: {fileID: 6348009847859874526}
   m_Layer: 0
   m_Name: House 4
   m_TagString: Untagged
@@ -77,3 +79,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2664989069163523393
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134962}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 1585305e98775cc4681aa2a4f28dd4c9, type: 3}
+--- !u!114 &6348009847859874526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05d31853b75195347a34c5ee58c21748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitFX: {fileID: 100000, guid: 2d332cf18bb674d428d38c0212d8ca6b, type: 3}
+  DamageMult: 1
+  HitboxPhysicLayer: 8

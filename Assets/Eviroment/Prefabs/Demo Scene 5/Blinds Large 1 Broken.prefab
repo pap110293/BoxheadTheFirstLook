@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 459530}
   - component: {fileID: 3319520}
   - component: {fileID: 2347630}
+  - component: {fileID: 8519677634465504313}
+  - component: {fileID: 6425755606519302870}
   m_Layer: 0
   m_Name: Blinds Large 1 Broken
   m_TagString: Untagged
@@ -77,3 +79,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8519677634465504313
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145782}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: f5d1eb89b5fa9c341922d7c259dd38ff, type: 3}
+--- !u!114 &6425755606519302870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05d31853b75195347a34c5ee58c21748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitFX: {fileID: 100000, guid: 2d332cf18bb674d428d38c0212d8ca6b, type: 3}
+  DamageMult: 1
+  HitboxPhysicLayer: 8
