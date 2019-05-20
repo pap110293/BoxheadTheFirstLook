@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1291664974}
   - component: {fileID: 1291664973}
   - component: {fileID: 1291664972}
+  - component: {fileID: 4600306513453213558}
   - component: {fileID: 1291664971}
   - component: {fileID: 1291664970}
   - component: {fileID: 1291664969}
@@ -114,6 +115,21 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4600306513453213558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5329938760072784364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9450e52760ba4094db84e4442bdac6ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 1
+  flyHeight: 0
+  typeMove: 0
 --- !u!114 &1291664971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,8 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f05ad97b6833444c849df7c5cbfb5cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyAtribute: {fileID: 0}
   target: {fileID: 0}
-  movementSpeed: 2
   planeMovement: {fileID: 1291664968}
   enemyAttacker: {fileID: 1291664967}
   teamManager: {fileID: 1291664969}
@@ -177,7 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34f56852713fff849be51f7d07338210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flyHeight: 0
   model: {fileID: 2360561766722872757}
 --- !u!114 &1291664967
 MonoBehaviour:

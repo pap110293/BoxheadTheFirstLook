@@ -5,26 +5,33 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    
-    
-    public Transform target;
-    public float movementSpeed;
-    public Movement.TypeMove typeMove;
+    //atribute
+    //public float movementSpeed;
+    //public float flyHeight;
+    //public Movement.TypeMove typeMove;
+    public EnemyAtribute enemyAtribute;
+    //
+    public Transform target;    
     public Movement planeMovement;
     public EnemyAttacker enemyAttacker;
     public TeamManager teamManager;
     public EnemyAnimState animState;
     void Start()
     {
+        enemyAtribute = this.GetComponent<EnemyAtribute>();
+        if(!enemyAtribute)
+        {
+            Debug.LogError(string.Format("Enemy[{0}] is null Atribute!", this.gameObject.name));
+            Destroy(this.gameObject);
+        }
         planeMovement = this.GetComponent<Movement>();
-        //if (!animator) animator.speed = TimeCount * 120 / 100;
         teamManager = this.gameObject.GetComponent<TeamManager>();
         enemyAttacker = this.GetComponent<EnemyAttacker>();
         animState = this.GetComponent<EnemyAnimState>();
     }
     public void UpdateChasing()
     {
-        if (target) planeMovement.SetMove(target, typeMove, movementSpeed);
+        if (target) planeMovement.SetMove(target, enemyAtribute.typeMove, enemyAtribute.movementSpeed, enemyAtribute.flyHeight);
         animState.SetAnim(EnemyAnimState.AnimState.RunForward);
     }
     public void StopChasing()
@@ -34,9 +41,8 @@ public class EnemyManager : MonoBehaviour
     }
     public void UpdateAttacking()
     {
-        //transform.LookAt(target);
         animState.SetAnim(EnemyAnimState.AnimState.DefaultAttack,enemyAttacker.AttackSpeed);
-        enemyAttacker.EnemyUpdateAttack(target);
+        enemyAttacker.EnemyUpdateTargetAttack(target);
     }
     #region Attack    
     private void Update()

@@ -17,15 +17,9 @@ public class EnemyAttacker : MonoBehaviour
         //TimeCount = 1;
         if (!ShootPoint) ShootPoint = this.transform;
     }
-    public void EnemyUpdateAttack(Transform _target)
+    public void EnemyUpdateTargetAttack(Transform _target)
     {
         if (_target) target = _target;
-        //AttackCountDown -= Time.deltaTime;
-        //if (AttackCountDown <= 0)
-        //{
-        //    Invoke("ActionAttack", TimeCount / 2);
-        //    AttackCountDown = TimeCount;
-        //}
     }
     public void ActionAttack()
     {

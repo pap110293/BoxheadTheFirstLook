@@ -8,32 +8,34 @@ public class Movement : MonoBehaviour
     {
         Walk,
         Fly
-    }
-    public TypeMove typeMove;
-    public float speed;
-    public float flyHeight;
+    }    
     public Transform model;
-    NavMeshAgent navMeshAgent;
+    private float flyHeight;
+    private TypeMove typeMove;
+    private float speed;    
+    private NavMeshAgent navMeshAgent;
     private Transform target;
     void Awake()
     {
         navMeshAgent = this.GetComponent<NavMeshAgent>();
     }
-    public void SetMove(Transform _target, TypeMove _typeMove, float speed)
+    public void SetMove(Transform _target, TypeMove _typeMove, float _speed,float _flyHeight)
     {
-
+        target = _target;
+        speed = _speed;
+        flyHeight = _flyHeight;
         switch (typeMove)
         {
             case TypeMove.Fly:
-                transform.position += transform.forward * speed * Time.deltaTime;
+                transform.position += transform.forward * _speed * Time.deltaTime;
                 break;
             default:
-                navMeshAgent.speed = speed;
+                navMeshAgent.speed = _speed;
                 navMeshAgent.SetDestination(_target.position);
                 break;
         }
 
-        target = _target;
+        
     }
     public void Stop()
     {
