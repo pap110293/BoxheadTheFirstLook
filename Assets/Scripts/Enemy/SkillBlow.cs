@@ -13,7 +13,7 @@ public class SkillBlow : MonoBehaviour
     }
     public SkillType skillType;
 
-    public int damage = 10;
+    private int damage = 10;
 
     private Transform pawnPoint;
     private Transform target;
@@ -58,14 +58,14 @@ public class SkillBlow : MonoBehaviour
         }
      
     }
-    public void InitSkillBlow(Transform _pawnPoint, Transform _target,Transform _posAim, float _flySpeed, SkillType _skillType)
+    public void InitSkillBlow(Transform _pawnPoint, Transform _target,Transform _posAim, float _flySpeed,int _damage, SkillType _skillType)
     {
         skillType = _skillType;
         pawnPoint = _pawnPoint;
         target = _target;
         posAim = _posAim;
         flySpeed = _flySpeed;
-
+        damage = _damage;
         //vecDelta = pawnPoint.position;
         vecDelta = new Vector3(pawnPoint.position.x, pawnPoint.position.y, pawnPoint.position.z);
         vecGoto = new Vector3(_posAim.position.x, _posAim.position.y, _posAim.position.z);

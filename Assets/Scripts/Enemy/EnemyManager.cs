@@ -5,7 +5,14 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-
+    [System.Serializable]
+    public enum EnemyType
+    {
+        Knight,
+        Mage,
+        Bat,
+        Dragon
+    }
     public EnemyAtribute enemyAtribute;
     //
     public EnemyLife life;
@@ -16,12 +23,8 @@ public class EnemyManager : MonoBehaviour
     public EnemyAnimState animState;
     void Start()
     {
-        enemyAtribute = this.GetComponent<EnemyAtribute>();
-        if(!enemyAtribute)
-        {
-            Debug.LogError(string.Format("Enemy[{0}] is null Atribute!", this.gameObject.name));
-            Destroy(this.gameObject);
-        }
+        //enemyAtribute = new EnemyAtribute();
+        //enemyAtribute.SetAtribute(1, 0, 0, 0, 0, 0);
         #region Init Life
         life = this.GetComponent<EnemyLife>();
         life.maxHP = enemyAtribute.HP;
@@ -35,7 +38,7 @@ public class EnemyManager : MonoBehaviour
         
         #region Init Attacker
         enemyAttacker = this.GetComponent<EnemyAttacker>();
-        enemyAttacker.InitAttacker(enemyAtribute.attackCooldown, enemyAtribute.skillFlySpeed, enemyAtribute.skillType);
+        enemyAttacker.InitAttacker(enemyAtribute.attackCooldown, enemyAtribute.skillFlySpeed, enemyAtribute.damage, enemyAtribute.skillType);
         #endregion
 
         teamManager = this.gameObject.GetComponent<TeamManager>();

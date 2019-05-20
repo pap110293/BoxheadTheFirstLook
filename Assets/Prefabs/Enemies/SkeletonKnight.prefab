@@ -6110,7 +6110,6 @@ GameObject:
   - component: {fileID: 6628901241499791144}
   - component: {fileID: 6345043957982725432}
   - component: {fileID: 2336586056528743138}
-  - component: {fileID: 478197680438388803}
   - component: {fileID: 6223633911807762599}
   - component: {fileID: 4936501031436085792}
   - component: {fileID: 3221964827574243225}
@@ -6212,29 +6211,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &478197680438388803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8846445596957168667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9450e52760ba4094db84e4442bdac6ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 100
-  Amor: 0
-  movementSpeed: 1
-  flyHeight: 0
-  typeMove: 0
-  attackCooldown: 1
-  skillFlySpeed: 10
-  skillType: 0
-  bowRange: 2
-  dangerRange: 0
-  meleeRange: 0
 --- !u!114 &6223633911807762599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6247,7 +6223,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f05ad97b6833444c849df7c5cbfb5cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAtribute: {fileID: 0}
   life: {fileID: 0}
   target: {fileID: 0}
   enemyMovement: {fileID: 0}

@@ -9,6 +9,7 @@ public class EnemyAttacker : MonoBehaviour
     public bool isValidAttack;
     public float attackCooldown = 1;
     public float actionAttackSpeed = 1;
+    public int damage = 1;
 
     public Transform shootPoint;
     public Transform target;
@@ -16,11 +17,12 @@ public class EnemyAttacker : MonoBehaviour
     private float countDownAttacker;
     private SkillBlow.SkillType skillType;
     private bool isInitlized = false;
-    public void InitAttacker(float _attackSpeed , float _skillFlySpeed, SkillBlow.SkillType _skillType)
+    public void InitAttacker(float _attackSpeed, float _skillFlySpeed, int _damage, SkillBlow.SkillType _skillType)
     {
         attackCooldown = _attackSpeed;
         skillBlowFlySpeed = _skillFlySpeed;
         skillType = _skillType;
+        damage = _damage;
         isInitlized = true;
     }
     private void Start()
@@ -42,7 +44,7 @@ public class EnemyAttacker : MonoBehaviour
         Transform _targetAim = target.transform;
         var SkillBlow = Instantiate(skillBlowPrefabs, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<SkillBlow>();
         SkillBlow.transform.position = shootPoint.position;
-        SkillBlow.InitSkillBlow(shootPoint, target, _targetAim, flySpeed, skillType);
+        SkillBlow.InitSkillBlow(shootPoint, target, _targetAim, flySpeed, damage, skillType);
         countDownAttacker = attackCooldown;
     }
     private void Update()

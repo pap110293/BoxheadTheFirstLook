@@ -2,16 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
-public class EnemyLevelData : MonoBehaviour
+public class EnemyLevelDataUnit
+{
+    //public int level;
+    public EnemyManager.EnemyType enemyType;
+    public EnemyAtribute atribute;
+    public GameObject enemyPrefabs;
+    //public EnemyAtribute enemyAtribute;
+    //public GameObject enemyprefabs;
+    //public int HP;
+    //public int amor;
+    //public float movementSpeed;
+    //public float flyHeight;
+    //public int damage;
+    //public Movement.TypeMove typeMove;
+    //public float attackCooldown;
+    //public float skillFlySpeed;
+    //public SkillBlow.SkillType skillType;
+
+}
+[System.Serializable]
+public class EnemyLevelData
 {
     public int Level;
-    public float Health;
-    public float Damage;
-    public float MoveSpeed;
-    public float AttackSpeed;
+    public EnemyLevelDataUnit[] records;
 }
-[CreateAssetMenu(fileName = "EnemyAttributeData", menuName = "Assets/Create Enemy Attribute Collection")]
-public class EnemyAttributeCollection : ScriptableObject
+[CreateAssetMenu(fileName = "EnemyLevelData", menuName = "Assets/Create Enemy Level Collection")]
+public class EnemyLevelCollection : ScriptableObject
 {
     public EnemyLevelData[] records;
 }
