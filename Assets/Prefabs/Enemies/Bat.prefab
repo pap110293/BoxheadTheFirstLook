@@ -805,6 +805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttackSpeed: 1
   SkillBlowFlySpeed: 3
+  skillType: 1
   ShootPoint: {fileID: 5181445986051680359}
   target: {fileID: 0}
   skillBlowPrefabs: {fileID: 2494000497611454123, guid: a07ff4fb590ee4945a72c0ee1baa67bf,
