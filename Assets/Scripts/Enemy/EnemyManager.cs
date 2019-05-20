@@ -5,10 +5,7 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    //atribute
-    //public float movementSpeed;
-    //public float flyHeight;
-    //public Movement.TypeMove typeMove;
+
     public EnemyAtribute enemyAtribute;
     //
     public Transform target;    
@@ -27,6 +24,7 @@ public class EnemyManager : MonoBehaviour
         planeMovement = this.GetComponent<Movement>();
         teamManager = this.gameObject.GetComponent<TeamManager>();
         enemyAttacker = this.GetComponent<EnemyAttacker>();
+        enemyAttacker.InitAttacker(enemyAtribute.attackCooldown, enemyAtribute.skillFlySpeed, enemyAtribute.skillType);
         animState = this.GetComponent<EnemyAnimState>();
     }
     public void UpdateChasing()
@@ -41,8 +39,15 @@ public class EnemyManager : MonoBehaviour
     }
     public void UpdateAttacking()
     {
-        animState.SetAnim(EnemyAnimState.AnimState.DefaultAttack,enemyAttacker.AttackSpeed);
-        enemyAttacker.EnemyUpdateTargetAttack(target);
+        if(enemyAttacker.isValidAttack)
+        {
+            animState.SetAnim(EnemyAnimState.AnimState.DefaultAttack, enemyAttacker.actionAttackSpeed);
+            enemyAttacker.EnemyUpdateTargetAttack(target);
+        }else
+        {
+            animState.SetAnim(EnemyAnimState.AnimState.Idle, 1);
+        }
+        
     }
     #region Attack    
     private void Update()

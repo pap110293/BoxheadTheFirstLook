@@ -7,10 +7,14 @@ public class EnemyAtribute : MonoBehaviour
     public float movementSpeed;
     public float flyHeight;
     public Movement.TypeMove typeMove;
-    public void SetAtribute( float _movementSpeed,float _flyHeight,Movement.TypeMove _typeMove)
+    public float attackCooldown;
+    public float skillFlySpeed;
+    public SkillBlow.SkillType skillType;
+    public void SetAtribute( float _movementSpeed,float _flyHeight,float _attackCooldown, float _skillFlySpeed)
     {
         movementSpeed = _movementSpeed;
         flyHeight = _flyHeight;
-        typeMove = _typeMove;
+        attackCooldown = _attackCooldown;
+        skillFlySpeed = _skillFlySpeed;
     }
 }

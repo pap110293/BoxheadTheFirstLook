@@ -22,7 +22,8 @@ public class SkillBlow : MonoBehaviour
     private bool isDisable;
     //private bool isFollow;
     private Vector3 vecDelta;
-    private Vector3 vecGoto;   
+    private Vector3 vecGoto;
+    private bool isInitlized = false;
     void Start()
     {
         isDisable = false;
@@ -31,6 +32,7 @@ public class SkillBlow : MonoBehaviour
     
     void Update()
     {
+        if (!isInitlized) return;
         switch(skillType)
         {
             case SkillType.Melee:
@@ -69,6 +71,7 @@ public class SkillBlow : MonoBehaviour
         vecGoto = new Vector3(_posAim.position.x, _posAim.position.y, _posAim.position.z);
 
         transform.LookAt(_posAim);
+        isInitlized = true;
     }
     private void UpdateMoveToFollow()
     {
