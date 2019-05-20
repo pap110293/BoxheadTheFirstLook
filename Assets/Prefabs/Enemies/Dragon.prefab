@@ -127,6 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   movementSpeed: 2
+  typeMove: 1
   planeMovement: {fileID: 0}
   enemyAttacker: {fileID: 0}
   teamManager: {fileID: 0}
@@ -176,6 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34f56852713fff849be51f7d07338210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typeMove: 0
+  speed: 0
   flyHeight: 10
   model: {fileID: 6171029550709931858}
 --- !u!114 &6171029549530708839

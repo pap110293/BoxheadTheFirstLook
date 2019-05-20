@@ -9,6 +9,7 @@ public class EnemyManager : MonoBehaviour
     
     public Transform target;
     public float movementSpeed;
+    public Movement.TypeMove typeMove;
     public Movement planeMovement;
     public EnemyAttacker enemyAttacker;
     public TeamManager teamManager;
@@ -23,7 +24,7 @@ public class EnemyManager : MonoBehaviour
     }
     public void UpdateChasing()
     {
-        if (target) planeMovement.SetMove(target);
+        if (target) planeMovement.SetMove(target, typeMove, movementSpeed);
         animState.SetAnim(EnemyAnimState.AnimState.RunForward);
     }
     public void StopChasing()
