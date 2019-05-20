@@ -724,12 +724,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9450e52760ba4094db84e4442bdac6ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 100
+  Amor: 0
   movementSpeed: 2
   flyHeight: 5
   typeMove: 1
   attackCooldown: 1
   skillFlySpeed: 5
   skillType: 1
+  bowRange: 5
+  dangerRange: 0
+  meleeRange: 0
 --- !u!114 &5426048675048595109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,8 +748,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAtribute: {fileID: 0}
+  life: {fileID: 0}
   target: {fileID: 0}
-  planeMovement: {fileID: 0}
+  enemyMovement: {fileID: 0}
   enemyAttacker: {fileID: 0}
   teamManager: {fileID: 0}
   animState: {fileID: 0}

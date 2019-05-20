@@ -81,7 +81,7 @@ public class SkillBlow : MonoBehaviour
     }
     private void UpdateMoveTo()
     {
-        Debug.LogError(this.flySpeed);
+        //Debug.LogError(this.flySpeed);
         transform.position = Vector3.MoveTowards(transform.position,this.vecGoto, this.flySpeed * Time.deltaTime);
         Vector3 _look = this.vecGoto - vecDelta;
         transform.rotation = Quaternion.LookRotation(_look);

@@ -8,8 +8,9 @@ public class EnemyManager : MonoBehaviour
 
     public EnemyAtribute enemyAtribute;
     //
+    public EnemyLife life;
     public Transform target;    
-    public Movement planeMovement;
+    public Movement enemyMovement;
     public EnemyAttacker enemyAttacker;
     public TeamManager teamManager;
     public EnemyAnimState animState;
@@ -21,21 +22,34 @@ public class EnemyManager : MonoBehaviour
             Debug.LogError(string.Format("Enemy[{0}] is null Atribute!", this.gameObject.name));
             Destroy(this.gameObject);
         }
-        planeMovement = this.GetComponent<Movement>();
-        teamManager = this.gameObject.GetComponent<TeamManager>();
+        #region Init Life
+        life = this.GetComponent<EnemyLife>();
+        life.maxHP = enemyAtribute.HP;
+        life.maxArmor = enemyAtribute.Amor;
+        life.Init();
+        #endregion
+
+        #region Init Movement
+        enemyMovement = this.GetComponent<Movement>();
+        #endregion
+        
+        #region Init Attacker
         enemyAttacker = this.GetComponent<EnemyAttacker>();
         enemyAttacker.InitAttacker(enemyAtribute.attackCooldown, enemyAtribute.skillFlySpeed, enemyAtribute.skillType);
+        #endregion
+
+        teamManager = this.gameObject.GetComponent<TeamManager>();
         animState = this.GetComponent<EnemyAnimState>();
     }
     public void UpdateChasing()
     {
-        if (target) planeMovement.SetMove(target, enemyAtribute.typeMove, enemyAtribute.movementSpeed, enemyAtribute.flyHeight);
+        if (target) enemyMovement.SetMove(target, enemyAtribute.typeMove, enemyAtribute.movementSpeed, enemyAtribute.flyHeight);
         animState.SetAnim(EnemyAnimState.AnimState.RunForward);
     }
     public void StopChasing()
     {
         animState.SetAnim(EnemyAnimState.AnimState.Idle);
-        planeMovement.Stop();
+        enemyMovement.Stop();
     }
     public void UpdateAttacking()
     {

@@ -124,6 +124,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkeletonKnight
       objectReference: {fileID: 0}
+    - target: {fileID: 8846445596957168667, guid: 6a9c7cec68eec164489f653d6bd3afbf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8846445596957168665, guid: 6a9c7cec68eec164489f653d6bd3afbf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1008,6 +1013,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dragon
       objectReference: {fileID: 0}
+    - target: {fileID: 6171029549530708856, guid: baed88711a85645459c8785fd4b56ce1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6171029549530708863, guid: baed88711a85645459c8785fd4b56ce1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1077,6 +1087,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat
       objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595134, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5426048675048595129, guid: 3d4e342670077e6429cf10a099bbacea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1145,6 +1160,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SkeletonMage
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329938760072784364, guid: ca90226ff58c78b4ab364f6b003a78bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 33859652010367467, guid: ca90226ff58c78b4ab364f6b003a78bd,
         type: 3}
