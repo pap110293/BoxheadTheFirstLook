@@ -4,16 +4,26 @@ using UnityEngine;
 
 public class SkillBlow : MonoBehaviour
 {
-    public int damage = 10;
+    public enum SkillType
+    {
+        Melee,
+        RangeForward,
+        RangeFollow
+        
+    }
+    public SkillType skillType;
 
-    private Transform PawnPoint;
-    private Transform Target;
-    private Transform TargetAim;
-    private float FlySpeed;
+    private int damage = 10;
+
+    private Transform pawnPoint;
+    private Transform target;
+    private Transform posAim;
+    private float flySpeed;
     private bool isDisable;
-    private bool isFollow;
+    //private bool isFollow;
     private Vector3 vecDelta;
     private Vector3 vecGoto;
+    private bool isInitlized = false;
     void Start()
     {
         isDisable = false;
@@ -22,71 +32,64 @@ public class SkillBlow : MonoBehaviour
     
     void Update()
     {
-        if (Target != null && PawnPoint != null)
+        if (!isInitlized) return;
+        switch(skillType)
         {
-            if (isFollow)
-                MoveToFollow(Target, TargetAim, FlySpeed);
-            else
-                UpdateMove(FlySpeed);
-                //MoveTo(Target, vecGoto, FlySpeed);
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }        
-    }
-    public void InitSkillBlow(Transform _pawnPoint, Transform _target,Transform _targetAim,float flySpeed)//Init bullet follow target
-    {
-        if (!_pawnPoint || !_target || !_targetAim)
-        {
-            Destroy(this.gameObject);
-            return;
-        }
-        PawnPoint = _pawnPoint;
-        Target = _target;
-        TargetAim = _targetAim;
-        FlySpeed = flySpeed;
-        vecDelta = PawnPoint.position;
-        isFollow = true;
-    }
-    public void InitSkillBlow(Transform _pawnPoint, Transform _target,Vector3 _posGoto, float flySpeed)//Init bullet don't follow target
-    {
-        if (!_pawnPoint || !_target)
-        {
-            Destroy(this.gameObject);
-            return;
-        }
-        PawnPoint = _pawnPoint;
-        Target = _target;
-        vecGoto = _posGoto;
-        FlySpeed = flySpeed;
-        vecDelta = PawnPoint.position;
-        isFollow = false;
+            case SkillType.Melee:
+                {
+                    UpdateMoveTo();
+                    break;
+                }                
+            case SkillType.RangeForward:
+                {
+                    UpdateMoveForward();
+                    break;
+                }                
+            case SkillType.RangeFollow:
+                {
+                    UpdateMoveToFollow();
+                    break;
+                }                
+            default:
+                Destroy(this.gameObject);
+                Debug.LogError(string.Format("skill type [{0}] is null!", this.name));
+                break;
 
-        transform.LookAt(_posGoto);
-    }
-    private void MoveToFollow(Transform target, Transform targetAim, float flySpeed)
-    {
-        if(!target || !targetAim)
-        {
-            Destroy(this.gameObject);
-        }else
-        {
-            transform.position = Vector3.MoveTowards(transform.position, targetAim.position, flySpeed = flySpeed * Time.deltaTime);
-            Vector3 _look = targetAim.position - vecDelta;
-            transform.rotation = Quaternion.LookRotation(_look);
         }
+     
     }
-    //private void MoveTo(Transform target, Vector3 movePos, float flySpeed)
-    //{        
-    //    transform.position = Vector3.MoveTowards(transform.position, movePos + transform., flySpeed = flySpeed * Time.deltaTime);
-    //    Vector3 _look = movePos - vecDelta;
-    //    transform.rotation = Quaternion.LookRotation(_look);
-    //}
-
-    private void UpdateMove(float flySpeed)
+    public void InitSkillBlow(Transform _pawnPoint, Transform _target,Transform _posAim, float _flySpeed,int _damage, SkillType _skillType)
     {
-        transform.position += transform.forward * flySpeed * Time.deltaTime;
+        skillType = _skillType;
+        pawnPoint = _pawnPoint;
+        target = _target;
+        posAim = _posAim;
+        flySpeed = _flySpeed;
+        damage = _damage;
+        //vecDelta = pawnPoint.position;
+        vecDelta = new Vector3(pawnPoint.position.x, pawnPoint.position.y, pawnPoint.position.z);
+        vecGoto = new Vector3(_posAim.position.x, _posAim.position.y, _posAim.position.z);
+
+        transform.LookAt(_posAim);
+        isInitlized = true;
+    }
+    private void UpdateMoveToFollow()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, this.posAim.position, this.flySpeed * Time.deltaTime);
+        Vector3 _look = this.posAim.position - vecDelta;
+        transform.rotation = Quaternion.LookRotation(_look);
+    }
+    private void UpdateMoveTo()
+    {
+        //Debug.LogError(this.flySpeed);
+        transform.position = Vector3.MoveTowards(transform.position,this.vecGoto, this.flySpeed * Time.deltaTime);
+        Vector3 _look = this.vecGoto - vecDelta;
+        transform.rotation = Quaternion.LookRotation(_look);
+    }
+
+    private void UpdateMoveForward()
+    {
+        transform.position += transform.forward * this.flySpeed * Time.deltaTime;
         if ((Vector3.Distance(vecGoto, vecDelta) * 3) <= Vector3.Distance(vecDelta, this.transform.position))
         {
             Destroy(this.gameObject);
@@ -97,9 +100,9 @@ public class SkillBlow : MonoBehaviour
     {
         if (!isDisable)
         {                       
-            if (Target != null)
+            if (target != null)
             {
-                if (other.gameObject == Target.gameObject)
+                if (other.gameObject == target.gameObject)
                 {
                     isDisable = true;
                     Destroy(gameObject);

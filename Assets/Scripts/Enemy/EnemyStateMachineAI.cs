@@ -62,7 +62,7 @@ public class EnemyStateMachineAI : MonoBehaviour
         Transform origin = this.transform;
         if (enemyManager)
         {
-            origin = enemyManager.enemyAttacker.ShootPoint; //transform.position;
+            origin = enemyManager.enemyAttacker.shootPoint; //transform.position;
         }
         
         if (Physics.Raycast(origin.position, target.transform.position - origin.position, out hit,1000))

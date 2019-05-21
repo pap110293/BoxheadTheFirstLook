@@ -723,9 +723,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f05ad97b6833444c849df7c5cbfb5cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: {fileID: 0}
   target: {fileID: 0}
-  movementSpeed: 2
-  planeMovement: {fileID: 0}
+  enemyMovement: {fileID: 0}
   enemyAttacker: {fileID: 0}
   teamManager: {fileID: 0}
   animState: {fileID: 0}
@@ -774,7 +774,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34f56852713fff849be51f7d07338210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flyHeight: 5
   model: {fileID: 5426048676235025044}
 --- !u!114 &5426048675048595105
 MonoBehaviour:
@@ -788,9 +787,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68c14bdafba911e408351003c74355c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackSpeed: 1
-  SkillBlowFlySpeed: 3
-  ShootPoint: {fileID: 5181445986051680359}
+  skillBlowFlySpeed: 8
+  isValidAttack: 0
+  attackCooldown: 1
+  actionAttackSpeed: 1
+  shootPoint: {fileID: 5181445986051680359}
   target: {fileID: 0}
   skillBlowPrefabs: {fileID: 2494000497611454123, guid: a07ff4fb590ee4945a72c0ee1baa67bf,
     type: 3}
