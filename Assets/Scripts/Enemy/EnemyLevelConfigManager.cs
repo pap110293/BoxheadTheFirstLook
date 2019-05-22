@@ -15,7 +15,7 @@ public class EnemyLevelConfigManager : MonoBehaviour
 
     }
 
-    void PawnEnemy(EnemyAtribute _enemyAtribute, GameObject _enemyPrefabs)
+    void PawnEnemy(EnemyData _enemyAtribute, GameObject _enemyPrefabs)
     {
         var Enemy = Instantiate(_enemyPrefabs, new Vector3(0, 0, 0), Quaternion.identity);
         Enemy.GetComponent<EnemyManager>().enemyAtribute = _enemyAtribute;

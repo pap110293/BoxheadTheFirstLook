@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 [System.Serializable]
-public class EnemyAtribute
+public class EnemyData
 {
     public int HP;
     public int Amor;
@@ -13,7 +14,7 @@ public class EnemyAtribute
     public float attackCooldown;
     public float skillFlySpeed;
     public SkillBlow.SkillType skillType;
-    public EnemyAtribute()
+    public EnemyData()
     {
         HP = 1;
         Amor = 0;

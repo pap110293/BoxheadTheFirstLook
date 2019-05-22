@@ -13,7 +13,7 @@ public class EnemyManager : MonoBehaviour
         Bat,
         Dragon
     }
-    public EnemyAtribute enemyAtribute;
+    public EnemyData enemyAtribute;
     //
     public EnemyLife life;
     public Transform target;    
