@@ -11,8 +11,8 @@ public class EnemyLevelConfigManager : MonoBehaviour
     public EnemyManager.EnemyType enemyType;
     void Start()
     {
-        MasterManager.ResumeGame();
-
+        //MasterManager.ResumeGame();
+        MasterManager.enemyLevelConfigManager = this;
     }
 
     void PawnEnemy(EnemyData _enemyAtribute, GameObject _enemyPrefabs)
@@ -22,15 +22,15 @@ public class EnemyLevelConfigManager : MonoBehaviour
     }
     public void Update()
     {
-        if (isSpawn)
-        {
-            var item = GetEnemyAtribute(level, enemyType);
-            if (item != null)
-            {
-                PawnEnemy(item.atribute, item.enemyPrefabs);
-                isSpawn = false;
-            }
-        }
+        //if (isSpawn)
+        //{
+        //    var item = GetEnemyAtribute(level, enemyType);
+        //    if (item != null)
+        //    {
+        //        PawnEnemy(item.atribute, item.enemyPrefabs);
+        //        isSpawn = false;
+        //    }
+        //}
     }
     //
     public EnemyLevelDataUnit GetEnemyAtribute(int _level, EnemyManager.EnemyType _enemyType)

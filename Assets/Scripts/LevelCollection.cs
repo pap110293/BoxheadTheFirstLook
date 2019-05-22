@@ -11,6 +11,7 @@ public class LevelData
     public Spawner.SpawnerObject[] monsters;
     public GameObject boss;
     public Spawner.SpawnerObject[] items;
+    
 
 }
 

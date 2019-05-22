@@ -8,7 +8,9 @@ public class Spawner : MonoBehaviour
     [Serializable]
     public struct SpawnerObject
     {
-        public GameObject Obj;
+        public GameObject Obj;        
+        public int level;
+        public EnemyManager.EnemyType enemyType;
         [Range(0, 100.0f)]
         public float percent;
     }
@@ -87,7 +89,11 @@ public class Spawner : MonoBehaviour
         var z = UnityEngine.Random.Range(transform.position.z - size.z / 2, transform.position.z + size.z / 2);
         var y = transform.position.y;
         var position = new Vector3(x, y, z);
-        Instantiate(ob.Obj, position, Quaternion.identity);
+        var Enemy =  Instantiate(ob.Obj, position, Quaternion.identity);
+        //vinh add
+        Enemy.GetComponent<EnemyManager>().enemyAtribute = MasterManager.enemyLevelConfigManager.GetEnemyAtribute(ob.level, ob.enemyType).atribute;
+        //
+
         MasterManager.spawEnemyManager.totalEnemy++;
     }
 
