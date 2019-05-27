@@ -21,6 +21,7 @@ public class SpawEnemyManager : MonoBehaviour
                 spawner.spawnerObjects = _levelData.monsters;
             spawner.numberOfObject = _levelData.totalSpawnObject / spawners.Count;
             spawner.duration = _levelData.duration;
+            spawner.StopSpawn();
         }
     }
 
