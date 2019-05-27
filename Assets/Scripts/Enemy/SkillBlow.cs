@@ -60,6 +60,7 @@ public class SkillBlow : MonoBehaviour
     }
     public void InitSkillBlow(Transform _pawnPoint, Transform _target,Transform _posAim, float _flySpeed,int _damage, SkillType _skillType)
     {
+        isDisable = false;
         skillType = _skillType;
         pawnPoint = _pawnPoint;
         target = _target;
@@ -93,26 +94,35 @@ public class SkillBlow : MonoBehaviour
         if ((Vector3.Distance(vecGoto, vecDelta) * 3) <= Vector3.Distance(vecDelta, this.transform.position))
         {
             Destroy(this.gameObject);
+            //isDisable = true;
+            //gameObject.SetActive(false);
+            //Destroy(this.gameObject,2.0f);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (!isDisable)
-        {                       
-            if (target != null)
-            {
-                if (other.gameObject == target.gameObject)
-                {
-                    isDisable = true;
-                    Destroy(gameObject);
-                    SkillHit(other);
-                }
-            }
-            else
+        {
+            //if (target != null)
+            //{
+            //    if (other.gameObject == target.gameObject)
+            //    {
+            //        isDisable = true;
+            //        Destroy(gameObject);
+            //        SkillHit(other);
+            //    }
+            //}
+            //else
+            //{
+            //    isDisable = true;
+            //    Destroy(this.gameObject);
+            //}
+            if (other.gameObject.CompareTag("Player"))
             {
                 isDisable = true;
-                Destroy(this.gameObject);
+                Destroy(gameObject);                
+                SkillHit(other);
             }
         }
     }

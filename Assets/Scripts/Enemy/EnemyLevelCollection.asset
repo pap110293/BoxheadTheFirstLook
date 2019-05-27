@@ -38,7 +38,7 @@ MonoBehaviour:
         typeMove: 0
         attackCooldown: 2
         skillFlySpeed: 10
-        skillType: 0
+        skillType: 1
       enemyPrefabs: {fileID: 5329938760072784364, guid: ca90226ff58c78b4ab364f6b003a78bd,
         type: 3}
     - enemyType: 2
@@ -92,7 +92,7 @@ MonoBehaviour:
         typeMove: 0
         attackCooldown: 2
         skillFlySpeed: 10
-        skillType: 0
+        skillType: 1
       enemyPrefabs: {fileID: 5329938760072784364, guid: ca90226ff58c78b4ab364f6b003a78bd,
         type: 3}
     - enemyType: 2
