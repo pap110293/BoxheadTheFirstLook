@@ -14,20 +14,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   records:
   - levelId: 1
-    duration: 1
-    totalSpawnObject: 5
+    duration: 10
+    totalSpawnObject: 10
     monsters:
     - Obj: {fileID: 8846445596957168667, guid: 6a9c7cec68eec164489f653d6bd3afbf, type: 3}
+      level: 1
+      enemyType: 0
       percent: 100
     - Obj: {fileID: 5329938760072784364, guid: ca90226ff58c78b4ab364f6b003a78bd, type: 3}
+      level: 1
+      enemyType: 1
       percent: 100
     boss: {fileID: 0}
     items: []
   - levelId: 2
-    duration: 1
-    totalSpawnObject: 3
+    duration: 10
+    totalSpawnObject: 10
     monsters:
+    - Obj: {fileID: 8846445596957168667, guid: 6a9c7cec68eec164489f653d6bd3afbf, type: 3}
+      level: 2
+      enemyType: 0
+      percent: 100
     - Obj: {fileID: 5329938760072784364, guid: ca90226ff58c78b4ab364f6b003a78bd, type: 3}
+      level: 2
+      enemyType: 1
+      percent: 100
+    - Obj: {fileID: 5426048675048595134, guid: 3d4e342670077e6429cf10a099bbacea, type: 3}
+      level: 2
+      enemyType: 2
+      percent: 100
+    - Obj: {fileID: 6171029549530708856, guid: baed88711a85645459c8785fd4b56ce1, type: 3}
+      level: 2
+      enemyType: 3
       percent: 100
     boss: {fileID: 0}
     items: []

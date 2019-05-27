@@ -12,25 +12,25 @@ public class EnemyLevelConfigManager : MonoBehaviour
     void Start()
     {
         MasterManager.ResumeGame();
-
+        MasterManager.enemyLevelConfigManager = this;
     }
 
-    void PawnEnemy(EnemyAtribute _enemyAtribute, GameObject _enemyPrefabs)
+    void PawnEnemy(EnemyData _enemyAtribute, GameObject _enemyPrefabs)
     {
         var Enemy = Instantiate(_enemyPrefabs, new Vector3(0, 0, 0), Quaternion.identity);
         Enemy.GetComponent<EnemyManager>().enemyAtribute = _enemyAtribute;
     }
     public void Update()
     {
-        if (isSpawn)
-        {
-            var item = GetEnemyAtribute(level, enemyType);
-            if (item != null)
-            {
-                PawnEnemy(item.atribute, item.enemyPrefabs);
-                isSpawn = false;
-            }
-        }
+        //if (isSpawn)
+        //{
+        //    var item = GetEnemyAtribute(level, enemyType);
+        //    if (item != null)
+        //    {
+        //        PawnEnemy(item.atribute, item.enemyPrefabs);
+        //        isSpawn = false;
+        //    }
+        //}
     }
     //
     public EnemyLevelDataUnit GetEnemyAtribute(int _level, EnemyManager.EnemyType _enemyType)

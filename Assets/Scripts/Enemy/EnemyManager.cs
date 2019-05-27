@@ -13,7 +13,7 @@ public class EnemyManager : MonoBehaviour
         Bat,
         Dragon
     }
-    public EnemyAtribute enemyAtribute;
+    public EnemyData enemyAtribute;
     //
     public EnemyLife life;
     public Transform target;    
@@ -34,8 +34,9 @@ public class EnemyManager : MonoBehaviour
 
         #region Init Movement
         enemyMovement = this.GetComponent<Movement>();
+        enemyMovement.model.localScale = new Vector3(1+(enemyAtribute.level *0.1f), 1 + (enemyAtribute.level * 0.1f), 1 + (enemyAtribute.level * 0.1f));
         #endregion
-        
+
         #region Init Attacker
         enemyAttacker = this.GetComponent<EnemyAttacker>();
         enemyAttacker.InitAttacker(enemyAtribute.attackCooldown, enemyAtribute.skillFlySpeed, enemyAtribute.damage, enemyAtribute.skillType);
@@ -46,6 +47,7 @@ public class EnemyManager : MonoBehaviour
     }
     public void UpdateChasing()
     {
+        if (enemyAttacker.timeCastingSkill > 0) return;
         if (target) enemyMovement.SetMove(target, enemyAtribute.typeMove, enemyAtribute.movementSpeed, enemyAtribute.flyHeight);
         animState.SetAnim(EnemyAnimState.AnimState.RunForward);
     }
@@ -56,24 +58,26 @@ public class EnemyManager : MonoBehaviour
     }
     public void UpdateAttacking()
     {
-        if(enemyAttacker.isValidAttack)
-        {
-            animState.SetAnim(EnemyAnimState.AnimState.DefaultAttack, enemyAttacker.actionAttackSpeed);
-            enemyAttacker.EnemyUpdateTargetAttack(target);
-        }else
-        {
-            animState.SetAnim(EnemyAnimState.AnimState.Idle, 1);
-        }
-        
+        //if(enemyAttacker.isValidAttack)
+        //{
+        //    animState.SetAnim(EnemyAnimState.AnimState.DefaultAttack, enemyAttacker.actionAttackSpeed);
+        //    enemyAttacker.EnemyUpdateTargetAttack(target);
+        //}else
+        //{
+        //    animState.SetAnim(EnemyAnimState.AnimState.Idle, 1);
+        //}
+        enemyAttacker.UpdateAtacker(target,animState);
+
+
     }
     #region Attack    
     private void Update()
     {
         if (teamManager != null) target = teamManager.target;
-    }    
-    public void DefaultAttackEvent()
-    {
-        enemyAttacker.ActionAttack();
     }
+    //public void DefaultAttackEvent()
+    //{
+    //    enemyAttacker.ActionAttack();
+    //}
     #endregion
 }

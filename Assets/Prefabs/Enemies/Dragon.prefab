@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAtribute:
+    level: 1
     HP: 1
     Amor: 0
     movementSpeed: 0
@@ -134,7 +135,7 @@ MonoBehaviour:
     typeMove: 0
     attackCooldown: 0
     skillFlySpeed: 0
-    skillType: 0
+    skillType: 1
   life: {fileID: 0}
   target: {fileID: 0}
   enemyMovement: {fileID: 0}
@@ -153,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d53dc50ba658354da6ae28ba0409823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bowRange: 10
+  bowRange: 20
   dangerRange: 0
   meleeRange: 0
   enemyManager: {fileID: 0}
@@ -204,6 +205,9 @@ MonoBehaviour:
   attackCooldown: 1
   actionAttackSpeed: 1
   damage: 1
+  CurrentMana: 1
+  timeCastingSkill: 0
+  UnlockCastSkill: 1
   shootPoint: {fileID: 1414847367917217043}
   target: {fileID: 0}
   skillBlowPrefabs: {fileID: 5563692012498191205, guid: c9235b856811978409fb76259c42193d,

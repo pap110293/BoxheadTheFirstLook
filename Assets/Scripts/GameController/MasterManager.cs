@@ -15,7 +15,7 @@ public class MasterManager : MonoBehaviour
     public static LevelConfigManager levelConfigManager;
     public static SpawEnemyManager spawEnemyManager;
     public static ScoreController scoreController;
-
+    public static EnemyLevelConfigManager enemyLevelConfigManager;
     public static void PauseGame()
     {
         isPause = true;

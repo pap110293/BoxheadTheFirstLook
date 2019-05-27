@@ -148,12 +148,12 @@ GameObject:
   - component: {fileID: 2331326406871524953}
   - component: {fileID: 2525958074047227867}
   - component: {fileID: 2330748313600550687}
-  - component: {fileID: 2481725895608646323}
   - component: {fileID: 2475840566936768667}
   - component: {fileID: 2527729153168748015}
   - component: {fileID: 1011883545808239191}
+  - component: {fileID: 2447874489159093384}
   m_Layer: 0
-  m_Name: BatSkill
+  m_Name: BatDefaultSkill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,7 +167,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2494000497611454123}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.65, y: 2, z: -0.05}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2492221786375551801}
@@ -4960,19 +4960,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!65 &2481725895608646323
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2494000497611454123}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.27, y: 0.27, z: 0.27}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &2475840566936768667
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4984,8 +4971,8 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
+  m_UseGravity: 1
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -5017,7 +5004,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da45f6a4f253894d9f0f05d788c3dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  skillType: 0
+--- !u!135 &2447874489159093384
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2494000497611454123}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2494227896555674991
 GameObject:
   m_ObjectHideFlags: 0

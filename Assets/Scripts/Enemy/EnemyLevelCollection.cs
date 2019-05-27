@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 [System.Serializable]
 public class EnemyLevelDataUnit
 {
     //public int level;
     public EnemyManager.EnemyType enemyType;
-    public EnemyAtribute atribute;
+    public EnemyData atribute;
     public GameObject enemyPrefabs;
     //public EnemyAtribute enemyAtribute;
     //public GameObject enemyprefabs;
@@ -21,14 +22,16 @@ public class EnemyLevelDataUnit
     //public SkillBlow.SkillType skillType;
 
 }
+
 [System.Serializable]
-public class EnemyLevelData
+public class EnemyLevelDataGroup
 {
     public int Level;
     public EnemyLevelDataUnit[] records;
 }
+
 [CreateAssetMenu(fileName = "EnemyLevelData", menuName = "Assets/Create Enemy Level Collection")]
 public class EnemyLevelCollection : ScriptableObject
 {
-    public EnemyLevelData[] records;
+    public EnemyLevelDataGroup[] records;
 }
