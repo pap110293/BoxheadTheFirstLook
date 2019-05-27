@@ -61,6 +61,9 @@ public class ScoreController : MonoBehaviour
     public void ResetScore()
     {
         currentPoint = 0;
+        if (!gameUI)
+            gameUI = MasterManager.gameHUBCanvas;
+
         gameUI.UpdateScoreUI(currentPoint);
     }
 }
