@@ -106,7 +106,7 @@ public class EnemyFSM
             new StateMachine.Transition()
             {
                 targetState = rangeAttackState,
-                IsTriggered = () => (PlayerDistance <= bowRange - 0.1f && IsValidAttack)
+                IsTriggered = () => (PlayerDistance <= bowRange - 1f && IsValidAttack)
             }
         };
     }
@@ -122,7 +122,7 @@ public class EnemyFSM
             new StateMachine.Transition()
             {
                 targetState = runAwayState,
-                IsTriggered = () => PlayerDistance <= dangerRange - 0.1f
+                IsTriggered = () => PlayerDistance <= dangerRange - 1f
             }
         };
     }
@@ -138,7 +138,7 @@ public class EnemyFSM
             new StateMachine.Transition()
             {
                 targetState = meleeAttackState,
-                IsTriggered = () => PlayerDistance <= meleeRange -0.1f
+                IsTriggered = () => PlayerDistance <= meleeRange - 1f
             }
         };
     }

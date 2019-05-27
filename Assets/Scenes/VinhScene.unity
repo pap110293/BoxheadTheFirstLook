@@ -1288,6 +1288,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595109, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: enemyAtribute.movementSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595109, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: enemyAtribute.flyHeight
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595109, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: enemyAtribute.skillFlySpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595109, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: enemyAtribute.attackCooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595109, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: enemyAtribute.skillType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d4e342670077e6429cf10a099bbacea, type: 3}
 --- !u!1001 &5751261134133580920
