@@ -11,7 +11,7 @@ public class EnemyLevelConfigManager : MonoBehaviour
     public EnemyManager.EnemyType enemyType;
     void Start()
     {
-        //MasterManager.ResumeGame();
+        MasterManager.ResumeGame();
         MasterManager.enemyLevelConfigManager = this;
     }
 

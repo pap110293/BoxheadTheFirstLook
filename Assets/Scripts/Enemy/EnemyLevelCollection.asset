@@ -17,9 +17,9 @@ MonoBehaviour:
     records:
     - enemyType: 0
       atribute:
-        HP: 100
+        HP: 50
         Amor: 0
-        movementSpeed: 10
+        movementSpeed: 5
         flyHeight: 0
         damage: 10
         typeMove: 0
@@ -30,9 +30,9 @@ MonoBehaviour:
         type: 3}
     - enemyType: 1
       atribute:
-        HP: 100
+        HP: 30
         Amor: 0
-        movementSpeed: 10
+        movementSpeed: 3
         flyHeight: 0
         damage: 10
         typeMove: 0
@@ -43,9 +43,9 @@ MonoBehaviour:
         type: 3}
     - enemyType: 2
       atribute:
-        HP: 100
+        HP: 30
         Amor: 0
-        movementSpeed: 10
+        movementSpeed: 7
         flyHeight: 5
         damage: 10
         typeMove: 1
@@ -60,20 +60,20 @@ MonoBehaviour:
         Amor: 0
         movementSpeed: 10
         flyHeight: 10
-        damage: 10
+        damage: 20
         typeMove: 1
         attackCooldown: 2
-        skillFlySpeed: 10
+        skillFlySpeed: 15
         skillType: 1
       enemyPrefabs: {fileID: 6171029549530708856, guid: baed88711a85645459c8785fd4b56ce1,
         type: 3}
-  - Level: 2
+  - Level: 1
     records:
     - enemyType: 0
       atribute:
         HP: 100
         Amor: 0
-        movementSpeed: 10
+        movementSpeed: 5
         flyHeight: 0
         damage: 10
         typeMove: 0
@@ -84,9 +84,63 @@ MonoBehaviour:
         type: 3}
     - enemyType: 1
       atribute:
-        HP: 100
+        HP: 80
+        Amor: 0
+        movementSpeed: 4
+        flyHeight: 0
+        damage: 10
+        typeMove: 0
+        attackCooldown: 2
+        skillFlySpeed: 10
+        skillType: 1
+      enemyPrefabs: {fileID: 5329938760072784364, guid: ca90226ff58c78b4ab364f6b003a78bd,
+        type: 3}
+    - enemyType: 2
+      atribute:
+        HP: 80
+        Amor: 0
+        movementSpeed: 7
+        flyHeight: 5
+        damage: 10
+        typeMove: 1
+        attackCooldown: 2
+        skillFlySpeed: 10
+        skillType: 1
+      enemyPrefabs: {fileID: 5426048675048595134, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+    - enemyType: 3
+      atribute:
+        HP: 200
         Amor: 0
         movementSpeed: 10
+        flyHeight: 10
+        damage: 20
+        typeMove: 1
+        attackCooldown: 2
+        skillFlySpeed: 15
+        skillType: 1
+      enemyPrefabs: {fileID: 6171029549530708856, guid: baed88711a85645459c8785fd4b56ce1,
+        type: 3}
+  - Level: 1
+    records:
+    - enemyType: 0
+      atribute:
+        HP: 150
+        Amor: 0
+        movementSpeed: 7
+        flyHeight: 0
+        damage: 10
+        typeMove: 0
+        attackCooldown: 2
+        skillFlySpeed: 10
+        skillType: 0
+      enemyPrefabs: {fileID: 8846445596957168667, guid: 6a9c7cec68eec164489f653d6bd3afbf,
+        type: 3}
+    - enemyType: 1
+      atribute:
+        HP: 120
+        Amor: 0
+        movementSpeed: 5
         flyHeight: 0
         damage: 10
         typeMove: 0
@@ -104,20 +158,20 @@ MonoBehaviour:
         damage: 10
         typeMove: 1
         attackCooldown: 2
-        skillFlySpeed: 10
+        skillFlySpeed: 20
         skillType: 1
       enemyPrefabs: {fileID: 5426048675048595134, guid: 3d4e342670077e6429cf10a099bbacea,
         type: 3}
     - enemyType: 3
       atribute:
-        HP: 100
+        HP: 300
         Amor: 0
         movementSpeed: 10
         flyHeight: 10
-        damage: 10
+        damage: 20
         typeMove: 1
         attackCooldown: 2
-        skillFlySpeed: 10
+        skillFlySpeed: 15
         skillType: 1
       enemyPrefabs: {fileID: 6171029549530708856, guid: baed88711a85645459c8785fd4b56ce1,
         type: 3}
