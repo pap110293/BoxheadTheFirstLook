@@ -10,6 +10,9 @@ public class EnemyAttacker : MonoBehaviour
     public float attackCooldown = 1;
     public float actionAttackSpeed = 1;
     public int damage = 1;
+    public float CurrentMana = 1;
+    public float timeCastingSkill = 0;
+    public bool UnlockCastSkill = false;
 
     public Transform shootPoint;
     public Transform target;
@@ -30,15 +33,20 @@ public class EnemyAttacker : MonoBehaviour
         if (!shootPoint) shootPoint = this.transform;
         countDownAttacker = 0;
     }
-    public void EnemyUpdateTargetAttack(Transform _target)
+    private void Update()
     {
-        if (_target) target = _target;
+        countDownAttacker = countDownAttacker - Time.deltaTime;
+        CurrentMana += Time.deltaTime;
+        if (countDownAttacker <= 0)
+        {
+            isValidAttack = true;
+        }
+        else
+        {
+            isValidAttack = false;
+        }
     }
-    public void ActionAttack()
-    {
-        EnemyAttack(target, skillBlowFlySpeed);
-    }
-    void EnemyAttack(Transform target, float flySpeed)
+    void EnemyDefaultAttack(Transform target, float flySpeed)
     {
         if (!shootPoint || !target) return;
         Transform _targetAim = target.transform;
@@ -47,17 +55,64 @@ public class EnemyAttacker : MonoBehaviour
         SkillBlow.InitSkillBlow(shootPoint, target, _targetAim, flySpeed, damage, skillType);
         countDownAttacker = attackCooldown;
     }
-    private void Update()
+    public void InitCastSkill(EnemyAnimState _animState)
     {
-        countDownAttacker = countDownAttacker -Time.deltaTime;
-        if (countDownAttacker <= 0)
+        timeCastingSkill = 3;
+        countDownAttacker = timeCastingSkill + 1;
+        CurrentMana = 0;
+        _animState.SetAnim(EnemyAnimState.AnimState.CastingSkill, actionAttackSpeed);
+    }
+    public void UpdateAtacker(Transform _target, EnemyAnimState _animState)
+    {
+        if (_target) target = _target;
+        if (isValidAttack)
         {
-            isValidAttack = true;
+            switch (CheckValidSkill())
+            {
+                case 1:
+                    {                        
+                        InitCastSkill(_animState);
+                        break;
+                    }
+                default:
+                    {
+                        if (timeCastingSkill <= 0) _animState.SetAnim(EnemyAnimState.AnimState.DefaultAttack, actionAttackSpeed);
+                        break;
+                    }
+            }
         }
         else
         {
-            isValidAttack = false;
-        } 
-         
+            if (timeCastingSkill <= 0) _animState.SetAnim(EnemyAnimState.AnimState.Idle, 1);
+        }
     }
+    public int CheckValidSkill()
+    {
+        if (UnlockCastSkill && CurrentMana >= 10)
+        {
+            return 1;
+        }
+        return 0;
+    }
+    public void DefaultAttackEvent()
+    {
+        EnemyDefaultAttack(target, skillBlowFlySpeed);
+    }
+    public void CastSkillBeginEvent()
+    {
+        this.StartCoroutine(SkillCasting());
+    }
+    IEnumerator SkillCasting()
+    {
+        float _timeWait = 0.3f;
+        while(timeCastingSkill > 0)
+        {
+            EnemyDefaultAttack(target, skillBlowFlySpeed);
+            yield return new WaitForSecondsRealtime(_timeWait);
+            timeCastingSkill -= _timeWait;
+        }
+        yield break;
+    }
+
+
 }

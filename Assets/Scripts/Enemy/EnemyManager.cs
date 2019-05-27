@@ -47,6 +47,7 @@ public class EnemyManager : MonoBehaviour
     }
     public void UpdateChasing()
     {
+        if (enemyAttacker.timeCastingSkill > 0) return;
         if (target) enemyMovement.SetMove(target, enemyAtribute.typeMove, enemyAtribute.movementSpeed, enemyAtribute.flyHeight);
         animState.SetAnim(EnemyAnimState.AnimState.RunForward);
     }
@@ -57,24 +58,26 @@ public class EnemyManager : MonoBehaviour
     }
     public void UpdateAttacking()
     {
-        if(enemyAttacker.isValidAttack)
-        {
-            animState.SetAnim(EnemyAnimState.AnimState.DefaultAttack, enemyAttacker.actionAttackSpeed);
-            enemyAttacker.EnemyUpdateTargetAttack(target);
-        }else
-        {
-            animState.SetAnim(EnemyAnimState.AnimState.Idle, 1);
-        }
-        
+        //if(enemyAttacker.isValidAttack)
+        //{
+        //    animState.SetAnim(EnemyAnimState.AnimState.DefaultAttack, enemyAttacker.actionAttackSpeed);
+        //    enemyAttacker.EnemyUpdateTargetAttack(target);
+        //}else
+        //{
+        //    animState.SetAnim(EnemyAnimState.AnimState.Idle, 1);
+        //}
+        enemyAttacker.UpdateAtacker(target,animState);
+
+
     }
     #region Attack    
     private void Update()
     {
         if (teamManager != null) target = teamManager.target;
-    }    
-    public void DefaultAttackEvent()
-    {
-        enemyAttacker.ActionAttack();
     }
+    //public void DefaultAttackEvent()
+    //{
+    //    enemyAttacker.ActionAttack();
+    //}
     #endregion
 }
