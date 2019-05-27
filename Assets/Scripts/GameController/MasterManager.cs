@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
@@ -13,6 +14,7 @@ public class MasterManager : MonoBehaviour
     public static GameController gameController;
     public static LevelConfigManager levelConfigManager;
     public static SpawEnemyManager spawEnemyManager;
+    public static ScoreController scoreController;
 
     public static void PauseGame()
     {

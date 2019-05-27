@@ -115,7 +115,6 @@ public class FPSWeapon : FPSItem
             {
                 animator.SetTrigger("shoot");
                 timeTemp = FireRate;
-                
             }
         }
     }
@@ -216,7 +215,7 @@ public class FPSWeapon : FPSItem
             bullet.GetComponent<TrailRenderer>().enabled = false;
             var bulletClass = bullet.GetComponent<Bullet>();
             bulletClass.SetDamage(Damage);
-            bulletClass.SetDistance(0.01f);
+            bulletClass.SetDistance(1.5f);
         }
     }
 

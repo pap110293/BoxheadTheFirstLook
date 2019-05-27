@@ -20,6 +20,7 @@ public class EnemyLife : LifeBase
             }
         }
         MasterManager.spawEnemyManager.totalEnemy--;
+        MasterManager.scoreController.AddPoint(1);
         Destroy(gameObject);
     }
 }

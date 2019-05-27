@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour
     public float lifeTime = 1;
 
     private int damage = 1;
-    private float distance = float.MaxValue;
+    private float maxDistance = float.MaxValue;
     private Vector3 startPos;
 
     Vector3 nextPos;
@@ -33,13 +33,13 @@ public class Bullet : MonoBehaviour
     private void CheckDistance()
     {
         var dis = (transform.position - startPos).magnitude;
-        if (dis >= distance)
+        if (dis >= maxDistance)
             Destroy(gameObject);
     }
 
     public void SetDistance(float dis)
     {
-        distance = dis;
+        maxDistance = dis;
     }
 
     public void SetDamage(int damage)
@@ -55,9 +55,14 @@ public class Bullet : MonoBehaviour
         Ray ray = new Ray(currentPos, direction.normalized);
         RaycastHit[] hits = Physics.RaycastAll(ray);
 
-        for (int i = 0; i < hits.Length; i++)
+        if (hits.Length == 0) return;
+
+        foreach (var hited in hits)
         {
-            var hited = hits[i];
+            var distanceToHited = Vector3.Distance(hited.point, currentPos);
+
+            if (distanceToHited > maxDistance)
+                return;
 
             DamagePackage dm = new DamagePackage
             {
@@ -72,8 +77,8 @@ public class Bullet : MonoBehaviour
             if (hitMark != null)
             {
                 hitMark.OnHit(dm);
+                gameObject.SetActive(false);
             }
-            gameObject.SetActive(false);
         }
 
         transform.position = nextPos;

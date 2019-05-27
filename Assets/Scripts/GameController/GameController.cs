@@ -80,8 +80,8 @@ public class GameController : MonoBehaviour
 
     private IEnumerator StartNewGameProcess()
     {
-
         MasterManager.levelConfigManager.Restart();
+        MasterManager.scoreController.ResetScore();
         yield return StartCoroutine(GameProcess());
     }
 

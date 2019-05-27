@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 8355323808581876568}
   m_Layer: 0
   m_Name: SkeletonMage
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,6 +126,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f05ad97b6833444c849df7c5cbfb5cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyAtribute:
+    HP: 1
+    Amor: 0
+    movementSpeed: 0
+    flyHeight: 0
+    damage: 0
+    typeMove: 0
+    attackCooldown: 0
+    skillFlySpeed: 0
+    skillType: 0
   life: {fileID: 0}
   target: {fileID: 0}
   enemyMovement: {fileID: 0}
@@ -194,6 +204,7 @@ MonoBehaviour:
   isValidAttack: 0
   attackCooldown: 1
   actionAttackSpeed: 1
+  damage: 1
   shootPoint: {fileID: 131170700797023788}
   target: {fileID: 0}
   skillBlowPrefabs: {fileID: 2494000497611454123, guid: a07ff4fb590ee4945a72c0ee1baa67bf,

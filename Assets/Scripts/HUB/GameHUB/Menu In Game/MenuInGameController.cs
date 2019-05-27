@@ -22,6 +22,7 @@ public class MenuInGameController : MonoBehaviour
     void Start()
     {
         this.HidePauseMenu();
+        this.HideFinishPanel();
 
     }
 

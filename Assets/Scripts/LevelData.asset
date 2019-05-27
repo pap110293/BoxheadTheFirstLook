@@ -15,15 +15,17 @@ MonoBehaviour:
   records:
   - levelId: 1
     duration: 1
-    totalSpawnObject: 1
+    totalSpawnObject: 5
     monsters:
-    - Obj: {fileID: 6171029549530708856, guid: baed88711a85645459c8785fd4b56ce1, type: 3}
+    - Obj: {fileID: 8846445596957168667, guid: 6a9c7cec68eec164489f653d6bd3afbf, type: 3}
+      percent: 100
+    - Obj: {fileID: 5329938760072784364, guid: ca90226ff58c78b4ab364f6b003a78bd, type: 3}
       percent: 100
     boss: {fileID: 0}
     items: []
   - levelId: 2
     duration: 1
-    totalSpawnObject: 1
+    totalSpawnObject: 3
     monsters:
     - Obj: {fileID: 5329938760072784364, guid: ca90226ff58c78b4ab364f6b003a78bd, type: 3}
       percent: 100
