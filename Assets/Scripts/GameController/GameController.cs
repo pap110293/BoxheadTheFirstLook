@@ -110,7 +110,7 @@ public class GameController : MonoBehaviour
 
     private void ShowFinishPanel()
     {
-        MasterManager.menuInGameController.ShowFinishPanel(100, "Your score");
+        MasterManager.menuInGameController.ShowFinishPanel("Your score");
         MasterManager.PauseGame();
         MasterManager.UnLockCursor();
     }

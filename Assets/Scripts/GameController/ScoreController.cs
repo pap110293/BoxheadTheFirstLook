@@ -26,7 +26,7 @@ public class ScoreController : MonoBehaviour
 
     private void Update()
     {
-        if(timeCountDown > 0)
+        if (timeCountDown > 0)
         {
             timeCountDown -= Time.deltaTime;
         }
@@ -52,7 +52,7 @@ public class ScoreController : MonoBehaviour
 
     private void updateTimeCountDown()
     {
-        timeCountDown = Mathf.Clamp(maxTimeCombo - (maxTimeCombo * multiply / 100f),minTimeCombo,maxTimeCombo);
+        timeCountDown = Mathf.Clamp(maxTimeCombo - (maxTimeCombo * multiply / 100f), minTimeCombo, maxTimeCombo);
     }
 
     /// <summary>
@@ -61,6 +61,6 @@ public class ScoreController : MonoBehaviour
     public void ResetScore()
     {
         currentPoint = 0;
-        gameUI.updateArmorUI(currentPoint);
+        gameUI.UpdateScoreUI(currentPoint);
     }
 }
