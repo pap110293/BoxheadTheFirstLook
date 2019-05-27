@@ -17,6 +17,7 @@ MonoBehaviour:
     records:
     - enemyType: 0
       atribute:
+        level: 1
         HP: 50
         Amor: 0
         movementSpeed: 5
@@ -30,6 +31,7 @@ MonoBehaviour:
         type: 3}
     - enemyType: 1
       atribute:
+        level: 1
         HP: 30
         Amor: 0
         movementSpeed: 3
@@ -43,6 +45,7 @@ MonoBehaviour:
         type: 3}
     - enemyType: 2
       atribute:
+        level: 1
         HP: 30
         Amor: 0
         movementSpeed: 7
@@ -56,6 +59,7 @@ MonoBehaviour:
         type: 3}
     - enemyType: 3
       atribute:
+        level: 1
         HP: 100
         Amor: 0
         movementSpeed: 10
@@ -71,6 +75,7 @@ MonoBehaviour:
     records:
     - enemyType: 0
       atribute:
+        level: 2
         HP: 100
         Amor: 0
         movementSpeed: 5
@@ -84,6 +89,7 @@ MonoBehaviour:
         type: 3}
     - enemyType: 1
       atribute:
+        level: 2
         HP: 80
         Amor: 0
         movementSpeed: 4
@@ -97,6 +103,7 @@ MonoBehaviour:
         type: 3}
     - enemyType: 2
       atribute:
+        level: 2
         HP: 80
         Amor: 0
         movementSpeed: 7
@@ -110,6 +117,7 @@ MonoBehaviour:
         type: 3}
     - enemyType: 3
       atribute:
+        level: 2
         HP: 200
         Amor: 0
         movementSpeed: 10
@@ -125,6 +133,7 @@ MonoBehaviour:
     records:
     - enemyType: 0
       atribute:
+        level: 3
         HP: 150
         Amor: 0
         movementSpeed: 7
@@ -138,6 +147,7 @@ MonoBehaviour:
         type: 3}
     - enemyType: 1
       atribute:
+        level: 3
         HP: 120
         Amor: 0
         movementSpeed: 5
@@ -151,6 +161,7 @@ MonoBehaviour:
         type: 3}
     - enemyType: 2
       atribute:
+        level: 3
         HP: 100
         Amor: 0
         movementSpeed: 10
@@ -164,6 +175,7 @@ MonoBehaviour:
         type: 3}
     - enemyType: 3
       atribute:
+        level: 3
         HP: 300
         Amor: 0
         movementSpeed: 10

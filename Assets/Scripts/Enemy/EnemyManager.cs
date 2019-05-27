@@ -34,8 +34,9 @@ public class EnemyManager : MonoBehaviour
 
         #region Init Movement
         enemyMovement = this.GetComponent<Movement>();
+        enemyMovement.model.localScale = new Vector3(1+(enemyAtribute.level *0.1f), 1 + (enemyAtribute.level * 0.1f), 1 + (enemyAtribute.level * 0.1f));
         #endregion
-        
+
         #region Init Attacker
         enemyAttacker = this.GetComponent<EnemyAttacker>();
         enemyAttacker.InitAttacker(enemyAtribute.attackCooldown, enemyAtribute.skillFlySpeed, enemyAtribute.damage, enemyAtribute.skillType);
