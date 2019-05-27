@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d53dc50ba658354da6ae28ba0409823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bowRange: 10
+  bowRange: 20
   dangerRange: 0
   meleeRange: 0
   enemyManager: {fileID: 0}
