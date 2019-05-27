@@ -26,12 +26,14 @@ public class Movement : MonoBehaviour
         flyHeight = _flyHeight;
         switch (typeMove)
         {
+            case TypeMove.Walk:
+                navMeshAgent.speed = _speed;
+                navMeshAgent.SetDestination(_target.position);
+                break;
             case TypeMove.Fly:
                 transform.position += transform.forward * _speed * Time.deltaTime;
                 break;
-            default:
-                navMeshAgent.speed = _speed;
-                navMeshAgent.SetDestination(_target.position);
+            default:                
                 break;
         }
 

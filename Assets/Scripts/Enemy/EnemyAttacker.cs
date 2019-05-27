@@ -104,7 +104,7 @@ public class EnemyAttacker : MonoBehaviour
     }
     IEnumerator SkillCasting()
     {
-        float _timeWait = 0.3f;
+        float _timeWait = 1f;
         while(timeCastingSkill > 0)
         {
             EnemyDefaultAttack(target, skillBlowFlySpeed);
