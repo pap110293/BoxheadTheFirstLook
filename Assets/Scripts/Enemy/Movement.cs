@@ -19,6 +19,12 @@ public class Movement : MonoBehaviour
     {
         navMeshAgent = this.GetComponent<NavMeshAgent>();
     }
+    public void Init(TypeMove _typeMove, float _speed, float _flyHeight)
+    {
+        speed = _speed;
+        flyHeight = _flyHeight;
+        typeMove = _typeMove;
+    }
     public void SetMove(Transform _target, TypeMove _typeMove, float _speed,float _flyHeight)
     {
         target = _target;
@@ -36,9 +42,7 @@ public class Movement : MonoBehaviour
                 break;
             default:                
                 break;
-        }
-
-        
+        }        
     }
     public void Stop()
     {
@@ -46,7 +50,7 @@ public class Movement : MonoBehaviour
     }
     void Update()
     {
-        //if (flyHeight > 0) 
+        //if (flyHeight > 0)
         if(typeMove == TypeMove.Fly)
         {
             model.localPosition = new Vector3(0, flyHeight, 0);
