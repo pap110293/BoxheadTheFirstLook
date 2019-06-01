@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 [System.Serializable]
@@ -9,13 +10,66 @@ public class LevelData
     public int totalSpawnObject;
     public Spawner.SpawnerObject[] monsters;
     public GameObject boss;
-    public Spawner.SpawnerObject[] items;
-
 
 }
 
 [CreateAssetMenu(fileName = "LevelData", menuName = "Assets/Create Level Collection")]
 public class LevelCollection : ScriptableObject
 {
-    public LevelData[] records;
+    public List<LevelData> records;
 }
+
+public static class CreateGameLevel
+{
+    [MenuItem("Custom/Game Levels/Create New Game Level Data")]
+    public static void CreateGameLevelData()
+    {
+        LevelCollection levelCollection = ScriptableObject.CreateInstance<LevelCollection>();
+        levelCollection.records = new List<LevelData>();
+
+        var defaultValue = 10f;
+        var percentForDuration = 0.02f;
+        var percentFOrMonster = 0.025f;
+        var value1 = defaultValue;
+        var value2 = defaultValue;
+        int level;
+        for (int i = 0; i < 100; i++)
+        {
+            level = i / 10 + 1;
+            value1 += value1 * percentForDuration;
+            Debug.Log("value 1 = " + value1);
+            value2 += value2 * percentFOrMonster;
+            Debug.Log("value 2 = " + (int)value1);
+            LevelData temp = new LevelData
+            {
+                duration = value1,
+                totalSpawnObject = (int)value2,
+                monsters = new Spawner.SpawnerObject[4]
+            };
+
+
+            for (int j = 0; j < 4; j++)
+            {
+                var monster = temp.monsters[j];
+                if (j == 0)
+                    monster.enemyType = EnemyManager.EnemyType.Knight;
+                if (j == 1)
+                    monster.enemyType = EnemyManager.EnemyType.Mage;
+                if (j == 2)
+                    monster.enemyType = EnemyManager.EnemyType.Bat;
+                if (j == 3)
+                    monster.enemyType = EnemyManager.EnemyType.Dragon;
+
+                monster.level = level;
+            }
+            levelCollection.records.Add(temp);
+        }
+
+        AssetDatabase.CreateAsset(levelCollection, "Assets/Data/MainLevelData1.asset");
+        AssetDatabase.SaveAssets();
+
+        EditorUtility.FocusProjectWindow();
+        Selection.activeObject = levelCollection;
+    }
+}
+

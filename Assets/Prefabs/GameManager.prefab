@@ -50,7 +50,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d46cb1615a4241b44a909e1e21debe16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawners: []
+  spawners:
+  - {fileID: 0}
   totalEnemy: 0
 --- !u!114 &1691100012623550421
 MonoBehaviour:
@@ -64,9 +65,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690fcf2c368199a43864cd5994a1b57b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelCollection: {fileID: 0}
+  levelCollection: {fileID: 11400000, guid: 6502f754e33fe45388c137104088a870, type: 2}
   currentLevelData:
-    levelId: 0
     duration: 0
     totalSpawnObject: 0
     monsters: []
@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PrepareTime: 3
-  isDone: 0
+  isEndPlayProcess: 0
 --- !u!114 &6569923261641484972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,23 +102,23 @@ MonoBehaviour:
   - Obj: {fileID: 4039087285630114366, guid: 654a63cb3fb66f344a85faa67bb2d662, type: 3}
     level: 0
     enemyType: 0
-    percent: 30
+    percent: 100
   - Obj: {fileID: 1641780700217324795, guid: 821e9421058534a7e8e88c8750f3aef5, type: 3}
     level: 0
     enemyType: 0
-    percent: 15
+    percent: 100
   - Obj: {fileID: 281833134398504457, guid: 314e03e83f7e140408c3772ba0f570e1, type: 3}
     level: 0
     enemyType: 0
-    percent: 15
+    percent: 100
   - Obj: {fileID: 7726164811127903746, guid: 5cccd3e363c76b048b9e8e7ea1153286, type: 3}
     level: 0
     enemyType: 0
-    percent: 10
+    percent: 100
   - Obj: {fileID: 0}
     level: 0
     enemyType: 0
-    percent: 30
+    percent: 100
 --- !u!114 &7935345379180658520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +218,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1691100012623550418}
     m_Modifications:
+    - target: {fileID: 1677369071060055131, guid: 0cd2f1550d007994c9cd9d8898eae0c0,
+        type: 3}
+      propertyPath: m_Name
+      value: MenuInGameCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 1677369071060055127, guid: 0cd2f1550d007994c9cd9d8898eae0c0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -323,12 +328,7 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1677369071060055131, guid: 0cd2f1550d007994c9cd9d8898eae0c0,
-        type: 3}
-      propertyPath: m_Name
-      value: MenuInGameCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 1677369071060055131, guid: 0cd2f1550d007994c9cd9d8898eae0c0,
+    - target: {fileID: 1677369069524167929, guid: 0cd2f1550d007994c9cd9d8898eae0c0,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -348,6 +348,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1691100012623550418}
     m_Modifications:
+    - target: {fileID: 3833984844522386243, guid: 1cf31489969381c4a818ff39a43a3500,
+        type: 3}
+      propertyPath: m_Name
+      value: GameHUBCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 3833984844522386255, guid: 1cf31489969381c4a818ff39a43a3500,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -452,11 +457,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3833984844522386243, guid: 1cf31489969381c4a818ff39a43a3500,
-        type: 3}
-      propertyPath: m_Name
-      value: GameHUBCanvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cf31489969381c4a818ff39a43a3500, type: 3}

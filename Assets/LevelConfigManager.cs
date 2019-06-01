@@ -28,13 +28,13 @@ public class LevelConfigManager : MonoBehaviour
     {
         get
         {
-            return currentLevelIndex == levelCollection.records.Length - 1;
+            return currentLevelIndex == levelCollection.records.Count - 1;
         }
     }
 
     public LevelData GetConfigWithLevel(int LevelIndex)
     {
-        for (int i = 0; i < levelCollection.records.Length; i++)
+        for (int i = 0; i < levelCollection.records.Count; i++)
         {
             if (LevelIndex == i)
             {
