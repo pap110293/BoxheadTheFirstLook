@@ -13,6 +13,7 @@ TagManager:
   - Metal
   - Concrete (Static)
   - Environment
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -26,8 +27,8 @@ TagManager:
   - PlayerObject
   - Weapon
   - PickUpItem
-  - 
-  - 
+  - EnemyBulletDefault
+  - Enemy
   - 
   - 
   - 

@@ -129,7 +129,7 @@ MonoBehaviour:
         skillType: 1
       enemyPrefabs: {fileID: 6171029549530708856, guid: baed88711a85645459c8785fd4b56ce1,
         type: 3}
-  - Level: 1
+  - Level: 2
     records:
     - enemyType: 0
       atribute:

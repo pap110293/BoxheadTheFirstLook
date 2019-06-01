@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4390829815779578468}
   - component: {fileID: 4447212992316837024}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 4391243364272954460}
   - component: {fileID: 4477011141818132158}
   - component: {fileID: 4478000129875354826}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4844,7 +4844,7 @@ GameObject:
   - component: {fileID: 4391176062066286784}
   - component: {fileID: 4477379490740248144}
   - component: {fileID: 4477735773078494590}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9542,7 +9542,7 @@ GameObject:
   - component: {fileID: 4390673831697943870}
   - component: {fileID: 4476964021563587670}
   - component: {fileID: 4477485423654365222}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BallFireIn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14285,7 +14285,7 @@ GameObject:
   - component: {fileID: 4391340905359795414}
   - component: {fileID: 4477334734420547400}
   - component: {fileID: 4478335915587471880}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18983,7 +18983,7 @@ GameObject:
   - component: {fileID: 4391036400053164472}
   - component: {fileID: 4477006411591759224}
   - component: {fileID: 4477970089563036892}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SmokeDark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23681,7 +23681,7 @@ GameObject:
   - component: {fileID: 4391225346614428094}
   - component: {fileID: 4477207173201726472}
   - component: {fileID: 4477472120618208580}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BeamFlare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28390,94 +28390,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!1 &4388425760168136224
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4391534292024232600}
-  - component: {fileID: 4428769614689674532}
-  - component: {fileID: 4332654218561175822}
-  - component: {fileID: 4395912293503526600}
-  m_Layer: 0
-  m_Name: vfx_Projectile_Comet_Orange
-  m_TagString: Bullet
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4391534292024232600
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4388425760168136224}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4390460268339789316}
-  m_Father: {fileID: 5563692012498191203}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4428769614689674532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4388425760168136224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12ba759cd568c0e47a7018ab70867a0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  accuracy: 95
-  fireRate: 1
-  muzzlePrefab: {fileID: 1056950820860086, guid: 6f3738ba95b11e94d823ca0763d6e26c,
-    type: 3}
-  hitPrefab: {fileID: 1576947433937734, guid: 3a1ab18e6861a8940aa332e72f024271, type: 3}
-  shotSFX: {fileID: 0}
-  hitSFX: {fileID: 0}
-  trails:
-  - {fileID: 4387518528371876742}
-  - {fileID: 4387953687572457394}
-  - {fileID: 4388229085743584248}
-  - {fileID: 4387690097888181590}
---- !u!54 &4332654218561175822
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4388425760168136224}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!135 &4395912293503526600
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4388425760168136224}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4388573854302204670
 GameObject:
   m_ObjectHideFlags: 0
@@ -28489,7 +28401,7 @@ GameObject:
   - component: {fileID: 4390460268339789316}
   - component: {fileID: 4478245207703122836}
   - component: {fileID: 4476592832712627474}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BallFireOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28514,7 +28426,7 @@ Transform:
   - {fileID: 4391176062066286784}
   - {fileID: 4390829815779578468}
   - {fileID: 4391225346614428094}
-  m_Father: {fileID: 4391534292024232600}
+  m_Father: {fileID: 5563692012498191203}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!199 &4478245207703122836
@@ -33259,11 +33171,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5563692012498191203}
-  - component: {fileID: 5563692012498191202}
+  - component: {fileID: 1930175874878195184}
   - component: {fileID: 5563692012498191200}
-  m_Layer: 0
+  - component: {fileID: 8245191807428376988}
+  - component: {fileID: 5563692012498191202}
+  m_Layer: 12
   m_Name: DragonDefaultSkill
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33275,14 +33189,68 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5563692012498191205}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.0327494, y: 11.1403475, z: 0.4717095}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4391534292024232600}
+  - {fileID: 4390460268339789316}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1930175874878195184
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5563692012498191205}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!135 &5563692012498191200
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5563692012498191205}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8245191807428376988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5563692012498191205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ba759cd568c0e47a7018ab70867a0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  accuracy: 95
+  fireRate: 1
+  muzzlePrefab: {fileID: 1056950820860086, guid: 6f3738ba95b11e94d823ca0763d6e26c,
+    type: 3}
+  hitPrefab: {fileID: 1576947433937734, guid: 3a1ab18e6861a8940aa332e72f024271, type: 3}
+  shotSFX: {fileID: 0}
+  hitSFX: {fileID: 0}
+  trails:
+  - {fileID: 4387518528371876742}
+  - {fileID: 4387953687572457394}
+  - {fileID: 4388229085743584248}
+  - {fileID: 4387690097888181590}
 --- !u!114 &5563692012498191202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33296,16 +33264,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillType: 0
---- !u!135 &5563692012498191200
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5563692012498191205}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
