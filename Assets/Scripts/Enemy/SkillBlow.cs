@@ -104,25 +104,23 @@ public class SkillBlow : MonoBehaviour
     {
         if (!isDisable)
         {
-            //if (target != null)
-            //{
-            //    if (other.gameObject == target.gameObject)
-            //    {
-            //        isDisable = true;
-            //        Destroy(gameObject);
-            //        SkillHit(other);
-            //    }
-            //}
-            //else
-            //{
-            //    isDisable = true;
-            //    Destroy(this.gameObject);
-            //}
             if (other.gameObject.CompareTag("Player"))
             {
                 isDisable = true;
                 Destroy(gameObject);                
                 SkillHit(other);
+            }
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!isDisable)
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                isDisable = true;
+                Destroy(gameObject);
+                SkillHit(collision.collider);
             }
         }
     }
