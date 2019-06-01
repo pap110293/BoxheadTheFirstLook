@@ -34,6 +34,7 @@ public class EnemyManager : MonoBehaviour
 
         #region Init Movement
         enemyMovement = this.GetComponent<Movement>();
+        enemyMovement.Init(enemyAtribute.typeMove, enemyAtribute.movementSpeed, enemyAtribute.flyHeight);
         enemyMovement.model.localScale = new Vector3(1+(enemyAtribute.level *0.1f), 1 + (enemyAtribute.level * 0.1f), 1 + (enemyAtribute.level * 0.1f));
         #endregion
 
