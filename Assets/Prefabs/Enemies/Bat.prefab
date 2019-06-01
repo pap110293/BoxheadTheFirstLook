@@ -724,15 +724,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAtribute:
+    level: 1
     HP: 1
     Amor: 0
     movementSpeed: 0
     flyHeight: 0
     damage: 0
-    typeMove: 0
+    typeMove: 1
     attackCooldown: 0
     skillFlySpeed: 0
-    skillType: 0
+    skillType: 1
   life: {fileID: 0}
   target: {fileID: 0}
   enemyMovement: {fileID: 0}
@@ -802,6 +803,9 @@ MonoBehaviour:
   attackCooldown: 1
   actionAttackSpeed: 1
   damage: 1
+  CurrentMana: 1
+  timeCastingSkill: 0
+  UnlockCastSkill: 0
   shootPoint: {fileID: 5181445986051680359}
   target: {fileID: 0}
   skillBlowPrefabs: {fileID: 2494000497611454123, guid: a07ff4fb590ee4945a72c0ee1baa67bf,

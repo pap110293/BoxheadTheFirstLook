@@ -132,7 +132,7 @@ MonoBehaviour:
     movementSpeed: 0
     flyHeight: 0
     damage: 0
-    typeMove: 0
+    typeMove: 1
     attackCooldown: 0
     skillFlySpeed: 0
     skillType: 1

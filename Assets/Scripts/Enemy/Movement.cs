@@ -24,6 +24,7 @@ public class Movement : MonoBehaviour
         target = _target;
         speed = _speed;
         flyHeight = _flyHeight;
+        typeMove = _typeMove;
         switch (typeMove)
         {
             case TypeMove.Walk:
@@ -45,15 +46,17 @@ public class Movement : MonoBehaviour
     }
     void Update()
     {
-        if (flyHeight > 0) 
+        //if (flyHeight > 0) 
+        if(typeMove == TypeMove.Fly)
         {
             model.localPosition = new Vector3(0, flyHeight, 0);
+            if (target != null)
+            {
+                var targetLookat = new Vector3(target.position.x, transform.position.y, target.position.z);
+                transform.LookAt(targetLookat);
+                //model.LookAt(target);
+            }
         }
-        if (target != null)
-        {
-            var targetLookat = new Vector3(target.position.x,transform.position.y,target.position.z);
-            transform.LookAt(targetLookat);
-           //model.LookAt(target);
-        }
+        
     }
 }
