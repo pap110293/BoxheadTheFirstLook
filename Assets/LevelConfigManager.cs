@@ -32,16 +32,16 @@ public class LevelConfigManager : MonoBehaviour
         }
     }
 
-    public LevelData GetConfigWithLevel(int Level)
+    public LevelData GetConfigWithLevel(int LevelIndex)
     {
-        foreach (var levelData in levelCollection.records)
+        for (int i = 0; i < levelCollection.records.Length; i++)
         {
-            //Debug.Log("level id: " + levelData.levelId);
-            if (Level == levelData.levelId)
+            if (LevelIndex == i)
             {
-                return levelData;
+                return levelCollection.records[i];
             }
         }
+
         return null;
     }
 

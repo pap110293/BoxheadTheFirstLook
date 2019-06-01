@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
     public int PrepareTime = 5;
 
     private PlayerLife playerLife;
-    public bool isDone = false;
+    public bool isEndPlayProcess = false;
 
     void Start()
     {
@@ -24,11 +24,11 @@ public class GameController : MonoBehaviour
         if (levelData != null)
         {
             yield return StartCoroutine(LoadLevel(levelData));
-            isDone = false;
+            isEndPlayProcess = false;
         }
         else
         {
-            isDone = true;
+            isEndPlayProcess = true;
         }
     }
 
@@ -58,7 +58,7 @@ public class GameController : MonoBehaviour
     {
         yield return StartCoroutine(StartNewWaveProcess());
 
-        if (isDone == false)
+        if (isEndPlayProcess == false)
         {
             yield return new WaitForSeconds(1f);
             yield return StartCoroutine(Playing());
@@ -69,12 +69,12 @@ public class GameController : MonoBehaviour
             }
             else if (CheckIsWinTheWave())
             {
-                StartCoroutine(WiningProcess());
+                StartCoroutine(ClearWaveProcess());
             }
         }
         else
         {
-            StartCoroutine(WinAllWaveProcess());
+            StartCoroutine(ClearAllWaveProcess());
         }
     }
 
@@ -85,10 +85,11 @@ public class GameController : MonoBehaviour
         yield return StartCoroutine(GameProcess());
     }
 
-    private IEnumerator WinAllWaveProcess()
+    private IEnumerator ClearAllWaveProcess()
     {
 
         PushNotification("YOU WIN ALL THE WAVE");
+        yield return new WaitForSeconds(PrepareTime);
         ShowFinishPanel();
         yield return null;
     }
@@ -113,9 +114,10 @@ public class GameController : MonoBehaviour
         MasterManager.menuInGameController.ShowFinishPanel("Your score");
         MasterManager.PauseGame();
         MasterManager.UnLockCursor();
+        isEndPlayProcess = true;
     }
 
-    IEnumerator WiningProcess()
+    IEnumerator ClearWaveProcess()
     {
         PushNotification("+++++ CLEAR +++++");
         StartCoroutine(GameProcess());

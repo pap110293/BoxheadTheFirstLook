@@ -28,7 +28,7 @@ public class MenuInGameController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && MasterManager.gameController.isDone == false)
+        if (Input.GetKeyDown(KeyCode.Escape) && MasterManager.gameController.isEndPlayProcess == false)
         {
             if (MasterManager.isPause)
             {
