@@ -5234,7 +5234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idleSound: {fileID: 0}
-  attackSound: {fileID: 8300000, guid: 67995530c5a897048afbbbd093b3823a, type: 3}
+  attackSound: {fileID: 0}
   destroy: {fileID: 0}
   audioSource: {fileID: 0}
 --- !u!1 &3785867036542281354
