@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
         StartNewGame();
     }
 
+
     private IEnumerator StartNewWaveProcess()
     {
         MasterManager.spawEnemyManager.totalEnemy = 0;

@@ -31,6 +31,7 @@ public class LifeBase : MonoBehaviour
             ClearAllEnemy();
         if (Input.GetKeyDown(KeyCode.F2))
             PlayerDie();
+
         // END CHEAT
     }
 

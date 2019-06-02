@@ -8,7 +8,7 @@ public class LevelConfigManager : MonoBehaviour
 
     [HideInInspector]
     public LevelData currentLevelData;
-    private int currentLevelIndex = -1;
+    public int currentLevelIndex = -1;
     public int CurrentLevel { get { return currentLevelIndex + 1; } }
 
     void Awake()
