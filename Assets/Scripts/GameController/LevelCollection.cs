@@ -8,7 +8,7 @@ public class LevelData
 {
     public float duration;
     public int totalSpawnObject;
-    public Spawner.SpawnerObject[] monsters;
+    public List<Spawner.SpawnerObject> monsters;
     public GameObject boss;
 
 }
@@ -44,13 +44,12 @@ public static class CreateGameLevel
             {
                 duration = value1,
                 totalSpawnObject = (int)value2,
-                monsters = new Spawner.SpawnerObject[4]
+                monsters = new List<Spawner.SpawnerObject>()
             };
-
 
             for (int j = 0; j < 4; j++)
             {
-                var monster = temp.monsters[j];
+                var monster = new Spawner.SpawnerObject();
                 if (j == 0)
                     monster.enemyType = EnemyManager.EnemyType.Knight;
                 if (j == 1)
@@ -61,11 +60,13 @@ public static class CreateGameLevel
                     monster.enemyType = EnemyManager.EnemyType.Dragon;
 
                 monster.level = level;
+
+                temp.monsters.Add(monster);
             }
             levelCollection.records.Add(temp);
         }
 
-        AssetDatabase.CreateAsset(levelCollection, "Assets/Data/MainLevelData1.asset");
+        AssetDatabase.CreateAsset(levelCollection, "Assets/Data/MainLevelData.asset");
         AssetDatabase.SaveAssets();
 
         EditorUtility.FocusProjectWindow();
