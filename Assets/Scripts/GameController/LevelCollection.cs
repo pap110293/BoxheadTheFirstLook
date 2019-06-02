@@ -20,6 +20,8 @@ public class LevelCollection : ScriptableObject
     public List<LevelData> records;
 }
 
+#if UNITY_EDITOR
+
 public static class CreateGameLevel
 {
     [MenuItem("Custom/Game Levels/Create New Game Level Data")]
@@ -76,5 +78,7 @@ public static class CreateGameLevel
         EditorUtility.FocusProjectWindow();
         Selection.activeObject = levelCollection;
     }
+
 }
+#endif
 

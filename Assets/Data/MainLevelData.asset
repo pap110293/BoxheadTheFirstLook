@@ -539,19 +539,19 @@ MonoBehaviour:
     - Obj: {fileID: 0}
       level: 3
       enemyType: 0
-      percent: 100
+      percent: 0
     - Obj: {fileID: 0}
       level: 3
       enemyType: 1
-      percent: 0
+      percent: 50
     - Obj: {fileID: 0}
       level: 3
       enemyType: 2
-      percent: 0
+      percent: 50
     - Obj: {fileID: 0}
       level: 3
       enemyType: 3
-      percent: 0
+      percent: 20
     boss: {fileID: 0}
   - duration: 17.41024
     totalSpawnObject: 78
@@ -574,7 +574,7 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 17.758446
-    totalSpawnObject: 82
+    totalSpawnObject: 100
     monsters:
     - Obj: {fileID: 0}
       level: 3
@@ -583,7 +583,7 @@ MonoBehaviour:
     - Obj: {fileID: 0}
       level: 3
       enemyType: 1
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 3
       enemyType: 2
@@ -611,7 +611,7 @@ MonoBehaviour:
     - Obj: {fileID: 0}
       level: 3
       enemyType: 3
-      percent: 0
+      percent: 20
     boss: {fileID: 0}
   - duration: 18.475887
     totalSpawnObject: 90
@@ -659,15 +659,15 @@ MonoBehaviour:
     - Obj: {fileID: 0}
       level: 4
       enemyType: 0
-      percent: 100
+      percent: 50
     - Obj: {fileID: 0}
       level: 4
       enemyType: 1
-      percent: 0
+      percent: 30
     - Obj: {fileID: 0}
       level: 4
       enemyType: 2
-      percent: 0
+      percent: 70
     - Obj: {fileID: 0}
       level: 4
       enemyType: 3
