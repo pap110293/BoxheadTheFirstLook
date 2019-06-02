@@ -24,6 +24,20 @@ public class Movement : MonoBehaviour
         speed = _speed;
         flyHeight = _flyHeight;
         typeMove = _typeMove;
+        if (navMeshAgent != null)
+        {
+            switch (typeMove)
+            {
+                case TypeMove.Walk:
+                    navMeshAgent.enabled = true;
+                    break;
+                case TypeMove.Fly:
+                    navMeshAgent.enabled = false;
+                    break;
+                default:
+                    break;
+            }
+        }
     }
     public void SetMove(Transform _target, TypeMove _typeMove, float _speed,float _flyHeight)
     {
@@ -46,7 +60,17 @@ public class Movement : MonoBehaviour
     }
     public void Stop()
     {
-        navMeshAgent.SetDestination(this.transform.position);
+        switch (typeMove)
+        {
+            case TypeMove.Walk:
+                navMeshAgent.SetDestination(this.transform.position);
+                break;
+            case TypeMove.Fly:
+                break;
+            default:
+                break;
+        }
+        
     }
     void Update()
     {

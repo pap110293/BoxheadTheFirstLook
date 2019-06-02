@@ -56,7 +56,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407451650286604612}
-  m_LocalRotation: {x: -0, y: 0.000000029802319, z: -0.000000119209275, w: 1}
+  m_LocalRotation: {x: -0, y: 0.000000041873676, z: -0.0000001674947, w: 1}
   m_LocalPosition: {x: 0, y: 0.8000002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -609,6 +609,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7294213015423535694, guid: dbe0c27819a1e184ba94b88f186f3963,
         type: 3}
+      propertyPath: isLocked
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294213015423535694, guid: dbe0c27819a1e184ba94b88f186f3963,
+        type: 3}
       propertyPath: amount
       value: 0
       objectReference: {fileID: 0}
@@ -689,14 +694,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6607649806970851606, guid: c82ba99bde8acc147a01736c9f141013,
         type: 3}
-      propertyPath: point
-      value: 
-      objectReference: {fileID: 601294956}
+      propertyPath: isLocked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6607649806970851606, guid: c82ba99bde8acc147a01736c9f141013,
         type: 3}
       propertyPath: ammo
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6607649806970851606, guid: c82ba99bde8acc147a01736c9f141013,
+        type: 3}
+      propertyPath: point
+      value: 
+      objectReference: {fileID: 601294956}
     - target: {fileID: 400078, guid: c82ba99bde8acc147a01736c9f141013, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.117
@@ -774,12 +784,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1866010978013347016, guid: ce16cf02bb81b6848bdad66c6ba0f3da,
         type: 3}
-      propertyPath: point
-      value: 
-      objectReference: {fileID: 601294956}
-    - target: {fileID: 1866010978013347016, guid: ce16cf02bb81b6848bdad66c6ba0f3da,
-        type: 3}
-      propertyPath: ammoHave
+      propertyPath: isLocked
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1866010978013347016, guid: ce16cf02bb81b6848bdad66c6ba0f3da,
@@ -789,9 +794,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1866010978013347016, guid: ce16cf02bb81b6848bdad66c6ba0f3da,
         type: 3}
+      propertyPath: ammoHave
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866010978013347016, guid: ce16cf02bb81b6848bdad66c6ba0f3da,
+        type: 3}
       propertyPath: Damage
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1866010978013347016, guid: ce16cf02bb81b6848bdad66c6ba0f3da,
+        type: 3}
+      propertyPath: point
+      value: 
+      objectReference: {fileID: 601294956}
     - target: {fileID: 400126, guid: ce16cf02bb81b6848bdad66c6ba0f3da, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -869,14 +884,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100203498427885547, guid: 266e1dc2315ee8d40af09f793b8eae9d,
         type: 3}
-      propertyPath: point
-      value: 
-      objectReference: {fileID: 601294956}
+      propertyPath: infinityAmmo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100203498427885547, guid: 266e1dc2315ee8d40af09f793b8eae9d,
+        type: 3}
+      propertyPath: maxAmmo
+      value: 999
+      objectReference: {fileID: 0}
+    - target: {fileID: 100203498427885547, guid: 266e1dc2315ee8d40af09f793b8eae9d,
+        type: 3}
+      propertyPath: ammoHave
+      value: 999
+      objectReference: {fileID: 0}
     - target: {fileID: 100203498427885547, guid: 266e1dc2315ee8d40af09f793b8eae9d,
         type: 3}
       propertyPath: Damage
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 100203498427885547, guid: 266e1dc2315ee8d40af09f793b8eae9d,
+        type: 3}
+      propertyPath: point
+      value: 
+      objectReference: {fileID: 601294956}
     - target: {fileID: 400004, guid: 266e1dc2315ee8d40af09f793b8eae9d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -954,12 +984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8285811045391690362, guid: 44d7a1798f1226b46a9e671633f6bca8,
         type: 3}
-      propertyPath: point
-      value: 
-      objectReference: {fileID: 601294956}
-    - target: {fileID: 8285811045391690362, guid: 44d7a1798f1226b46a9e671633f6bca8,
-        type: 3}
-      propertyPath: ammoHave
+      propertyPath: isLocked
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8285811045391690362, guid: 44d7a1798f1226b46a9e671633f6bca8,
@@ -969,9 +994,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8285811045391690362, guid: 44d7a1798f1226b46a9e671633f6bca8,
         type: 3}
-      propertyPath: Damage
-      value: 15
+      propertyPath: ammoHave
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8285811045391690362, guid: 44d7a1798f1226b46a9e671633f6bca8,
+        type: 3}
+      propertyPath: point
+      value: 
+      objectReference: {fileID: 601294956}
     - target: {fileID: 400006, guid: 44d7a1798f1226b46a9e671633f6bca8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.037
@@ -1049,11 +1079,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6329332289763401723, guid: 9eabd0283d81e32439416a354c5a26d6,
         type: 3}
-      propertyPath: point
-      value: 
-      objectReference: {fileID: 601294956}
-    - target: {fileID: 6329332289763401723, guid: 9eabd0283d81e32439416a354c5a26d6,
-        type: 3}
       propertyPath: Spread
       value: 0
       objectReference: {fileID: 0}
@@ -1062,6 +1087,11 @@ PrefabInstance:
       propertyPath: Damage
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 6329332289763401723, guid: 9eabd0283d81e32439416a354c5a26d6,
+        type: 3}
+      propertyPath: point
+      value: 
+      objectReference: {fileID: 601294956}
     - target: {fileID: 400124, guid: 9eabd0283d81e32439416a354c5a26d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
