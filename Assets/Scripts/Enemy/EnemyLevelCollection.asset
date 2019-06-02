@@ -51,7 +51,7 @@ MonoBehaviour:
         movementSpeed: 7
         flyHeight: 5
         damage: 10
-        typeMove: 1
+        typeMove: 0
         attackCooldown: 2
         skillFlySpeed: 10
         skillType: 1
@@ -109,7 +109,7 @@ MonoBehaviour:
         movementSpeed: 7
         flyHeight: 5
         damage: 10
-        typeMove: 1
+        typeMove: 0
         attackCooldown: 2
         skillFlySpeed: 10
         skillType: 1
@@ -167,7 +167,7 @@ MonoBehaviour:
         movementSpeed: 10
         flyHeight: 5
         damage: 10
-        typeMove: 1
+        typeMove: 0
         attackCooldown: 2
         skillFlySpeed: 20
         skillType: 1
