@@ -89,11 +89,18 @@ public class Spawner : MonoBehaviour
         var z = UnityEngine.Random.Range(transform.position.z - size.z / 2, transform.position.z + size.z / 2);
         var y = transform.position.y;
         var position = new Vector3(x, y, z);
-        var Enemy = Instantiate(ob.Obj, position, Quaternion.identity);
+        //var Enemy = Instantiate(ob.Obj, position, Quaternion.identity);
         //vinh add
-        Enemy.GetComponent<EnemyManager>().enemyAtribute = MasterManager.enemyLevelConfigManager.GetEnemyAtribute(ob.level, ob.enemyType).atribute;
+        //Enemy.GetComponent<EnemyManager>().enemyAtribute = MasterManager.enemyLevelConfigManager.GetEnemyAtribute(ob.level, ob.enemyType).atribute;
+        var EnemyUnit = MasterManager.enemyLevelConfigManager.GetEnemyAtribute(ob.level, ob.enemyType);
+        if (EnemyUnit != null)
+        {
+            var Enemy = Instantiate(EnemyUnit.enemyPrefabs, position, Quaternion.identity);
+            Enemy.GetComponent<EnemyManager>().enemyAtribute = EnemyUnit.atribute;
+            MasterManager.spawEnemyManager.totalEnemy++;
+        }
 
-        MasterManager.spawEnemyManager.totalEnemy++;
+        //MasterManager.spawEnemyManager.totalEnemy++;
     }
 
     private float TotalSpawnRate()
