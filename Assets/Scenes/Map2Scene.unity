@@ -181,55 +181,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1691100012623550419, guid: 2245c5c07c4985643bc9187dfc68f33c,
         type: 3}
-      propertyPath: spawners.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1691100012623550419, guid: 2245c5c07c4985643bc9187dfc68f33c,
-        type: 3}
       propertyPath: spawners.Array.data[0]
       value: 
       objectReference: {fileID: 1245930498}
-    - target: {fileID: 1691100012623550421, guid: 2245c5c07c4985643bc9187dfc68f33c,
-        type: 3}
-      propertyPath: levelCollection
-      value: 
-      objectReference: {fileID: 11400000, guid: 6502f754e33fe45388c137104088a870,
-        type: 2}
-    - target: {fileID: 13731560864414954, guid: 2245c5c07c4985643bc9187dfc68f33c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 13731561417286728, guid: 2245c5c07c4985643bc9187dfc68f33c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6569923261641484972, guid: 2245c5c07c4985643bc9187dfc68f33c,
-        type: 3}
-      propertyPath: spawnerObjects.Array.data[0].percent
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6569923261641484972, guid: 2245c5c07c4985643bc9187dfc68f33c,
-        type: 3}
-      propertyPath: spawnerObjects.Array.data[1].percent
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6569923261641484972, guid: 2245c5c07c4985643bc9187dfc68f33c,
-        type: 3}
-      propertyPath: spawnerObjects.Array.data[2].percent
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6569923261641484972, guid: 2245c5c07c4985643bc9187dfc68f33c,
-        type: 3}
-      propertyPath: spawnerObjects.Array.data[3].percent
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6569923261641484972, guid: 2245c5c07c4985643bc9187dfc68f33c,
-        type: 3}
-      propertyPath: spawnerObjects.Array.data[4].percent
-      value: 100
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2245c5c07c4985643bc9187dfc68f33c, type: 3}
 --- !u!1001 &500084971
