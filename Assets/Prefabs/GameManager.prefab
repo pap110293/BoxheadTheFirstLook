@@ -71,7 +71,7 @@ MonoBehaviour:
     totalSpawnObject: 0
     monsters: []
     boss: {fileID: 0}
-    items: []
+  currentLevelIndex: -1
 --- !u!114 &5561727201292251965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,23 +102,23 @@ MonoBehaviour:
   - Obj: {fileID: 4039087285630114366, guid: 654a63cb3fb66f344a85faa67bb2d662, type: 3}
     level: 0
     enemyType: 0
-    percent: 100
+    percent: 12
   - Obj: {fileID: 1641780700217324795, guid: 821e9421058534a7e8e88c8750f3aef5, type: 3}
     level: 0
     enemyType: 0
-    percent: 100
+    percent: 5
   - Obj: {fileID: 281833134398504457, guid: 314e03e83f7e140408c3772ba0f570e1, type: 3}
     level: 0
     enemyType: 0
-    percent: 100
+    percent: 1
   - Obj: {fileID: 7726164811127903746, guid: 5cccd3e363c76b048b9e8e7ea1153286, type: 3}
     level: 0
     enemyType: 0
-    percent: 100
+    percent: 7
   - Obj: {fileID: 0}
     level: 0
     enemyType: 0
-    percent: 100
+    percent: 75
 --- !u!114 &7935345379180658520
 MonoBehaviour:
   m_ObjectHideFlags: 0
