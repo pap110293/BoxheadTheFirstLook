@@ -54,6 +54,7 @@ public class EnemyAttacker : MonoBehaviour
         SkillBlow.transform.position = shootPoint.position;
         SkillBlow.InitSkillBlow(shootPoint, target, _targetAim, flySpeed, damage, skillType);
         countDownAttacker = attackCooldown;
+        this.transform.LookAt(target);
     }
     public void InitCastSkill(EnemyAnimState _animState)
     {

@@ -28,13 +28,12 @@ public static class CreateGameLevel
         LevelCollection levelCollection = ScriptableObject.CreateInstance<LevelCollection>();
         levelCollection.records = new List<LevelData>();
 
-        var defaultValue = 10f;
         var percentForDuration = 0.02f;
-        var percentFOrMonster = 0.06f;
-        var value1 = defaultValue;
-        var value2 = defaultValue;
+        var percentFOrMonster = 0.05f;
+        var value1 = 10f;
+        var value2 = 20f;
         int level;
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 50; i++)
         {
             level = i / 10 + 1; // add 1 level for 10 wave
             value1 += value1 * percentForDuration;
@@ -52,7 +51,10 @@ public static class CreateGameLevel
             {
                 var monster = new Spawner.SpawnerObject();
                 if (j == 0)
+                {
                     monster.enemyType = EnemyManager.EnemyType.Knight;
+                    monster.percent = 100f;
+                }
                 if (j == 1)
                     monster.enemyType = EnemyManager.EnemyType.Mage;
                 if (j == 2)

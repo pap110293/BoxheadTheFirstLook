@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   records:
   - duration: 10.2
-    totalSpawnObject: 10
+    totalSpawnObject: 21
     monsters:
     - Obj: {fileID: 0}
       level: 1
@@ -34,7 +34,7 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 10.403999
-    totalSpawnObject: 10
+    totalSpawnObject: 22
     monsters:
     - Obj: {fileID: 0}
       level: 1
@@ -54,7 +54,7 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 10.61208
-    totalSpawnObject: 10
+    totalSpawnObject: 23
     monsters:
     - Obj: {fileID: 0}
       level: 1
@@ -71,10 +71,10 @@ MonoBehaviour:
     - Obj: {fileID: 0}
       level: 1
       enemyType: 3
-      percent: 10
+      percent: 0
     boss: {fileID: 0}
   - duration: 10.824321
-    totalSpawnObject: 11
+    totalSpawnObject: 24
     monsters:
     - Obj: {fileID: 0}
       level: 1
@@ -83,18 +83,18 @@ MonoBehaviour:
     - Obj: {fileID: 0}
       level: 1
       enemyType: 1
-      percent: 40
+      percent: 30
     - Obj: {fileID: 0}
       level: 1
       enemyType: 2
-      percent: 20
+      percent: 10
     - Obj: {fileID: 0}
       level: 1
       enemyType: 3
-      percent: 10
+      percent: 0
     boss: {fileID: 0}
   - duration: 11.040807
-    totalSpawnObject: 11
+    totalSpawnObject: 25
     monsters:
     - Obj: {fileID: 0}
       level: 1
@@ -103,18 +103,18 @@ MonoBehaviour:
     - Obj: {fileID: 0}
       level: 1
       enemyType: 1
-      percent: 30
+      percent: 100
     - Obj: {fileID: 0}
       level: 1
       enemyType: 2
-      percent: 30
+      percent: 20
     - Obj: {fileID: 0}
       level: 1
       enemyType: 3
-      percent: 10
+      percent: 0
     boss: {fileID: 0}
   - duration: 11.261622
-    totalSpawnObject: 11
+    totalSpawnObject: 26
     monsters:
     - Obj: {fileID: 0}
       level: 1
@@ -122,108 +122,128 @@ MonoBehaviour:
       percent: 100
     - Obj: {fileID: 0}
       level: 1
-      enemyType: 1
-      percent: 40
-    - Obj: {fileID: 0}
-      level: 1
-      enemyType: 2
-      percent: 20
-    - Obj: {fileID: 0}
-      level: 1
-      enemyType: 3
-      percent: 20
-    boss: {fileID: 0}
-  - duration: 11.486855
-    totalSpawnObject: 11
-    monsters:
-    - Obj: {fileID: 0}
-      level: 1
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 1
-      enemyType: 1
-      percent: 100
-    - Obj: {fileID: 0}
-      level: 1
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 1
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 11.716592
-    totalSpawnObject: 12
-    monsters:
-    - Obj: {fileID: 0}
-      level: 1
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 1
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 1
-      enemyType: 2
-      percent: 100
-    - Obj: {fileID: 0}
-      level: 1
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 11.950924
-    totalSpawnObject: 12
-    monsters:
-    - Obj: {fileID: 0}
-      level: 1
-      enemyType: 0
-      percent: 50
-    - Obj: {fileID: 0}
-      level: 1
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 1
-      enemyType: 2
-      percent: 40
-    - Obj: {fileID: 0}
-      level: 1
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 12.189942
-    totalSpawnObject: 12
-    monsters:
-    - Obj: {fileID: 0}
-      level: 1
-      enemyType: 0
-      percent: 100
-    - Obj: {fileID: 0}
-      level: 1
-      enemyType: 1
-      percent: 50
-    - Obj: {fileID: 0}
-      level: 1
-      enemyType: 2
-      percent: 50
-    - Obj: {fileID: 0}
-      level: 1
-      enemyType: 3
-      percent: 20
-    boss: {fileID: 0}
-  - duration: 12.433742
-    totalSpawnObject: 13
-    monsters:
-    - Obj: {fileID: 0}
-      level: 2
-      enemyType: 0
-      percent: 100
-    - Obj: {fileID: 0}
-      level: 2
       enemyType: 1
       percent: 30
+    - Obj: {fileID: 0}
+      level: 1
+      enemyType: 2
+      percent: 30
+    - Obj: {fileID: 0}
+      level: 1
+      enemyType: 3
+      percent: 0
+    boss: {fileID: 0}
+  - duration: 11.486855
+    totalSpawnObject: 28
+    monsters:
+    - Obj: {fileID: 0}
+      level: 1
+      enemyType: 0
+      percent: 100
+    - Obj: {fileID: 0}
+      level: 1
+      enemyType: 1
+      percent: 100
+    - Obj: {fileID: 0}
+      level: 1
+      enemyType: 2
+      percent: 0
+    - Obj: {fileID: 0}
+      level: 1
+      enemyType: 3
+      percent: 5
+    boss: {fileID: 0}
+  - duration: 11.716592
+    totalSpawnObject: 29
+    monsters:
+    - Obj: {fileID: 0}
+      level: 1
+      enemyType: 0
+      percent: 100
+    - Obj: {fileID: 0}
+      level: 1
+      enemyType: 1
+      percent: 0
+    - Obj: {fileID: 0}
+      level: 1
+      enemyType: 2
+      percent: 100
+    - Obj: {fileID: 0}
+      level: 1
+      enemyType: 3
+      percent: 5
+    boss: {fileID: 0}
+  - duration: 11.950924
+    totalSpawnObject: 31
+    monsters:
+    - Obj: {fileID: 0}
+      level: 1
+      enemyType: 0
+      percent: 100
+    - Obj: {fileID: 0}
+      level: 1
+      enemyType: 1
+      percent: 30
+    - Obj: {fileID: 0}
+      level: 1
+      enemyType: 2
+      percent: 50
+    - Obj: {fileID: 0}
+      level: 1
+      enemyType: 3
+      percent: 5
+    boss: {fileID: 0}
+  - duration: 12.189942
+    totalSpawnObject: 32
+    monsters:
+    - Obj: {fileID: 0}
+      level: 1
+      enemyType: 0
+      percent: 0
+    - Obj: {fileID: 0}
+      level: 1
+      enemyType: 1
+      percent: 100
+    - Obj: {fileID: 0}
+      level: 1
+      enemyType: 2
+      percent: 0
+    - Obj: {fileID: 0}
+      level: 1
+      enemyType: 3
+      percent: 10
+    boss: {fileID: 0}
+  - duration: 12.433742
+    totalSpawnObject: 34
+    monsters:
+    - Obj: {fileID: 0}
+      level: 2
+      enemyType: 0
+      percent: 80
+    - Obj: {fileID: 0}
+      level: 2
+      enemyType: 1
+      percent: 0
+    - Obj: {fileID: 0}
+      level: 2
+      enemyType: 2
+      percent: 50
+    - Obj: {fileID: 0}
+      level: 2
+      enemyType: 3
+      percent: 1
+    boss: {fileID: 0}
+  - duration: 12.682416
+    totalSpawnObject: 35
+    monsters:
+    - Obj: {fileID: 0}
+      level: 2
+      enemyType: 0
+      percent: 100
+    - Obj: {fileID: 0}
+      level: 2
+      enemyType: 1
+      percent: 0
     - Obj: {fileID: 0}
       level: 2
       enemyType: 2
@@ -233,37 +253,17 @@ MonoBehaviour:
       enemyType: 3
       percent: 10
     boss: {fileID: 0}
-  - duration: 12.682416
-    totalSpawnObject: 13
-    monsters:
-    - Obj: {fileID: 0}
-      level: 2
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 2
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 2
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 2
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
   - duration: 12.936065
-    totalSpawnObject: 13
+    totalSpawnObject: 50
     monsters:
     - Obj: {fileID: 0}
       level: 2
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 2
       enemyType: 1
-      percent: 0
+      percent: 10
     - Obj: {fileID: 0}
       level: 2
       enemyType: 2
@@ -274,96 +274,96 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 13.194786
-    totalSpawnObject: 14
+    totalSpawnObject: 50
     monsters:
     - Obj: {fileID: 0}
       level: 2
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 2
       enemyType: 1
-      percent: 0
+      percent: 30
     - Obj: {fileID: 0}
       level: 2
       enemyType: 2
-      percent: 0
+      percent: 40
     - Obj: {fileID: 0}
       level: 2
       enemyType: 3
-      percent: 0
+      percent: 10
     boss: {fileID: 0}
   - duration: 13.458682
-    totalSpawnObject: 14
+    totalSpawnObject: 41
     monsters:
     - Obj: {fileID: 0}
       level: 2
       enemyType: 0
-      percent: 0
+      percent: 50
     - Obj: {fileID: 0}
       level: 2
       enemyType: 1
-      percent: 0
+      percent: 10
     - Obj: {fileID: 0}
       level: 2
       enemyType: 2
-      percent: 0
+      percent: 30
     - Obj: {fileID: 0}
       level: 2
       enemyType: 3
-      percent: 0
+      percent: 20
     boss: {fileID: 0}
   - duration: 13.727856
-    totalSpawnObject: 14
+    totalSpawnObject: 60
     monsters:
     - Obj: {fileID: 0}
       level: 2
       enemyType: 0
-      percent: 0
+      percent: 50
     - Obj: {fileID: 0}
       level: 2
       enemyType: 1
-      percent: 0
+      percent: 40
     - Obj: {fileID: 0}
       level: 2
       enemyType: 2
-      percent: 0
+      percent: 40
     - Obj: {fileID: 0}
       level: 2
       enemyType: 3
-      percent: 0
+      percent: 25
     boss: {fileID: 0}
   - duration: 14.002413
-    totalSpawnObject: 15
+    totalSpawnObject: 70
     monsters:
     - Obj: {fileID: 0}
       level: 2
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 2
       enemyType: 1
-      percent: 0
+      percent: 50
     - Obj: {fileID: 0}
       level: 2
       enemyType: 2
-      percent: 0
+      percent: 30
     - Obj: {fileID: 0}
       level: 2
       enemyType: 3
-      percent: 0
+      percent: 15
     boss: {fileID: 0}
   - duration: 14.282461
-    totalSpawnObject: 15
+    totalSpawnObject: 70
     monsters:
     - Obj: {fileID: 0}
       level: 2
       enemyType: 0
-      percent: 0
+      percent: 50
     - Obj: {fileID: 0}
       level: 2
       enemyType: 1
-      percent: 0
+      percent: 50
     - Obj: {fileID: 0}
       level: 2
       enemyType: 2
@@ -373,8 +373,8 @@ MonoBehaviour:
       enemyType: 3
       percent: 0
     boss: {fileID: 0}
-  - duration: 14.56811
-    totalSpawnObject: 15
+  - duration: 14
+    totalSpawnObject: 70
     monsters:
     - Obj: {fileID: 0}
       level: 2
@@ -383,78 +383,78 @@ MonoBehaviour:
     - Obj: {fileID: 0}
       level: 2
       enemyType: 1
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 2
       enemyType: 2
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 2
       enemyType: 3
       percent: 0
     boss: {fileID: 0}
   - duration: 14.859472
-    totalSpawnObject: 16
+    totalSpawnObject: 40
     monsters:
     - Obj: {fileID: 0}
       level: 2
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 2
       enemyType: 1
-      percent: 0
+      percent: 50
     - Obj: {fileID: 0}
       level: 2
       enemyType: 2
-      percent: 0
+      percent: 50
     - Obj: {fileID: 0}
       level: 2
       enemyType: 3
-      percent: 0
+      percent: 50
     boss: {fileID: 0}
   - duration: 15.156662
-    totalSpawnObject: 16
+    totalSpawnObject: 55
     monsters:
     - Obj: {fileID: 0}
       level: 3
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 3
       enemyType: 1
-      percent: 0
+      percent: 30
     - Obj: {fileID: 0}
       level: 3
       enemyType: 2
-      percent: 0
+      percent: 30
     - Obj: {fileID: 0}
       level: 3
       enemyType: 3
-      percent: 0
+      percent: 25
     boss: {fileID: 0}
   - duration: 15.459795
-    totalSpawnObject: 17
+    totalSpawnObject: 58
     monsters:
     - Obj: {fileID: 0}
       level: 3
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 3
       enemyType: 1
-      percent: 0
+      percent: 30
     - Obj: {fileID: 0}
       level: 3
       enemyType: 2
-      percent: 0
+      percent: 30
     - Obj: {fileID: 0}
       level: 3
       enemyType: 3
-      percent: 0
+      percent: 20
     boss: {fileID: 0}
   - duration: 15.7689905
-    totalSpawnObject: 17
+    totalSpawnObject: 30
     monsters:
     - Obj: {fileID: 0}
       level: 3
@@ -471,15 +471,15 @@ MonoBehaviour:
     - Obj: {fileID: 0}
       level: 3
       enemyType: 3
-      percent: 0
+      percent: 100
     boss: {fileID: 0}
   - duration: 16.08437
-    totalSpawnObject: 18
+    totalSpawnObject: 64
     monsters:
     - Obj: {fileID: 0}
       level: 3
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 3
       enemyType: 1
@@ -494,52 +494,52 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 16.406057
-    totalSpawnObject: 18
+    totalSpawnObject: 80
     monsters:
     - Obj: {fileID: 0}
       level: 3
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 3
       enemyType: 1
-      percent: 0
+      percent: 40
     - Obj: {fileID: 0}
       level: 3
       enemyType: 2
-      percent: 0
+      percent: 50
     - Obj: {fileID: 0}
       level: 3
       enemyType: 3
-      percent: 0
+      percent: 20
     boss: {fileID: 0}
   - duration: 16.734179
-    totalSpawnObject: 19
+    totalSpawnObject: 71
     monsters:
     - Obj: {fileID: 0}
       level: 3
       enemyType: 0
-      percent: 0
+      percent: 20
     - Obj: {fileID: 0}
       level: 3
       enemyType: 1
-      percent: 0
+      percent: 20
     - Obj: {fileID: 0}
       level: 3
       enemyType: 2
-      percent: 0
+      percent: 50
     - Obj: {fileID: 0}
       level: 3
       enemyType: 3
-      percent: 0
+      percent: 30
     boss: {fileID: 0}
   - duration: 17.068863
-    totalSpawnObject: 19
+    totalSpawnObject: 74
     monsters:
     - Obj: {fileID: 0}
       level: 3
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 3
       enemyType: 1
@@ -554,12 +554,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 17.41024
-    totalSpawnObject: 19
+    totalSpawnObject: 78
     monsters:
     - Obj: {fileID: 0}
       level: 3
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 3
       enemyType: 1
@@ -574,12 +574,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 17.758446
-    totalSpawnObject: 20
+    totalSpawnObject: 82
     monsters:
     - Obj: {fileID: 0}
       level: 3
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 3
       enemyType: 1
@@ -594,12 +594,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 18.113615
-    totalSpawnObject: 20
+    totalSpawnObject: 86
     monsters:
     - Obj: {fileID: 0}
       level: 3
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 3
       enemyType: 1
@@ -614,12 +614,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 18.475887
-    totalSpawnObject: 21
+    totalSpawnObject: 90
     monsters:
     - Obj: {fileID: 0}
       level: 4
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 4
       enemyType: 1
@@ -634,12 +634,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 18.845406
-    totalSpawnObject: 22
+    totalSpawnObject: 95
     monsters:
     - Obj: {fileID: 0}
       level: 4
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 4
       enemyType: 1
@@ -654,12 +654,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 19.222313
-    totalSpawnObject: 22
+    totalSpawnObject: 100
     monsters:
     - Obj: {fileID: 0}
       level: 4
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 4
       enemyType: 1
@@ -674,12 +674,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 19.60676
-    totalSpawnObject: 23
+    totalSpawnObject: 105
     monsters:
     - Obj: {fileID: 0}
       level: 4
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 4
       enemyType: 1
@@ -694,12 +694,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 19.998896
-    totalSpawnObject: 23
+    totalSpawnObject: 110
     monsters:
     - Obj: {fileID: 0}
       level: 4
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 4
       enemyType: 1
@@ -714,12 +714,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 20.398874
-    totalSpawnObject: 24
+    totalSpawnObject: 115
     monsters:
     - Obj: {fileID: 0}
       level: 4
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 4
       enemyType: 1
@@ -734,12 +734,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 20.806852
-    totalSpawnObject: 24
+    totalSpawnObject: 121
     monsters:
     - Obj: {fileID: 0}
       level: 4
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 4
       enemyType: 1
@@ -754,12 +754,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 21.22299
-    totalSpawnObject: 25
+    totalSpawnObject: 127
     monsters:
     - Obj: {fileID: 0}
       level: 4
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 4
       enemyType: 1
@@ -774,12 +774,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 21.64745
-    totalSpawnObject: 26
+    totalSpawnObject: 134
     monsters:
     - Obj: {fileID: 0}
       level: 4
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 4
       enemyType: 1
@@ -794,12 +794,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 22.080399
-    totalSpawnObject: 26
+    totalSpawnObject: 140
     monsters:
     - Obj: {fileID: 0}
       level: 4
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 4
       enemyType: 1
@@ -814,12 +814,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 22.522007
-    totalSpawnObject: 27
+    totalSpawnObject: 147
     monsters:
     - Obj: {fileID: 0}
       level: 5
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 5
       enemyType: 1
@@ -834,12 +834,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 22.972446
-    totalSpawnObject: 28
+    totalSpawnObject: 155
     monsters:
     - Obj: {fileID: 0}
       level: 5
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 5
       enemyType: 1
@@ -854,12 +854,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 23.431896
-    totalSpawnObject: 28
+    totalSpawnObject: 162
     monsters:
     - Obj: {fileID: 0}
       level: 5
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 5
       enemyType: 1
@@ -874,12 +874,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 23.900534
-    totalSpawnObject: 29
+    totalSpawnObject: 171
     monsters:
     - Obj: {fileID: 0}
       level: 5
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 5
       enemyType: 1
@@ -894,12 +894,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 24.378544
-    totalSpawnObject: 30
+    totalSpawnObject: 179
     monsters:
     - Obj: {fileID: 0}
       level: 5
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 5
       enemyType: 1
@@ -914,12 +914,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 24.866116
-    totalSpawnObject: 31
+    totalSpawnObject: 188
     monsters:
     - Obj: {fileID: 0}
       level: 5
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 5
       enemyType: 1
@@ -934,12 +934,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 25.363438
-    totalSpawnObject: 31
+    totalSpawnObject: 198
     monsters:
     - Obj: {fileID: 0}
       level: 5
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 5
       enemyType: 1
@@ -954,12 +954,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 25.870707
-    totalSpawnObject: 32
+    totalSpawnObject: 208
     monsters:
     - Obj: {fileID: 0}
       level: 5
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 5
       enemyType: 1
@@ -974,12 +974,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 26.38812
-    totalSpawnObject: 33
+    totalSpawnObject: 218
     monsters:
     - Obj: {fileID: 0}
       level: 5
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 5
       enemyType: 1
@@ -994,12 +994,12 @@ MonoBehaviour:
       percent: 0
     boss: {fileID: 0}
   - duration: 26.915882
-    totalSpawnObject: 34
+    totalSpawnObject: 229
     monsters:
     - Obj: {fileID: 0}
       level: 5
       enemyType: 0
-      percent: 0
+      percent: 100
     - Obj: {fileID: 0}
       level: 5
       enemyType: 1
@@ -1010,1006 +1010,6 @@ MonoBehaviour:
       percent: 0
     - Obj: {fileID: 0}
       level: 5
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 27.454199
-    totalSpawnObject: 35
-    monsters:
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 28.003283
-    totalSpawnObject: 36
-    monsters:
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 28.563349
-    totalSpawnObject: 37
-    monsters:
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 29.134615
-    totalSpawnObject: 37
-    monsters:
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 29.717308
-    totalSpawnObject: 38
-    monsters:
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 30.311655
-    totalSpawnObject: 39
-    monsters:
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 30.917889
-    totalSpawnObject: 40
-    monsters:
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 31.536247
-    totalSpawnObject: 41
-    monsters:
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 32.166973
-    totalSpawnObject: 42
-    monsters:
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 32.810314
-    totalSpawnObject: 43
-    monsters:
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 6
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 33.466522
-    totalSpawnObject: 45
-    monsters:
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 34.135853
-    totalSpawnObject: 46
-    monsters:
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 34.81857
-    totalSpawnObject: 47
-    monsters:
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 35.514942
-    totalSpawnObject: 48
-    monsters:
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 36.225243
-    totalSpawnObject: 49
-    monsters:
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 36.94975
-    totalSpawnObject: 51
-    monsters:
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 37.688744
-    totalSpawnObject: 52
-    monsters:
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 38.44252
-    totalSpawnObject: 53
-    monsters:
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 39.211372
-    totalSpawnObject: 54
-    monsters:
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 39.9956
-    totalSpawnObject: 56
-    monsters:
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 7
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 40.795513
-    totalSpawnObject: 57
-    monsters:
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 41.611423
-    totalSpawnObject: 59
-    monsters:
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 42.443653
-    totalSpawnObject: 60
-    monsters:
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 43.292526
-    totalSpawnObject: 62
-    monsters:
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 44.15838
-    totalSpawnObject: 63
-    monsters:
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 45.041546
-    totalSpawnObject: 65
-    monsters:
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 45.942375
-    totalSpawnObject: 66
-    monsters:
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 46.86122
-    totalSpawnObject: 68
-    monsters:
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 47.798447
-    totalSpawnObject: 70
-    monsters:
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 48.754417
-    totalSpawnObject: 72
-    monsters:
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 8
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 49.729507
-    totalSpawnObject: 73
-    monsters:
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 50.7241
-    totalSpawnObject: 75
-    monsters:
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 51.73858
-    totalSpawnObject: 77
-    monsters:
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 52.77335
-    totalSpawnObject: 79
-    monsters:
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 53.828815
-    totalSpawnObject: 81
-    monsters:
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 54.90539
-    totalSpawnObject: 83
-    monsters:
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 56.003498
-    totalSpawnObject: 85
-    monsters:
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 57.12357
-    totalSpawnObject: 87
-    monsters:
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 58.26604
-    totalSpawnObject: 90
-    monsters:
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 59.431362
-    totalSpawnObject: 92
-    monsters:
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 9
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 60.619987
-    totalSpawnObject: 94
-    monsters:
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 61.832386
-    totalSpawnObject: 96
-    monsters:
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 63.069035
-    totalSpawnObject: 99
-    monsters:
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 64.330414
-    totalSpawnObject: 101
-    monsters:
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 65.61702
-    totalSpawnObject: 104
-    monsters:
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 66.92936
-    totalSpawnObject: 107
-    monsters:
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 68.267944
-    totalSpawnObject: 109
-    monsters:
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 69.6333
-    totalSpawnObject: 112
-    monsters:
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 71.02597
-    totalSpawnObject: 115
-    monsters:
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 3
-      percent: 0
-    boss: {fileID: 0}
-  - duration: 72.44649
-    totalSpawnObject: 118
-    monsters:
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 0
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 1
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
-      enemyType: 2
-      percent: 0
-    - Obj: {fileID: 0}
-      level: 10
       enemyType: 3
       percent: 0
     boss: {fileID: 0}
