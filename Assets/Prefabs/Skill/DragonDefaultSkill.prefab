@@ -33376,5 +33376,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idleSound: {fileID: 8300000, guid: 060c600ce5d11ed4d9a4f4dce647ec8e, type: 3}
   attackSound: {fileID: 8300000, guid: e01dc7806fd04cd4f8dee82c5fbfe3e4, type: 3}
-  destroy: {fileID: 8300000, guid: eb078ead63d759246ab8f85606bac30a, type: 3}
+  destroy: {fileID: 8300000, guid: cf8cb2535eaec684896e40c410ca9da2, type: 3}
   audioSource: {fileID: 944739615485874228}
