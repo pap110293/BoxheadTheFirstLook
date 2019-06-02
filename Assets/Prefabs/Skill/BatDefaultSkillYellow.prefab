@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 5893457149169415076}
   m_Layer: 12
   m_Name: BatDefaultSkillYellow
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5234,7 +5234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idleSound: {fileID: 0}
-  attackSound: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: 4462b639ae40f804cb16346ef61c8568, type: 3}
   destroy: {fileID: 0}
   audioSource: {fileID: 0}
 --- !u!1 &3785867036542281354

@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 1898428411625216205}
   m_Layer: 12
   m_Name: BatDefaultSkill
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

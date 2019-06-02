@@ -14508,7 +14508,7 @@ GameObject:
   - component: {fileID: 8503632655468937905}
   m_Layer: 12
   m_Name: MageDefaultSkill
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19343,7 +19343,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -19439,7 +19439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7d96619c67448349b4cc922d8438b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSound: {fileID: 0}
+  idleSound: {fileID: 8300000, guid: eb078ead63d759246ab8f85606bac30a, type: 3}
   attackSound: {fileID: 0}
-  destroy: {fileID: 0}
+  destroy: {fileID: 8300000, guid: cf8cb2535eaec684896e40c410ca9da2, type: 3}
   audioSource: {fileID: 0}
