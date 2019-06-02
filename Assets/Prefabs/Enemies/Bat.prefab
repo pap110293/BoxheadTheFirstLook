@@ -810,7 +810,7 @@ MonoBehaviour:
   UnlockCastSkill: 0
   shootPoint: {fileID: 5181445986051680359}
   target: {fileID: 0}
-  skillBlowPrefabs: {fileID: 2494000497611454123, guid: a07ff4fb590ee4945a72c0ee1baa67bf,
+  skillBlowPrefabs: {fileID: 3785571953948679284, guid: bd70c8e070996d94f985b4913ac93b4b,
     type: 3}
 --- !u!114 &5426048675048595106
 MonoBehaviour:
