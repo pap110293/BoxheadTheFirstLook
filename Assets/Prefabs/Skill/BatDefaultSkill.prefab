@@ -99,7 +99,7 @@ TrailRenderer:
       m_RotationOrder: 0
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.19117647, g: 0.72288233, b: 1, a: 1}
+      key0: {r: 1, g: 0.19215687, b: 0.45882353, a: 1}
       key1: {r: 0.16911763, g: 0.7153246, b: 1, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -169,7 +169,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2494000497611454123}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.846}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2492221786375551801}
@@ -282,8 +282,8 @@ MonoBehaviour:
   lights: 1
   trails: 1
   changeColor: 1
-  newMaxColor: {r: 0, g: 0.6573818, b: 1, a: 1}
-  newMinColor: {r: 0, g: 0.49025083, b: 1, a: 1}
+  newMaxColor: {r: 1, g: 0.14431222, b: 0, a: 1}
+  newMinColor: {r: 1, g: 0.8991846, b: 0, a: 1}
   ParticleSystems:
   - {fileID: 2494000497611454123}
   - {fileID: 2494350918198238899}
@@ -5231,7 +5231,7 @@ TrailRenderer:
       m_RotationOrder: 0
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.19117647, g: 0.72288233, b: 1, a: 1}
+      key0: {r: 1, g: 0.19215687, b: 0.45882353, a: 1}
       key1: {r: 0.16911763, g: 0.7153246, b: 1, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -5366,7 +5366,7 @@ TrailRenderer:
       m_RotationOrder: 0
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.19117647, g: 0.72288233, b: 1, a: 1}
+      key0: {r: 1, g: 0.19215685, b: 0.45741683, a: 1}
       key1: {r: 0.16911763, g: 0.7153246, b: 1, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -5623,8 +5623,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.18382353, g: 0.5839547, b: 1, a: 1}
-      maxColor: {r: 0.33823532, g: 0.7732673, b: 1, a: 1}
+      minColor: {r: 1, g: 0.53680533, b: 0.18431371, a: 1}
+      maxColor: {r: 1, g: 0.6462221, b: 0.33725488, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

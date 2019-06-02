@@ -27,7 +27,6 @@ public class EnemySkillSound : MonoBehaviour
     {
         if (audioSource && destroy)
         {
-            Debug.LogError(1);
             audioSource.clip = attackSound;
             //audioSource.volume = 0.5f;
             audioSource.loop = false;
