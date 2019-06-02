@@ -115,7 +115,6 @@ public class FPSWeapon : FPSItem
             {
                 animator.SetTrigger("shoot");
                 timeTemp = FireRate;
-                
             }
         }
     }
@@ -154,8 +153,8 @@ public class FPSWeapon : FPSItem
         {
             for (int i = 0; i < numberOfBullet; i++)
             {
-                Quaternion bulletDirection = GetBulletRotation();
-                var bullet = Instantiate(bulletPrefab, point.position, bulletDirection);
+                Quaternion bulletRotatetion = GetBulletRotation();
+                var bullet = Instantiate(bulletPrefab, point.position, bulletRotatetion);
                 bullet.GetComponent<Bullet>().SetDamage(Damage);
             }
         }
@@ -163,9 +162,13 @@ public class FPSWeapon : FPSItem
 
     private Quaternion GetBulletRotation()
     {
-        Vector3 spreadDirection = point.position - (point.position + new Vector3(Random.Range(-Spread,Spread),Random.Range(-Spread,Spread),0));
-        Quaternion rotation = Quaternion.Euler(point.rotation.eulerAngles + spreadDirection); 
-        return rotation;
+        if (!isScoped)
+        {
+            Vector3 spreadDirection = point.position - (point.position + new Vector3(Random.Range(-Spread, Spread), Random.Range(-Spread, Spread), 0));
+            Quaternion rotation = Quaternion.Euler(point.rotation.eulerAngles + spreadDirection);
+            return rotation;
+        }
+        return point.rotation;
     }
 
     private void CreateMuzzleFX()
@@ -207,7 +210,7 @@ public class FPSWeapon : FPSItem
         base.OnAction();
         if (weaponType == WeaponType.Tool)
         {
-            if(audioSource && SoundFire)
+            if (audioSource && SoundFire)
             {
                 audioSource.PlayOneShot(SoundFire);
             }
@@ -216,7 +219,7 @@ public class FPSWeapon : FPSItem
             bullet.GetComponent<TrailRenderer>().enabled = false;
             var bulletClass = bullet.GetComponent<Bullet>();
             bulletClass.SetDamage(Damage);
-            bulletClass.SetDistance(0.01f);
+            bulletClass.SetDistance(1.5f);
         }
     }
 

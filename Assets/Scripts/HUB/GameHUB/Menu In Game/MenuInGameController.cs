@@ -22,12 +22,13 @@ public class MenuInGameController : MonoBehaviour
     void Start()
     {
         this.HidePauseMenu();
+        this.HideFinishPanel();
 
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && MasterManager.gameController.isDone == false)
+        if (Input.GetKeyDown(KeyCode.Escape) && MasterManager.gameController.isEndPlayProcess == false)
         {
             if (MasterManager.isPause)
             {
@@ -69,10 +70,10 @@ public class MenuInGameController : MonoBehaviour
         finishPanel.SetActive(false);
     }
 
-    public void ShowFinishPanel(int score, string text)
+    public void ShowFinishPanel(string text)
     {
         header.text = text;
-        this.score.text = score + "";
+        this.score.text = MasterManager.scoreController.currentPoint + "";
         finishPanel.SetActive(true);
     }
 

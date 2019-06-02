@@ -16,11 +16,19 @@ public class GameHUBManager : MonoBehaviour
     private GameObject notification;
     [SerializeField]
     private GameObject notificationGroup;
+    private int defaultComboSize;
+    private ScoreController scoreController;
+    private float tempFontsize;
 
     public GameObject crossHair;
     public GameObject crossHairZoom;
 
     public Text ammoText;
+    public Text scoreText;
+    [Header("Combo Text")]
+    public Text comboText;
+    public Color startComboColor;
+    public Color endComboColor;
 
     private void Awake()
     {
@@ -30,8 +38,30 @@ public class GameHUBManager : MonoBehaviour
         MasterManager.gameHUBCanvas = this;
     }
 
-    private void Start() {
+    private void Start()
+    {
         MasterManager.ResumeGame();
+        defaultComboSize = comboText.fontSize;
+        scoreController = MasterManager.scoreController;
+    }
+
+    private void Update()
+    {
+        if (comboText)
+        {
+            if (comboText.fontSize > defaultComboSize)
+            {
+                tempFontsize -= 0.1f;
+                comboText.fontSize = (int)tempFontsize;
+            }
+
+            if (scoreController)
+            {
+                var comboColor = comboText.color;
+                comboColor.a = scoreController.timeCountDown / 2 > 1f ? 1f : scoreController.timeCountDown / 2;
+                comboText.color = comboColor;
+            }
+        }
     }
 
     public void Scoped(float FOVZoom)
@@ -100,5 +130,26 @@ public class GameHUBManager : MonoBehaviour
     public void DisableAmmoUI()
     {
         ammoText.gameObject.SetActive(false);
+    }
+
+    public void UpdateScoreUI(int point)
+    {
+        if (!scoreText) return;
+
+        scoreText.text = point + "";
+    }
+
+    public void UpdateComboUI(int combo)
+    {
+        if (!comboText) return;
+        comboText.fontSize = 60;
+        comboText.text = "x" + combo;
+        tempFontsize = comboText.fontSize;
+        UpdateComboTextColor(combo);
+    }
+
+    private void UpdateComboTextColor(int combo)
+    {
+        comboText.color = Color.Lerp(startComboColor, endComboColor, Mathf.Clamp(combo / 100f, 0, 100f));
     }
 }

@@ -4,20 +4,40 @@ using UnityEngine;
 using UnityEngine.AI;
 public class Movement : MonoBehaviour
 {
-    public float flyHeight;
+    public enum TypeMove
+    {
+        Walk,
+        Fly
+    }    
     public Transform model;
-
-    NavMeshAgent navMeshAgent;
+    private float flyHeight;
+    private TypeMove typeMove;
+    private float speed;    
+    private NavMeshAgent navMeshAgent;
     private Transform target;
-
     void Awake()
     {
         navMeshAgent = this.GetComponent<NavMeshAgent>();
     }
-    public void SetMove(Transform _target)
+    public void SetMove(Transform _target, TypeMove _typeMove, float _speed,float _flyHeight)
     {
-        navMeshAgent.SetDestination(_target.position);
         target = _target;
+        speed = _speed;
+        flyHeight = _flyHeight;
+        switch (typeMove)
+        {
+            case TypeMove.Walk:
+                navMeshAgent.speed = _speed;
+                navMeshAgent.SetDestination(_target.position);
+                break;
+            case TypeMove.Fly:
+                transform.position += transform.forward * _speed * Time.deltaTime;
+                break;
+            default:                
+                break;
+        }
+
+        
     }
     public void Stop()
     {
@@ -31,8 +51,9 @@ public class Movement : MonoBehaviour
         }
         if (target != null)
         {
-            //transform.LookAt(target);
-            //model.LookAt(target);
+            var targetLookat = new Vector3(target.position.x,transform.position.y,target.position.z);
+            transform.LookAt(targetLookat);
+           //model.LookAt(target);
         }
     }
 }

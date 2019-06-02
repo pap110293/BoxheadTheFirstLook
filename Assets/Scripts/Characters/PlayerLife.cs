@@ -67,15 +67,4 @@ public class PlayerLife : LifeBase
         // show text
         MasterManager.gameHUBCanvas.PushNotification("Heal " + heal, Color.green);
     }
-
-    public override void OnUpdate()
-    {
-        if (Input.GetKeyDown(KeyCode.F1))
-            DieNow();
-    }
-
-    private void DieNow()
-    {
-        TakeDamage(this.maxHP);
-    }
 }

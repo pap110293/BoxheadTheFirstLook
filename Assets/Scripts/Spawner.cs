@@ -9,6 +9,8 @@ public class Spawner : MonoBehaviour
     public struct SpawnerObject
     {
         public GameObject Obj;
+        public int level;
+        public EnemyManager.EnemyType enemyType;
         [Range(0, 100.0f)]
         public float percent;
     }
@@ -61,7 +63,7 @@ public class Spawner : MonoBehaviour
     }
 
     private void Spawn()
-    {   
+    {
         float totalRate = TotalSpawnRate();
         var randomNum = UnityEngine.Random.Range(0f, totalRate);
 
@@ -71,7 +73,7 @@ public class Spawner : MonoBehaviour
             {
                 counting++;
                 SpawnZombie(ob);
-                if(counting >= numberOfObject)
+                if (counting >= numberOfObject)
                 {
                     StopSpawn();
                 }
@@ -87,7 +89,10 @@ public class Spawner : MonoBehaviour
         var z = UnityEngine.Random.Range(transform.position.z - size.z / 2, transform.position.z + size.z / 2);
         var y = transform.position.y;
         var position = new Vector3(x, y, z);
-        Instantiate(ob.Obj, position, Quaternion.identity);
+        var Enemy = Instantiate(ob.Obj, position, Quaternion.identity);
+        //vinh add
+        Enemy.GetComponent<EnemyManager>().enemyAtribute = MasterManager.enemyLevelConfigManager.GetEnemyAtribute(ob.level, ob.enemyType).atribute;
+
         MasterManager.spawEnemyManager.totalEnemy++;
     }
 

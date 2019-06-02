@@ -64,7 +64,7 @@ public class ProjectileMoveScript : MonoBehaviour {
 	}
 
 	void OnCollisionEnter (Collision co) {
-		if (co.gameObject.tag != "Bullet" && !collided) {
+		if (co.gameObject.tag != "Bullet" && co.gameObject.tag != "Enemy" && !collided) {
 			collided = true;
 			
 			if (shotSFX != null && GetComponent<AudioSource>()) {

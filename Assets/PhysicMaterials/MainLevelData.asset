@@ -1,0 +1,447 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c9da54a549170846b22e858b6882576, type: 3}
+  m_Name: MainLevelData
+  m_EditorClassIdentifier: 
+  records:
+  - duration: 10.5
+    totalSpawnObject: 12
+    monsters:
+    - Obj: {fileID: 0}
+      level: 0
+      enemyType: 0
+      percent: 0
+    - Obj: {fileID: 0}
+      level: 0
+      enemyType: 0
+      percent: 0
+    - Obj: {fileID: 0}
+      level: 0
+      enemyType: 0
+      percent: 0
+    - Obj: {fileID: 0}
+      level: 0
+      enemyType: 0
+      percent: 0
+    boss: {fileID: 0}
+  - duration: 11.025
+    totalSpawnObject: 14
+    monsters:
+    - Obj: {fileID: 0}
+      level: 0
+      enemyType: 0
+      percent: 0
+    - Obj: {fileID: 0}
+      level: 0
+      enemyType: 0
+      percent: 0
+    - Obj: {fileID: 0}
+      level: 0
+      enemyType: 0
+      percent: 0
+    - Obj: {fileID: 0}
+      level: 0
+      enemyType: 0
+      percent: 0
+    boss: {fileID: 0}
+  - duration: 11.57625
+    totalSpawnObject: 17
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 12.155063
+    totalSpawnObject: 20
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 12.762815
+    totalSpawnObject: 24
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 13.400956
+    totalSpawnObject: 29
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 14.071004
+    totalSpawnObject: 35
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 14.774554
+    totalSpawnObject: 42
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 15.513282
+    totalSpawnObject: 51
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 16.288946
+    totalSpawnObject: 61
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 17.103394
+    totalSpawnObject: 74
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 17.958563
+    totalSpawnObject: 89
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 18.856491
+    totalSpawnObject: 106
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 19.799316
+    totalSpawnObject: 128
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 20.789282
+    totalSpawnObject: 154
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 21.828747
+    totalSpawnObject: 184
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 22.920185
+    totalSpawnObject: 221
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 24.066195
+    totalSpawnObject: 266
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 25.269505
+    totalSpawnObject: 319
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 26.53298
+    totalSpawnObject: 383
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 27.859629
+    totalSpawnObject: 460
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 29.25261
+    totalSpawnObject: 552
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 30.71524
+    totalSpawnObject: 662
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 32.251003
+    totalSpawnObject: 794
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 33.863552
+    totalSpawnObject: 953
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 35.55673
+    totalSpawnObject: 1144
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 37.334564
+    totalSpawnObject: 1373
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 39.201294
+    totalSpawnObject: 1648
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 41.161358
+    totalSpawnObject: 1978
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 43.219425
+    totalSpawnObject: 2373
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 45.380398
+    totalSpawnObject: 2848
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 47.649418
+    totalSpawnObject: 3418
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 50.031887
+    totalSpawnObject: 4101
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 52.53348
+    totalSpawnObject: 4922
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 55.160156
+    totalSpawnObject: 5906
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 57.918163
+    totalSpawnObject: 7088
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 60.81407
+    totalSpawnObject: 8505
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 63.854774
+    totalSpawnObject: 10206
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 67.047516
+    totalSpawnObject: 12248
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 70.399895
+    totalSpawnObject: 14697
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 73.91989
+    totalSpawnObject: 17637
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 77.61588
+    totalSpawnObject: 21164
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 81.49667
+    totalSpawnObject: 25397
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 85.57151
+    totalSpawnObject: 30477
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 89.85008
+    totalSpawnObject: 36572
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 94.34259
+    totalSpawnObject: 43887
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 99.05972
+    totalSpawnObject: 52664
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 104.01271
+    totalSpawnObject: 63197
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 109.21335
+    totalSpawnObject: 75836
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 114.67402
+    totalSpawnObject: 91004
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 120.40772
+    totalSpawnObject: 109205
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 126.42811
+    totalSpawnObject: 131046
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 132.74951
+    totalSpawnObject: 157255
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 139.387
+    totalSpawnObject: 188706
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 146.35634
+    totalSpawnObject: 226447
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 153.67415
+    totalSpawnObject: 271737
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 161.35785
+    totalSpawnObject: 326085
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 169.42574
+    totalSpawnObject: 391302
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 177.89702
+    totalSpawnObject: 469562
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 186.79187
+    totalSpawnObject: 563474
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 196.13147
+    totalSpawnObject: 676169
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 205.93805
+    totalSpawnObject: 811403
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 216.23495
+    totalSpawnObject: 973684
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 227.0467
+    totalSpawnObject: 1168421
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 238.39905
+    totalSpawnObject: 1402106
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 250.319
+    totalSpawnObject: 1682527
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 262.83496
+    totalSpawnObject: 2019032
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 275.9767
+    totalSpawnObject: 2422839
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 289.77554
+    totalSpawnObject: 2907407
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 304.2643
+    totalSpawnObject: 3488889
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 319.47754
+    totalSpawnObject: 4186666
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 335.45142
+    totalSpawnObject: 5024000
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 352.224
+    totalSpawnObject: 6028800
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 369.8352
+    totalSpawnObject: 7234560
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 388.32697
+    totalSpawnObject: 8681472
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 407.74332
+    totalSpawnObject: 10417766
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 428.1305
+    totalSpawnObject: 12501319
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 449.53702
+    totalSpawnObject: 15001583
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 472.01385
+    totalSpawnObject: 18001900
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 495.61456
+    totalSpawnObject: 21602280
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 520.39526
+    totalSpawnObject: 25922736
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 546.41504
+    totalSpawnObject: 31107284
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 573.7358
+    totalSpawnObject: 37328740
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 602.42255
+    totalSpawnObject: 44794488
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 632.5437
+    totalSpawnObject: 53753384
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 664.1709
+    totalSpawnObject: 64504060
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 697.37946
+    totalSpawnObject: 77404872
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 732.2484
+    totalSpawnObject: 92885848
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 768.86084
+    totalSpawnObject: 111463016
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 807.3039
+    totalSpawnObject: 133755616
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 847.66907
+    totalSpawnObject: 160506736
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 890.05255
+    totalSpawnObject: 192608080
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 934.5552
+    totalSpawnObject: 231129696
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 981.28296
+    totalSpawnObject: 277355648
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 1030.3472
+    totalSpawnObject: 332826784
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 1081.8645
+    totalSpawnObject: 399392128
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 1135.9578
+    totalSpawnObject: 479270560
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 1192.7556
+    totalSpawnObject: 575124672
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 1252.3934
+    totalSpawnObject: 690149632
+    monsters: []
+    boss: {fileID: 0}
+  - duration: 1315.0131
+    totalSpawnObject: 828179584
+    monsters: []
+    boss: {fileID: 0}

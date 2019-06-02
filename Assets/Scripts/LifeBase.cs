@@ -12,7 +12,7 @@ public class LifeBase : MonoBehaviour
     public int CurrentArmor { get { return currentArmor; } }
     public int CurrentHP { get { return currentHP; } }
 
-    public bool IsDead {get{return currentHP <= 0; }}
+    public bool IsDead { get { return currentHP <= 0; } }
 
     private void Start()
     {
@@ -25,6 +25,13 @@ public class LifeBase : MonoBehaviour
             OnDead();
         else
             OnUpdate();
+
+        // CHEAT
+        if (Input.GetKeyDown(KeyCode.F1))
+            ClearAllEnemy();
+        if (Input.GetKeyDown(KeyCode.F2))
+            PlayerDie();
+        // END CHEAT
     }
 
     public virtual void Init()
@@ -71,5 +78,25 @@ public class LifeBase : MonoBehaviour
     public virtual void OnUpdate()
     {
 
+    }
+
+    public virtual void DieNow()
+    {
+        currentHP = 0;
+    }
+
+    private void PlayerDie()
+    {
+        var player = FindObjectOfType<PlayerLife>();
+        player.DieNow();
+    }
+
+    private void ClearAllEnemy()
+    {
+        var enemies = FindObjectsOfType<EnemyLife>();
+        foreach (var enemy in enemies)
+        {
+            enemy.DieNow();
+        }
     }
 }
