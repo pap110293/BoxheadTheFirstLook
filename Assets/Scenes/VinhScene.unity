@@ -367,7 +367,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221856225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.83, y: 10.3, z: 1.04}
+  m_LocalPosition: {x: -0.83, y: 10.3, z: -4.22}
   m_LocalScale: {x: 2, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 249005643}
@@ -939,6 +939,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkeletonMage
       objectReference: {fileID: 0}
+    - target: {fileID: 5329938760072784364, guid: ca90226ff58c78b4ab364f6b003a78bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 33859652010367467, guid: ca90226ff58c78b4ab364f6b003a78bd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1248,7 +1253,7 @@ PrefabInstance:
     - target: {fileID: 6171029549530708856, guid: baed88711a85645459c8785fd4b56ce1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6171029549530708863, guid: baed88711a85645459c8785fd4b56ce1,
         type: 3}

@@ -31,11 +31,11 @@ public class EnemySkillSound : MonoBehaviour
             //audioSource.volume = 0.5f;
             audioSource.loop = false;
             audioSource.Play();
-            var temp = Instantiate(new GameObject(), new Vector3(0, 0, 0), Quaternion.identity);
+            var temp = new GameObject();// Instantiate(new GameObject(), new Vector3(0, 0, 0), Quaternion.identity);
             var tempSound = temp.AddComponent<AudioSource>();
             tempSound.clip = destroy;
             tempSound.Play();
-            Destroy(temp, 2);
+            Destroy(temp, 1);
         }
     }
     public void StartIdleSound()
