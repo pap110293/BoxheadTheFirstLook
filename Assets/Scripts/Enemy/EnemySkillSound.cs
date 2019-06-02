@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySound : MonoBehaviour
+public class EnemySkillSound : MonoBehaviour
 {
     public AudioClip idleSound;
     public AudioClip attackSound;
