@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -29,13 +30,13 @@ public static class CreateGameLevel
 
         var defaultValue = 10f;
         var percentForDuration = 0.02f;
-        var percentFOrMonster = 0.025f;
+        var percentFOrMonster = 0.06f;
         var value1 = defaultValue;
         var value2 = defaultValue;
         int level;
         for (int i = 0; i < 100; i++)
         {
-            level = i / 10 + 1;
+            level = i / 10 + 1; // add 1 level for 10 wave
             value1 += value1 * percentForDuration;
             Debug.Log("value 1 = " + value1);
             value2 += value2 * percentFOrMonster;
@@ -63,6 +64,7 @@ public static class CreateGameLevel
 
                 temp.monsters.Add(monster);
             }
+
             levelCollection.records.Add(temp);
         }
 

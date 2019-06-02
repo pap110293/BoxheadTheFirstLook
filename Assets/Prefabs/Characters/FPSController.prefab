@@ -877,6 +877,21 @@ PrefabInstance:
       propertyPath: Damage
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 100203498427885547, guid: 266e1dc2315ee8d40af09f793b8eae9d,
+        type: 3}
+      propertyPath: infinityAmmo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100203498427885547, guid: 266e1dc2315ee8d40af09f793b8eae9d,
+        type: 3}
+      propertyPath: ammoHave
+      value: 999
+      objectReference: {fileID: 0}
+    - target: {fileID: 100203498427885547, guid: 266e1dc2315ee8d40af09f793b8eae9d,
+        type: 3}
+      propertyPath: maxAmmo
+      value: 999
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 266e1dc2315ee8d40af09f793b8eae9d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
