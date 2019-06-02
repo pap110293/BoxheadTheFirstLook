@@ -5128,8 +5128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7d96619c67448349b4cc922d8438b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSound: {fileID: 8300000, guid: 67995530c5a897048afbbbd093b3823a, type: 3}
-  attackSound: {fileID: 0}
+  idleSound: {fileID: 8300000, guid: 9bb1e2db37d0fe14c86c23cf252b0414, type: 3}
+  attackSound: {fileID: 8300000, guid: 01e64537dc2f2514298b6150f3344364, type: 3}
   destroy: {fileID: 0}
   audioSource: {fileID: 0}
 --- !u!1 &2494227896555674991
