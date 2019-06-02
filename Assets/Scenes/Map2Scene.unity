@@ -225,17 +225,17 @@ PrefabInstance:
     - target: {fileID: 6569923261641484972, guid: 2245c5c07c4985643bc9187dfc68f33c,
         type: 3}
       propertyPath: spawnerObjects.Array.data[4].percent
-      value: 50
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 6569923261641484972, guid: 2245c5c07c4985643bc9187dfc68f33c,
         type: 3}
       propertyPath: spawnerObjects.Array.data[3].percent
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6569923261641484972, guid: 2245c5c07c4985643bc9187dfc68f33c,
         type: 3}
       propertyPath: spawnerObjects.Array.data[2].percent
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6569923261641484972, guid: 2245c5c07c4985643bc9187dfc68f33c,
         type: 3}
@@ -245,7 +245,7 @@ PrefabInstance:
     - target: {fileID: 6569923261641484972, guid: 2245c5c07c4985643bc9187dfc68f33c,
         type: 3}
       propertyPath: spawnerObjects.Array.data[0].percent
-      value: 30
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2245c5c07c4985643bc9187dfc68f33c, type: 3}
