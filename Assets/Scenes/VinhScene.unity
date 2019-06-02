@@ -1163,6 +1163,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dragon
       objectReference: {fileID: 0}
+    - target: {fileID: 6171029549530708856, guid: baed88711a85645459c8785fd4b56ce1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6171029549530708863, guid: baed88711a85645459c8785fd4b56ce1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1260,6 +1265,95 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: baed88711a85645459c8785fd4b56ce1, type: 3}
+--- !u!1001 &1962092537
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5426048675048595134, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: m_Name
+      value: Bat
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595129, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595129, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.251
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595129, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595129, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595129, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595129, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595129, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595129, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595129, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595129, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595129, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595109, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: enemyAtribute.movementSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595109, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: enemyAtribute.flyHeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595109, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: enemyAtribute.typeMove
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595109, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: enemyAtribute.skillFlySpeed
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d4e342670077e6429cf10a099bbacea, type: 3}
 --- !u!1 &2039608181
 GameObject:
   m_ObjectHideFlags: 0
