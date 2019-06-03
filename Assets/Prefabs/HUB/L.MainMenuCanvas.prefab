@@ -379,6 +379,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptionButton
       objectReference: {fileID: 0}
+    - target: {fileID: 5320240307670890615, guid: 90dce3c65cf3c4c4380f785f7fd0cd8c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 141979471068089590, guid: 90dce3c65cf3c4c4380f785f7fd0cd8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -618,7 +623,7 @@ PrefabInstance:
     - target: {fileID: 141979471068089590, guid: 90dce3c65cf3c4c4380f785f7fd0cd8c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 80
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 141979471068089590, guid: 90dce3c65cf3c4c4380f785f7fd0cd8c,
         type: 3}
