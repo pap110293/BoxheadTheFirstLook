@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MenuInGameController : MonoBehaviour
 {
     public int mainMenuSceneIndex = 0;
+    public GameObject optionPanel;
     [Header("Pause panel")]
     public GameObject pausePanel;
     [Header("finish panel")]
