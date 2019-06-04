@@ -5006,7 +5006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da45f6a4f253894d9f0f05d788c3dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillType: 0
+  skillType: 1
 --- !u!135 &2447874489159093384
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5029,7 +5029,8 @@ AudioSource:
   m_GameObject: {fileID: 2494000497611454123}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 0a58ad84fdbaeba4a8b0646c449ca371,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

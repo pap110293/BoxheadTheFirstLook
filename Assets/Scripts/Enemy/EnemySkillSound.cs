@@ -34,6 +34,7 @@ public class EnemySkillSound : MonoBehaviour
             var temp = new GameObject();// Instantiate(new GameObject(), new Vector3(0, 0, 0), Quaternion.identity);
             var tempSound = temp.AddComponent<AudioSource>();
             tempSound.clip = destroy;
+            tempSound.outputAudioMixerGroup = audioSource.outputAudioMixerGroup;
             tempSound.Play();
             Destroy(temp, 1);
         }

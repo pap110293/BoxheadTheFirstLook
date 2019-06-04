@@ -343,6 +343,48 @@ PrefabInstance:
       propertyPath: m_JumpSpeed
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 407451650278967462, guid: dfaed5cde6e8185458115181f1d6c56f,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 0a58ad84fdbaeba4a8b0646c449ca371,
+        type: 2}
+    - target: {fileID: 1265901474555186143, guid: dfaed5cde6e8185458115181f1d6c56f,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 0a58ad84fdbaeba4a8b0646c449ca371,
+        type: 2}
+    - target: {fileID: 1265901474946981207, guid: dfaed5cde6e8185458115181f1d6c56f,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 0a58ad84fdbaeba4a8b0646c449ca371,
+        type: 2}
+    - target: {fileID: 1265901475358619473, guid: dfaed5cde6e8185458115181f1d6c56f,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 0a58ad84fdbaeba4a8b0646c449ca371,
+        type: 2}
+    - target: {fileID: 3876459536032459598, guid: dfaed5cde6e8185458115181f1d6c56f,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 0a58ad84fdbaeba4a8b0646c449ca371,
+        type: 2}
+    - target: {fileID: 7160065076761972399, guid: dfaed5cde6e8185458115181f1d6c56f,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 0a58ad84fdbaeba4a8b0646c449ca371,
+        type: 2}
+    - target: {fileID: 7947696417982297282, guid: dfaed5cde6e8185458115181f1d6c56f,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 0a58ad84fdbaeba4a8b0646c449ca371,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfaed5cde6e8185458115181f1d6c56f, type: 3}
 --- !u!1001 &680304044
