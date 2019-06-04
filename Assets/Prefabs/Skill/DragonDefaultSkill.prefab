@@ -33226,7 +33226,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8245191807428376988
 MonoBehaviour:
@@ -33375,7 +33375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7d96619c67448349b4cc922d8438b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSound: {fileID: 8300000, guid: 060c600ce5d11ed4d9a4f4dce647ec8e, type: 3}
+  idleSound: {fileID: 0}
   attackSound: {fileID: 8300000, guid: e01dc7806fd04cd4f8dee82c5fbfe3e4, type: 3}
   destroy: {fileID: 8300000, guid: cf8cb2535eaec684896e40c410ca9da2, type: 3}
   audioSource: {fileID: 944739615485874228}
