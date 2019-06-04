@@ -138,7 +138,7 @@ MonoBehaviour:
     typeMove: 0
     attackCooldown: 0
     skillFlySpeed: 0
-    skillType: 0
+    skillType: 1
   life: {fileID: 0}
   target: {fileID: 0}
   enemyMovement: {fileID: 0}
@@ -213,7 +213,7 @@ MonoBehaviour:
   UnlockCastSkill: 0
   shootPoint: {fileID: 131170700797023788}
   target: {fileID: 0}
-  skillBlowPrefabs: {fileID: 5453385660543773556, guid: 76aba47f5684dae4598b188297e74d3c,
+  skillBlowPrefabs: {fileID: 5824684424563926566, guid: 62adff0d06a218744811fce7491c5cd7,
     type: 3}
 --- !u!114 &1291664966
 MonoBehaviour:
