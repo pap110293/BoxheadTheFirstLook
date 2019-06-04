@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.455065, g: 0.967048, b: 1.5184207, a: 1}
+  m_IndirectSpecularColor: {r: 0.45480216, g: 0.96701103, b: 1.518429, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -225,17 +225,17 @@ PrefabInstance:
     - target: {fileID: 6569923261641484972, guid: 2245c5c07c4985643bc9187dfc68f33c,
         type: 3}
       propertyPath: spawnerObjects.Array.data[4].percent
-      value: 50
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 6569923261641484972, guid: 2245c5c07c4985643bc9187dfc68f33c,
         type: 3}
       propertyPath: spawnerObjects.Array.data[3].percent
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6569923261641484972, guid: 2245c5c07c4985643bc9187dfc68f33c,
         type: 3}
       propertyPath: spawnerObjects.Array.data[2].percent
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6569923261641484972, guid: 2245c5c07c4985643bc9187dfc68f33c,
         type: 3}
@@ -245,32 +245,7 @@ PrefabInstance:
     - target: {fileID: 6569923261641484972, guid: 2245c5c07c4985643bc9187dfc68f33c,
         type: 3}
       propertyPath: spawnerObjects.Array.data[0].percent
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4567753571025194095, guid: 2245c5c07c4985643bc9187dfc68f33c,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4567753571025194095, guid: 2245c5c07c4985643bc9187dfc68f33c,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4567753571025194095, guid: 2245c5c07c4985643bc9187dfc68f33c,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564904406057163217, guid: 2245c5c07c4985643bc9187dfc68f33c,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564904406057163217, guid: 2245c5c07c4985643bc9187dfc68f33c,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2245c5c07c4985643bc9187dfc68f33c, type: 3}
@@ -449,7 +424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfc1cf3a25e2c5f4d987991d6844618b, type: 3}
---- !u!1 &878695053
+--- !u!1 &740084568
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -457,8 +432,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 878695055}
-  - component: {fileID: 878695054}
+  - component: {fileID: 740084570}
+  - component: {fileID: 740084569}
   m_Layer: 0
   m_Name: BackgroundMusic
   m_TagString: Untagged
@@ -466,18 +441,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &878695054
+--- !u!82 &740084569
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 878695053}
+  m_GameObject: {fileID: 740084568}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: b4ab7f03fc5620e4a8c7378e85f1d559,
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 0a58ad84fdbaeba4a8b0646c449ca371,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: fba6c507ffbf3524197bb5b649a9eeba, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b7604e19fe8c62a47b3d7b54df877153, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -563,15 +538,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &878695055
+--- !u!4 &740084570
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 878695053}
+  m_GameObject: {fileID: 740084568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 41.090412, y: -32.91888, z: -1.3087993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

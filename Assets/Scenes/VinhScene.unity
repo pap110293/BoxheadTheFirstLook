@@ -255,6 +255,7 @@ MonoBehaviour:
     totalSpawnObject: 0
     monsters: []
     boss: {fileID: 0}
+  currentLevelIndex: -1
 --- !u!4 &107843368
 Transform:
   m_ObjectHideFlags: 0
@@ -366,7 +367,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221856225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.83, y: 10.3, z: 1.04}
+  m_LocalPosition: {x: -0.83, y: 10.3, z: -4.22}
   m_LocalScale: {x: 2, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 249005643}
@@ -926,6 +927,92 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 959490829}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1058913562
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5329938760072784364, guid: ca90226ff58c78b4ab364f6b003a78bd,
+        type: 3}
+      propertyPath: m_Name
+      value: SkeletonMage
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329938760072784364, guid: ca90226ff58c78b4ab364f6b003a78bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 33859652010367467, guid: ca90226ff58c78b4ab364f6b003a78bd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 33859652010367467, guid: ca90226ff58c78b4ab364f6b003a78bd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 33859652010367467, guid: ca90226ff58c78b4ab364f6b003a78bd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 33859652010367467, guid: ca90226ff58c78b4ab364f6b003a78bd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 33859652010367467, guid: ca90226ff58c78b4ab364f6b003a78bd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 33859652010367467, guid: ca90226ff58c78b4ab364f6b003a78bd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 33859652010367467, guid: ca90226ff58c78b4ab364f6b003a78bd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 33859652010367467, guid: ca90226ff58c78b4ab364f6b003a78bd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 33859652010367467, guid: ca90226ff58c78b4ab364f6b003a78bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 33859652010367467, guid: ca90226ff58c78b4ab364f6b003a78bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 33859652010367467, guid: ca90226ff58c78b4ab364f6b003a78bd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291664971, guid: ca90226ff58c78b4ab364f6b003a78bd, type: 3}
+      propertyPath: enemyAtribute.movementSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291664971, guid: ca90226ff58c78b4ab364f6b003a78bd, type: 3}
+      propertyPath: enemyAtribute.attackCooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291664971, guid: ca90226ff58c78b4ab364f6b003a78bd, type: 3}
+      propertyPath: enemyAtribute.skillFlySpeed
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ca90226ff58c78b4ab364f6b003a78bd, type: 3}
 --- !u!1 &1170254933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,6 +1363,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bat
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426048675048595134, guid: 3d4e342670077e6429cf10a099bbacea,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5426048675048595129, guid: 3d4e342670077e6429cf10a099bbacea,
         type: 3}

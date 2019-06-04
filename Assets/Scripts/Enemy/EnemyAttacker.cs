@@ -66,6 +66,8 @@ public class EnemyAttacker : MonoBehaviour
     public void UpdateAtacker(Transform _target, EnemyAnimState _animState)
     {
         if (_target) target = _target;
+        var targetLookat = new Vector3(target.position.x, transform.position.y, target.position.z);
+        transform.LookAt(targetLookat);
         if (isValidAttack)
         {
             switch (CheckValidSkill())
