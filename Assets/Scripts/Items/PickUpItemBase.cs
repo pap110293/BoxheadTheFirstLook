@@ -6,6 +6,7 @@ using UnityEngine;
 public class PickUpItemBase : MonoBehaviour
 {
     public float radius = 0.5f;
+    private bool consumed = false;
     private void Start()
     {
         InvokeRepeating("checkRadius", 0.0f, 0.2f);
@@ -18,7 +19,9 @@ public class PickUpItemBase : MonoBehaviour
         {
             if (ob.CompareTag("Player"))
             {
-                PickUpItem();
+                if (consumed == false)
+                    PickUpItem();
+                consumed = true;
                 Destroy(gameObject);
             }
         }
@@ -26,7 +29,7 @@ public class PickUpItemBase : MonoBehaviour
 
     public virtual void PickUpItem()
     {
-        
+
     }
 
     private void OnDrawGizmos()
