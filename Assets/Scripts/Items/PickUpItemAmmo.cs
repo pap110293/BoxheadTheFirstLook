@@ -13,7 +13,7 @@ public class PickUpItemAmmo : PickUpItemBase
             var unlockedGuns = MasterManager.fpsItemController.GetUnlockedFPSItems()
             .Where(i => i is FPSWeapon)
             .Select(i => { return (FPSWeapon)i; })
-            .Where(i => i.weaponType == FPSWeapon.WeaponType.Gun)
+            .Where(i => i.weaponType == FPSWeapon.WeaponType.Gun && i.infinityAmmo == false)
             .ToArray();
 
             if (unlockedGuns.Length > 0)

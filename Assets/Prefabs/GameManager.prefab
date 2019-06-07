@@ -102,7 +102,7 @@ MonoBehaviour:
   - Obj: {fileID: 4039087285630114366, guid: 654a63cb3fb66f344a85faa67bb2d662, type: 3}
     level: 0
     enemyType: 0
-    percent: 12
+    percent: 22
   - Obj: {fileID: 1641780700217324795, guid: 821e9421058534a7e8e88c8750f3aef5, type: 3}
     level: 0
     enemyType: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
   - Obj: {fileID: 0}
     level: 0
     enemyType: 0
-    percent: 75
+    percent: 65
 --- !u!114 &7935345379180658520
 MonoBehaviour:
   m_ObjectHideFlags: 0
