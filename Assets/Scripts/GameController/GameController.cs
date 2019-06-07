@@ -48,6 +48,7 @@ public class GameController : MonoBehaviour
         }
 
         PushNotification("START WAVE " + (MasterManager.levelConfigManager.CurrentLevel));
+        MasterManager.gameHUBCanvas.UpdateWaveText(MasterManager.levelConfigManager.CurrentLevel);
 
         if (MasterManager.spawEnemyManager)
         {

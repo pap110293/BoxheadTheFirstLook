@@ -230,12 +230,12 @@ PrefabInstance:
     - target: {fileID: 6569923261641484972, guid: 2245c5c07c4985643bc9187dfc68f33c,
         type: 3}
       propertyPath: spawnerObjects.Array.data[3].percent
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6569923261641484972, guid: 2245c5c07c4985643bc9187dfc68f33c,
         type: 3}
       propertyPath: spawnerObjects.Array.data[2].percent
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6569923261641484972, guid: 2245c5c07c4985643bc9187dfc68f33c,
         type: 3}

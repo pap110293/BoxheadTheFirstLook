@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
@@ -150,6 +151,26 @@ public class FPSItemController : MonoBehaviour
         }
         return unlockedItems;
     }
+
+    public IEnumerable<FPSWeapon> GetAllWeaponItem()
+    {
+        var allWeapon = MasterManager.fpsItemController.GetAllItem()
+                .Where(i => i is FPSWeapon)
+                .Select(i => { return (FPSWeapon)i; })
+                .ToArray();
+        return allWeapon;
+    }
+
+    public IEnumerable<FPSItem> GetAllItem()
+    {
+        List<FPSItem> allItem = new List<FPSItem>();
+        foreach (var item in itemSlots)
+        {
+            allItem.Add(item.Item);
+        }
+        return allItem;
+    }
+
 
     public void UnlockNextItem()
     {

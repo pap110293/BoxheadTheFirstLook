@@ -25,6 +25,8 @@ public class GameHUBManager : MonoBehaviour
 
     public Text ammoText;
     public Text scoreText;
+    public Text waveText;
+
     [Header("Combo Text")]
     public Text comboText;
     public Color startComboColor;
@@ -151,5 +153,10 @@ public class GameHUBManager : MonoBehaviour
     private void UpdateComboTextColor(int combo)
     {
         comboText.color = Color.Lerp(startComboColor, endComboColor, Mathf.Clamp(combo / 100f, 0, 100f));
+    }
+
+    public void UpdateWaveText(int wave)
+    {
+        waveText.text = "Wave " + wave;
     }
 }

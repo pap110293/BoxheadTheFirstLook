@@ -31,7 +31,28 @@ public class LifeBase : MonoBehaviour
             ClearAllEnemy();
         if (Input.GetKeyDown(KeyCode.F2))
             PlayerDie();
+        if (Input.GetKeyDown(KeyCode.F3))
+        {
+            ClearAllEnemy();
+            MasterManager.levelConfigManager.currentLevelIndex = MasterManager.levelConfigManager.levelCollection.records.Count - 2;
+        }
+        if (Input.GetKeyDown(KeyCode.F4))
+        {
+            var allWeapon = MasterManager.fpsItemController.GetAllWeaponItem();
+            foreach (var item in allWeapon)
+            {
+                item.infinityAmmo = true;
+            }
+        }
 
+        if (Input.GetKeyDown(KeyCode.F5))
+        {
+            var allWeapon = MasterManager.fpsItemController.GetAllWeaponItem();
+            foreach (var item in allWeapon)
+            {
+                item.infinityAmmo = false;
+            }
+        }
         // END CHEAT
     }
 

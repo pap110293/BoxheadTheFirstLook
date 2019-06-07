@@ -437,7 +437,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemSlots:
-  - Item: {fileID: 4151665636952929401}
   - Item: {fileID: 3794297966850036709}
   - Item: {fileID: 609118130394846427}
   - Item: {fileID: 1270213550492269463}
@@ -958,12 +957,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 266e1dc2315ee8d40af09f793b8eae9d, type: 3}
---- !u!4 &3876459536027545226 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400004, guid: 266e1dc2315ee8d40af09f793b8eae9d,
-    type: 3}
-  m_PrefabInstance: {fileID: 3876459536027939854}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3794297966850036709 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 100203498427885547, guid: 266e1dc2315ee8d40af09f793b8eae9d,
@@ -976,6 +969,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ae0fd4ea24c644eb1a72ea17d6bfb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &3876459536027545226 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400004, guid: 266e1dc2315ee8d40af09f793b8eae9d,
+    type: 3}
+  m_PrefabInstance: {fileID: 3876459536027939854}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7160065076767937005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1082,6 +1081,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Axe_FPS
       objectReference: {fileID: 0}
+    - target: {fileID: 100124, guid: 9eabd0283d81e32439416a354c5a26d6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6329332289763401723, guid: 9eabd0283d81e32439416a354c5a26d6,
         type: 3}
       propertyPath: Spread
@@ -1090,7 +1093,7 @@ PrefabInstance:
     - target: {fileID: 6329332289763401723, guid: 9eabd0283d81e32439416a354c5a26d6,
         type: 3}
       propertyPath: Damage
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6329332289763401723, guid: 9eabd0283d81e32439416a354c5a26d6,
         type: 3}
@@ -1149,15 +1152,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7947696417974758274}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4151665636952929401 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6329332289763401723, guid: 9eabd0283d81e32439416a354c5a26d6,
-    type: 3}
-  m_PrefabInstance: {fileID: 7947696417974758274}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2ae0fd4ea24c644eb1a72ea17d6bfb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
